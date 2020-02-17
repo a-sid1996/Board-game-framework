@@ -9,6 +9,6 @@ public class BoardController {
 //	public BoardView view = new BoardView();
 	
 	public BoardController() {
-		System.out.println(board.getTile("1 2").getTileName());
+//		System.out.println(board.getTile("1 2").getTileName());
 	}	
 }

@@ -6,12 +6,12 @@ public class Tile {
 	private int x, y;
 	private String nameOfTile;
 	private ArrayList<Unit> unit = new ArrayList<Unit>();
+	private ArrayList<Tile> neighbourTile = new ArrayList<Tile>();
 	
 	public Tile(String nameOfTile, int X, int Y) {
 		this.nameOfTile = nameOfTile;
 		this.x = X;
 		this.y = Y;
-		this.unit = null;
 	}
 	
 	public String getTileCoordinates() {
@@ -43,5 +43,22 @@ public class Tile {
 		this.x = Integer.valueOf(coo[0]);
 		this.y = Integer.valueOf(coo[1]);
 	}
+	
+	public ArrayList<String> getNeighbours() {
+		ArrayList<String> temp = new ArrayList<String>();
+		for(Tile i : neighbourTile) {
+			temp.add(i.nameOfTile);
+		}
+		return temp;
+	}
+	
+	public void addNeigbour(Tile tile) {
+		neighbourTile.add(tile);
+	}
+	
+	public void removeNeigbour(Tile tile) {
+		neighbourTile.remove(tile);
+	}
+	
 	
 }
