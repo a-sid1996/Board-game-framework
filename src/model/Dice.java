@@ -8,22 +8,21 @@ import java.util.Random;
  * of different players
  */
 public class Dice {
+	private int noOfDice;
 
-	private int number_of_dice;
-
-	Dice(int number_of_dice) {
-		this.number_of_dice = number_of_dice;
+	Dice(int noOfDice) {
+		this.noOfDice = noOfDice;
 	}
 
 	/**
-	 * @param number_of_dice displays total numbers of dice user need for their game
+	 * @param noOfDice displays total numbers of dice user need for their game
 	 * @return Method returns random numbers between 1 and appropriate number as per
-	 *         number_of_dice added
+	 *         noOfDice added
 	 */
-	public int diceroll(int number_of_dice) {
+	public int diceroll(int noOfDice) {
 		Random rand = new Random();
 		int sum = 0;
-		for (int i = 0; i < number_of_dice; i++) {
+		for (int i = 0; i < noOfDice; i++) {
 			int diceOutput = rand.nextInt(5) + 1;
 			sum = +diceOutput;
 		}

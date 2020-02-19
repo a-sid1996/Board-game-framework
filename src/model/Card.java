@@ -21,8 +21,9 @@ public class Card {
 	 */
 	public Card(int num) {
 		this.noOfCards = num;
-		for (int i = 0; i < num; i++) {
-			this.descOfCards.put(i, "Empty");
+		this.descOfCards = new HashMap<>();
+		for(int i=0; i<num; i++) {
+			descOfCards.put(i, "Empty");
 		}
 	}
 

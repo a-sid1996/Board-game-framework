@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-
 	/**
 	 * @param name        represents player's name
 	 * @param currentTile shows tiles that are owned by current player.

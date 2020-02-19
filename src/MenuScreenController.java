@@ -19,7 +19,6 @@ public class MenuScreenController {
 	ArrayList<Player> list = new ArrayList<Player>();
 	BoardModel bc;
 	Card cm;
-	GameController gc;
 	Score score;
 	PlayerTurnModule<Player> turn;
 	Unit[] units;
@@ -60,7 +59,6 @@ public class MenuScreenController {
 	void cardsBtnClick(ActionEvent event) {
 		System.out.println("Enter number of cards");
 		int num = s.nextInt();
-		
 		cm = new Card(num);
 		System.out.println("Deck of cards created");
 		b2 = true;
@@ -73,8 +71,28 @@ public class MenuScreenController {
 
 	@FXML
 	void playBtnClick(ActionEvent event) {
-		if(b1 && b2 && b3 && b4 && b5 && b6) {
-			gc = new GameController(bc, cm, gc, list, score, turn, units);
+		if(b1 && b2 && b3 && b4 && b5 ) {
+			GameController gc = new GameController(bc, cm, list, score, turn, units);
+		} else {
+			System.out.println("Following frameworks have not been configured yet.");
+			if(!b1) {
+				System.out.println("Board");
+			}
+			if(!b2) {
+				System.out.println("Cards");
+			}
+			if(!b3) {
+				System.out.println("Player");
+			}
+			if(!b4) {
+				System.out.println("Score");
+			}
+			if(!b5) {
+				System.out.println("Turn");
+			}
+			if(!b6) {
+				System.out.println("Unit");				
+			}
 		}
 	}
 
@@ -82,9 +100,11 @@ public class MenuScreenController {
 	void playerBtnClick(ActionEvent event) {
 		System.out.println("Enter number of players");
 		int num = s.nextInt();
+		s.nextLine();
 		for(int i=0; i<num; i++) {
 			System.out.println("Enter name of player-");
-			Player player = new Player(s.nextLine());
+			String name = s.nextLine();
+			Player player = new Player(name);
 			list.add(player);
 		}
 		System.out.println("Players created.");
@@ -107,11 +127,13 @@ public class MenuScreenController {
 	void unitBtnClick(ActionEvent event) {
 		System.out.println("Enter number of units");
 		int num = s.nextInt();
+		s.nextLine();
 		units = new Unit[num];
 		for(int i=0; i<num; i++) {
 			System.out.println("Enter name of this unit");
-			units[i] = new Unit(s.nextLine());
-			System.out.println("Enter number of properties for this unit");
+			String name = s.nextLine();
+			units[i] = new Unit(name);
+			System.out.println("Enter number of properties for this unit" + name);
 			int n = s.nextInt();
 			for(int j = 0; j < n; j++) {
 				System.out.println("Enter property");
