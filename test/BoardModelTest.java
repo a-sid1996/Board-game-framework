@@ -4,8 +4,6 @@ import org.junit.Assert;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
-
 public class BoardModelTest {
     int height = 10;
     int width = 10;
