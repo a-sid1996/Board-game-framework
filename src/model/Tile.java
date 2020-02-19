@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Tile {
+	
+	/**
+	 * @param int x and y  are the coordinates of tile on the board
+	 * @param nameofTile defines tile name
+	 * @param internalValue stores amount associated with specific tile.
+	 * @param unit is any object that can be associated with current tile.For instance, Money, house, hotel etc.
+	 * @param neighbourTile stores neighbour tiles of the current tile.
+	 * @param playerlog monitors players activity on current tile such as how many times player has been to this tile.
+	 * @param CurrentPlayer defines current player who has landed on this tile.
+	 * @param mainPlayer is the player who owns this tile.
+	 */
 	private int x, y;
 	private String nameOfTile;
 	private HashMap<String, Integer> internalValue;
@@ -13,12 +24,21 @@ public class Tile {
 	private Player currentPlayer;
 	private String mainPlayer;
 	
+
+	/**
+	 * @param nameOfTile is a unique name assigned to current tile
+	 * @param x is the x coordinate of the current tile
+	 * @param y is the y coordinate of the current tile
+	 */
 	public Tile(String nameOfTile, int X, int Y) {
 		this.nameOfTile = nameOfTile;
 		this.x = X;
 		this.y = Y;
 	}
 	
+	/**
+	 * @return is coordiantes of the current tile in the plane
+	 */
 	public String getTileCoordinates() {
 		return Integer.toString(x) + " " + Integer.toString(y);
 	}
@@ -27,6 +47,9 @@ public class Tile {
 		this.internalValue.put(key, value);
 	}
 	
+	/**
+	 * @return is internal value associated with current tile
+	 */
 	public int getValue(String key) {
 		return internalValue.get(key);
 	}
@@ -43,6 +66,9 @@ public class Tile {
 
 	}
 	
+	/**
+	 * @return is a player who owns this tile
+	 */
 	public String getMainPlayer() {
 		return this.mainPlayer;
 	}
@@ -50,11 +76,17 @@ public class Tile {
 	public void setMainPlayer(String playerName) {
 		this.mainPlayer = playerName;
 	}
-	
+
+	/**
+	 * @return is a player who just landed on current plot
+	 */
 	public Player getPlayer() {
 		return currentPlayer;
 	}
-	
+
+	/**
+	 * @return is a name of the tile
+	 */
 	public String getTileName() {
 		return nameOfTile;
 	}
@@ -71,6 +103,9 @@ public class Tile {
 		this.unit.remove(unit);
 	}
 	
+	/**
+	 * @return is a list of units associated with current tile
+	 */
 	public ArrayList<Unit> getUnits() {
 		return this.unit;
 	}
@@ -81,6 +116,9 @@ public class Tile {
 		this.y = Integer.valueOf(coo[1]);
 	}
 	
+	/**
+	 * @return is a list of all the neighbours of the current tile
+	 */
 	public ArrayList<String> getNeighbours() {
 		ArrayList<String> temp = new ArrayList<String>();
 		for(Tile i : neighbourTile) {
@@ -89,7 +127,8 @@ public class Tile {
 		return temp;
 	}
 	
-	public void addNeigbour(Tile tile) {
+	public void addNeigbour(Tile tile)
+	{
 		neighbourTile.add(tile);
 	}
 	

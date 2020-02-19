@@ -1,21 +1,26 @@
 package model;
+
 import java.util.*;
 
-public class Score 
-{
-	//This ArrayList stores list of all players
+/**
+ * This is a model class for score module that stores different score parameters
+ * of different players
+ */
+public class Score {
+
+	/**
+	 * @param playerList            Stores list of all players
+	 * @param playerName            Stores player object with its name
+	 * @param playerBalance         stores players with their respective balance
+	 * @param PlayerCurrentPosition stores player and their current respective
+	 *                              position
+	 * @param PlayerCards           stores player and list of cards they posses
+	 */
+
 	public ArrayList<Player> PlayerList = new ArrayList<Player>();
-	
-	//This map stores Player Object and their names
-	public HashMap<Player,String> PlayerName = new HashMap<Player,String>();
-	
-	//This map stores Player Object and their Score
-	public  HashMap<Player,ArrayList<Unit>> PlayerBalance = new HashMap<Player, ArrayList<Unit>>();
-	
-	//This map stores Player Object and their current position
-	public  HashMap<Player,ArrayList<Tile>> PlayerCurrentPosition = new HashMap<Player,ArrayList<Tile>>();
-	
-	//This Map stores Player and all the cards he possesses
-	public  HashMap<Player, List<Card>> PlayerCards = new HashMap<Player, List<Card>>();	
-	
+	public HashMap<Player, String> PlayerName = new HashMap<Player, String>();
+	public HashMap<Player, ArrayList<Unit>> PlayerBalance = new HashMap<Player, ArrayList<Unit>>();
+	public HashMap<Player, ArrayList<Tile>> PlayerCurrentPosition = new HashMap<Player, ArrayList<Tile>>();
+	public HashMap<Player, List<Card>> PlayerCards = new HashMap<Player, List<Card>>();
+
 }
