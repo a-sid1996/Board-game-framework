@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,9 +10,9 @@ public class PlayerTurnModule<Player> {
 	private Iterator<Player> iterator;
 
 	/** Generic list. */
-	private List<Player> list;
+	private ArrayList<Player> list;
 
-	public PlayerTurnModule(List<Player> list) {
+	public PlayerTurnModule(ArrayList<Player> list) {
 		this.list = list;
 		iterator = list.iterator();
 	}
@@ -39,7 +40,7 @@ public class PlayerTurnModule<Player> {
 		return list;
 	}
 
-	public void setList(List<Player> list) {
+	public void setList(ArrayList<Player> list) {
 		this.list = list;
 	}
 }

@@ -1,10 +1,7 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-
-
 
 public class Player {
 
@@ -70,12 +67,7 @@ public class Player {
 		// him.
 		public void updateCurrentTile(int diceNumber, Tile currentTile)
 		{
-			/* Logic of set plot needs to be changed */
-			/*
-			 * if(Math.abs(currentPlot+diceNumber)>24) currentPlot=
-			 * (Math.abs(currentPlot+diceNumber))%24; else
-			 * currentPlot=Math.abs(currentPlot+diceNumber);
-			 */
+			
 			this.currentTile = currentTile;
 
 			if (!score.PlayerCurrentPosition.containsKey(this)) {
