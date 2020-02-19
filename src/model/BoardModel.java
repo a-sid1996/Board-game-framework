@@ -87,7 +87,7 @@ public class BoardModel {
 	}
 	
 	public String tileConnectCoordinate(int xSource, int ySource, int xDest, int yDest) {
-		if(xSource < width && xDest < width) {
+		if(xSource < width && xDest < width && xSource > -1 && ySource > -1 && xDest > -1 && yDest > -1 && (xDest < tiles.size() && xSource < tiles.size()) && (yDest < tiles.get(0).size() && ySource < tiles.get(0).size())) {
 			if(ySource < height && yDest < height) {
 				tiles.get(xSource).get(ySource).addNeigbour(tiles.get(xDest).get(yDest));
 				return "Tiles connected successfully.";
@@ -98,7 +98,10 @@ public class BoardModel {
 
 	public Tile getTile(String coordinates) {
 		String[] coo = coordinates.split(" ");
-		return tiles.get( Integer.parseInt(coo[0])).get(Integer.parseInt(coo[1]));
+		if(Integer.parseInt(coo[0]) > -1 && Integer.parseInt(coo[1]) > -1 && Integer.parseInt(coo[0]) < height && Integer.parseInt(coo[1]) < width) {
+			return tiles.get( Integer.parseInt(coo[0])).get(Integer.parseInt(coo[1]));
+		}
+		return null;
 	}
 
 	public void setCustomConnections() {
