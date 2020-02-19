@@ -19,7 +19,8 @@ public class Unit {
 		return this.property;
 	}
 	
-	public void setProperty(String key, String property) {
+	public void setProperty(String key, String property) 
+	{
 		this.property.put(key, property);
 	}
 	
