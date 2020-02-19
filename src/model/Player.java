@@ -25,9 +25,9 @@ public class Player {
 		/** Card List */
 		private List<Card> cardList = new ArrayList<Card>();
 		
-		public Player(String name) 
+		public Player() 
 		{
-			this.name  = name;				
+		
 		}
 
 		// Getter method to get the name of the player

@@ -52,7 +52,8 @@ public class Tile {
 		return temp;
 	}
 	
-	public void addNeigbour(Tile tile) {
+	public void addNeigbour(Tile tile)
+	{
 		neighbourTile.add(tile);
 	}
 	
