@@ -10,8 +10,9 @@ public class Card {
 	
 	public Card(int num){
 		this.noOfCards = num;
+		this.descOfCards = new HashMap<>();
 		for(int i=0; i<num; i++) {
-			this.descOfCards.put(i, "Empty");
+			descOfCards.put(i, "Empty");
 		}
 	}
 	
