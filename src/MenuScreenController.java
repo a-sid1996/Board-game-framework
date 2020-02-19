@@ -133,14 +133,21 @@ public class MenuScreenController {
 			System.out.println("Enter name of this unit");
 			String name = s.nextLine();
 			units[i] = new Unit(name);
-			System.out.println("Enter number of properties for this unit" + name);
-			int n = s.nextInt();
-			for(int j = 0; j < n; j++) {
-				System.out.println("Enter property");
-				String prop = s.nextLine();
-				System.out.println("Enter value");
-				String val = s.nextLine();
-				units[i].setProperty(prop, val);
+			System.out.println("Enter amount for this unit");
+			int amt = s.nextInt();
+			units[i].setAmount(amt);
+			System.out.println("Are there any additional properties to this unit? \n (Enter Y/N)" + name);
+			if(s.nextLine().equalsIgnoreCase("Y")) {
+				System.out.println("Enter number of properties.");
+				int n = s.nextInt();
+				for(int j = 0; j < n; j++) {
+					System.out.println("Enter property");
+					String prop = s.nextLine();
+					System.out.println("Enter value");
+					String val = s.nextLine();
+					units[i].setProperty(prop, val);
+				}
+
 			}
 		}
 		b6 = true;

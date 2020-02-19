@@ -23,13 +23,12 @@ public class GameController {
 		// TODO Auto-generated constructor stub
 		this.bc = bc;
 		this.cm = cm;
+		this.list = list;
 		this.score = score;
 		this.turn = turn;
 		this.units = units;
-		
-		fortification();
-		
-		reinforcement();
+				
+		fortification(list, units);
 		
 	}
 
@@ -38,9 +37,17 @@ public class GameController {
 		
 	}
 
-	private void fortification() {
+	private void fortification(ArrayList<Player> list, Unit[] units) {
 		// TODO Auto-generated method stub
-		
+		for(Player player : list) {
+			for(Unit u : units) {
+				if(u.getName().equalsIgnoreCase("money")) {
+					Unit unit = u;
+					u.setAmount((int)(u.getAmount()/list.size()));
+					player.setBalance(unit);
+				}
+			}
+		}
 	}
 
 }

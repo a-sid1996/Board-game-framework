@@ -13,22 +13,29 @@ public class Player {
 	 * @param cardList    stores list of cards player posseses.
 	 */
 
+	// Key attribute which holds the name of the player
 	private String name;
-	private Tile currentTile;
-	private int balance;
-	private List<Card> cardList = new ArrayList<Card>();
-	
+
+	// key attribute which holds the current location of the player that is set to 1
+	// initially.
+	private ArrayList<Tile> currentTile;
+
+	// key attribute which holds the balance of the player that is set to 1500$
+	// initially.=
+	private ArrayList<Unit> balance;
+
+	// Object of Score class
 	Score score;
 
+	// Object of Card
+	/** Card List */
+	private List<Card> cardList = new ArrayList<Card>();
 
-	public Player() {
-
+	public Player(String name) {
+		this.name = name;
 	}
 
-	/**
-	 *@return returns name of the player
-	 * 
-	 */
+	// Getter method to get the name of the player
 	public String getName() {
 		return name;
 	}
@@ -41,47 +48,69 @@ public class Player {
 	}
 
 	/**
-	 *@return returns balance of current player
+	 * @return returns balance of current player
 	 * 
 	 */
-	public int getBalance() {
-		return balance;
+	public Unit getBalance(String bal) {
+		for (Unit u : this.balance) {
+			if (u.getName().equalsIgnoreCase(bal)) {
+				return u;
+			}
+		}
+		return null;
 	}
 
 	// Setter method to set the balance of the player
-	public void setBalance(int balance) {
-		this.balance = balance;
+	public void setBalance(Unit balance) {
+
+		boolean add = false;
+		for (Unit bal : this.balance) {
+			if (bal.getName().equalsIgnoreCase(balance.getName())) {
+				bal.setAmount(balance.getAmount());
+				add = true;
+				break;
+			}
+		}
+
+		if (!add)
+			this.balance.add(balance);
 
 		if (!score.PlayerBalance.containsKey(this)) {
 			// score.PlayerBalance.put(this, balance);
 		} else {
-			score.PlayerBalance.put(this, balance);
+			score.PlayerBalance.put(this, this.balance);
 		}
+
 	}
 
 	/**
-	 *@return returns currentTile of current player
+	 * @return returns currentTile of current player
 	 * 
 	 */
-	public Tile getCurrentTile() {
+	public ArrayList<Tile> getCurrentTile() {
 		return currentTile;
 	}
 
 	// This method updates the location of the player based on the number rolled by
 	// him.
 	public void updateCurrentTile(int diceNumber, Tile currentTile) {
-
-		this.currentTile = currentTile;
+		/* Logic of set plot needs to be changed */
+		/*
+		 * if(Math.abs(currentPlot+diceNumber)>24) currentPlot=
+		 * (Math.abs(currentPlot+diceNumber))%24; else
+		 * currentPlot=Math.abs(currentPlot+diceNumber);
+		 */
+		this.currentTile.add(currentTile);
 
 		if (!score.PlayerCurrentPosition.containsKey(this)) {
-			score.PlayerCurrentPosition.put(this, currentTile);
+			score.PlayerCurrentPosition.put(this, this.currentTile);
 		} else {
-			score.PlayerCurrentPosition.put(this, currentTile);
+			score.PlayerCurrentPosition.put(this, this.currentTile);
 		}
 	}
 
 	/**
-	 *@return returns list of cards possessed by current player
+	 * @return returns list of cards possessed by current player
 	 * 
 	 */
 	public List<Card> getCardList() {
