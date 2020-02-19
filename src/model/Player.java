@@ -10,10 +10,10 @@ public class Player {
 
 		// key attribute which holds the current location of the player that is set to 1
 		// initially.
-		private Tile currentTile;
+		private ArrayList<Tile> currentTile;
 
 		// key attribute which holds the balance of the player that is set to 1500$ initially.=
-		private int balance;
+		private ArrayList<Unit> balance;
 
 		// Object of Score class
 		Score score ;
@@ -40,26 +40,43 @@ public class Player {
 		}
 		
 		// Getter method to get the balance of the player
-		public int getBalance() {
-			return balance;
+		public Unit getBalance(String bal) {
+			for(Unit u : this.balance) {
+				if(u.getName().equalsIgnoreCase(bal)) {
+					return u;
+				}
+			}
+			return null;
 		}
 
 		// Setter method to set the balance of the player
-		public void setBalance(int balance) 
+		public void setBalance(Unit balance) 
 		{
-			this.balance = balance;
+
+			boolean add = false;
+			for(Unit bal : this.balance) {
+				if(bal.getName().equalsIgnoreCase(balance.getName())) {
+					bal.setAmount(balance.getAmount());
+					add = true;
+					break;
+				}
+			}
+			
+			if(!add)
+				this.balance.add(balance);
 			
 			if (!score.PlayerBalance.containsKey(this)) 
 			{
 			//	score.PlayerBalance.put(this, balance);
 			} else 
 			{
-				score.PlayerBalance.put(this,balance);
+				score.PlayerBalance.put(this,this.balance);
 			}
+			
 		}
 		
 		// Getter method to get the current tile location of the player
-		public Tile getCurrentTile() {
+		public ArrayList<Tile> getCurrentTile() {
 			return currentTile;
 		}
 
@@ -73,12 +90,12 @@ public class Player {
 			 * (Math.abs(currentPlot+diceNumber))%24; else
 			 * currentPlot=Math.abs(currentPlot+diceNumber);
 			 */
-			this.currentTile = currentTile;
+			this.currentTile.add(currentTile);
 
 			if (!score.PlayerCurrentPosition.containsKey(this)) {
-				score.PlayerCurrentPosition.put(this,currentTile);
+				score.PlayerCurrentPosition.put(this,this.currentTile);
 			} else {
-				score.PlayerCurrentPosition.put(this,currentTile);
+				score.PlayerCurrentPosition.put(this,this.currentTile);
 			}
 		}
 		

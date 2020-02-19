@@ -5,10 +5,19 @@ import java.util.HashMap;
 public class Unit {
 
 	private String name;
+	private int amount;
 	private HashMap<String, String> property;
 	
 	public Unit(String name) {
 		this.name = name;
+	}
+	
+	public int getAmount() {
+		return this.amount;
+	}
+	
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	
 	public String getName() {

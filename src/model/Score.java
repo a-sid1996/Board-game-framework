@@ -10,10 +10,10 @@ public class Score
 	public HashMap<Player,String> PlayerName = new HashMap<Player,String>();
 	
 	//This map stores Player Object and their Score
-	public  HashMap<Player,Integer> PlayerBalance = new HashMap<Player, Integer>();
+	public  HashMap<Player,ArrayList<Unit>> PlayerBalance = new HashMap<Player, ArrayList<Unit>>();
 	
 	//This map stores Player Object and their current position
-	public  HashMap<Player,Tile> PlayerCurrentPosition = new HashMap<Player,Tile>();
+	public  HashMap<Player,ArrayList<Tile>> PlayerCurrentPosition = new HashMap<Player,ArrayList<Tile>>();
 	
 	//This Map stores Player and all the cards he possesses
 	public  HashMap<Player, List<Card>> PlayerCards = new HashMap<Player, List<Card>>();	
