@@ -9,8 +9,8 @@ public class Transaction {
 	// This method is called when player has to pay money to the banker
 	public void performpayment(Player player1, Player player2, int amount) {
 
-		player1.setBalance(player1.getBalance() - amount);
-		player2.setBalance(player2.getBalance() + amount);
+		player1.setMoney(player1.getMoney() - amount);
+		player2.setMoney(player2.getMoney() + amount);
 
 	}
 
@@ -22,8 +22,8 @@ public class Transaction {
 			if (list.get(i) == player) {
 				continue;
 			} else {
-				player.setBalance(player.getBalance() - amount);
-				list.get(i).setBalance(list.get(i).getBalance() + amount);
+				player.setMoney(player.getMoney() - amount);
+				list.get(i).setMoney(list.get(i).getMoney() + amount);
 			}
 
 		}

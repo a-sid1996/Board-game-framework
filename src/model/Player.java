@@ -59,6 +59,23 @@ public class Player {
 		}
 		return null;
 	}
+	
+	public void setMoney(int amt) {
+		for(Unit u : this.balance) {
+			if(u.getName().equalsIgnoreCase("money")) {
+				u.setAmount(amt);
+			}
+		}
+	}
+	
+	public int getMoney() {
+		for(Unit u : this.balance) {
+			if(u.getName().equalsIgnoreCase("money")) {
+				return u.getAmount();
+			}
+		}
+		return -1;
+	}
 
 	// Setter method to set the balance of the player
 	public void setBalance(Unit balance) {
