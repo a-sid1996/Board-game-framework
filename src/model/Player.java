@@ -48,7 +48,6 @@ public class Player {
     // Setter method to set the balance of the player
     public void setBalance(int balance) {
         this.balance = balance;
-
         if (!score.PlayerBalance.containsKey(this)) {
             //	score.PlayerBalance.put(this, balance);
         } else {
