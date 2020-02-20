@@ -27,9 +27,13 @@ public class GameController {
 		this.score = score;
 		this.turn = turn;
 		this.units = units;
-				
+
 		fortification(list, units);
-		
+
+		for(Player play : list) {
+			System.out.println(play.getName() + ": " + play.getMoney());
+		}
+				
 	}
 
 	private void reinforcement() {
@@ -42,11 +46,10 @@ public class GameController {
 		for(Player player : list) {
 			for(Unit u : units) {
 				if(u.getName().equalsIgnoreCase("money")) {
-					Unit unit = u;
-					u.setAmount((int)(u.getAmount()/list.size()));
-					player.setBalance(unit);
+					player.setMoney((int)(u.getAmount()/list.size()));
+					break;
 				}
-			}
+			}			
 		}
 	}
 

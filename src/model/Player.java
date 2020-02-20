@@ -22,7 +22,7 @@ public class Player {
 
 	// key attribute which holds the balance of the player that is set to 1500$
 	// initially.=
-	private ArrayList<Unit> balance;
+	private ArrayList<Unit> asset;
 
 	// Object of Score class
 	Score score;
@@ -31,8 +31,13 @@ public class Player {
 	/** Card List */
 	private List<Card> cardList = new ArrayList<Card>();
 
-	public Player(String name) {
+	public Player(String name, Unit[] units) {
 		this.name = name;
+		this.asset = new ArrayList<>();
+		for(Unit unit : units) {
+			Unit u = new Unit(unit.getName());
+			this.asset.add(u);
+		}
 	}
 
 	// Getter method to get the name of the player
@@ -51,9 +56,9 @@ public class Player {
 	 * @return returns balance of current player
 	 * 
 	 */
-	public Unit getBalance(String bal) {
-		for (Unit u : this.balance) {
-			if (u.getName().equalsIgnoreCase(bal)) {
+	public Unit getAsset(String bal, Tile tile) {
+		for (Unit u : this.asset) {
+			if (u.getName().equalsIgnoreCase(bal) && u.getTile() == tile) {
 				return u;
 			}
 		}
@@ -61,7 +66,7 @@ public class Player {
 	}
 	
 	public void setMoney(int amt) {
-		for(Unit u : this.balance) {
+		for(Unit u : this.asset) {
 			if(u.getName().equalsIgnoreCase("money")) {
 				u.setAmount(amt);
 			}
@@ -69,7 +74,7 @@ public class Player {
 	}
 	
 	public int getMoney() {
-		for(Unit u : this.balance) {
+		for(Unit u : this.asset) {
 			if(u.getName().equalsIgnoreCase("money")) {
 				return u.getAmount();
 			}
@@ -78,24 +83,14 @@ public class Player {
 	}
 
 	// Setter method to set the balance of the player
-	public void setBalance(Unit balance) {
+	public void setAsset(Unit balance) {
 
-		boolean add = false;
-		for (Unit bal : this.balance) {
-			if (bal.getName().equalsIgnoreCase(balance.getName())) {
-				bal.setAmount(balance.getAmount());
-				add = true;
-				break;
-			}
-		}
-
-		if (!add)
-			this.balance.add(balance);
+		this.asset.add(balance);
 
 		if (!score.PlayerBalance.containsKey(this)) {
 			// score.PlayerBalance.put(this, balance);
 		} else {
-			score.PlayerBalance.put(this, this.balance);
+			score.PlayerBalance.put(this, this.asset);
 		}
 
 	}

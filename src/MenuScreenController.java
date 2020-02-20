@@ -1,7 +1,9 @@
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import controller.GameController;
 import javafx.application.Platform;
@@ -16,6 +18,7 @@ import model.Unit;
 
 public class MenuScreenController {
 
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ArrayList<Player> list = new ArrayList<Player>();
     BoardModel bc;
     Card cm;
@@ -25,49 +28,46 @@ public class MenuScreenController {
     boolean b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false;
 
     @FXML
-    void boardBtnClick(ActionEvent event) {
+    void boardBtnClick(ActionEvent event) throws NumberFormatException, IOException {
 
-        Scanner s1 = new Scanner(System.in);
-
-        System.out.println("Enter height and width of intended Board");
-        int height = s1.nextInt();
-        int width = s1.nextInt();
+        System.out.println("Enter height of intended Board");
+        int height = Integer.parseInt(br.readLine());
+        System.out.println("Enter width of intended Board");
+        int width = Integer.parseInt(br.readLine());
         bc = new BoardModel(height, width);
 
         System.out.println("Do you want custom names for Tiles? \n (Enter Y/N)");
-        bc.populateBoard(s1.next());
+        String resp = br.readLine();
+        bc.populateBoard(resp);
 
         System.out.println("Do you want custom connections for Tiles? \n (Enter Y/N)");
-        if (s1.next().equals("Y")) {
+        if (br.readLine().equals("Y")) {
             while (true) {
-                System.out.println("Enter coordinate of tiles you want to connect? \n (Enter Y/N) \n (Enter Done when done)");
-                if (s1.next().equalsIgnoreCase("Done"))
+                System.out.println("Enter coordinate of tiles you want to connect? \n (Enter Done when done)");
+                String first = br.readLine();
+                if (first.equalsIgnoreCase("Done"))
                     break;
-                int xSource = s1.nextInt();
-                int ySource = s1.nextInt();
-                int xDest = s1.nextInt();
-                int yDest = s1.nextInt();
+                int xSource = Integer.parseInt(first);
+                int ySource = Integer.parseInt(br.readLine());
+                int xDest = Integer.parseInt(br.readLine());
+                int yDest = Integer.parseInt(br.readLine());
                 bc.tileConnectCoordinate(xSource, ySource, xDest, yDest);
+                System.out.println("Tiles connected.");
             }
         } else {
             bc.setConnections();
         }
-
         System.out.println("Board created.");
         b1 = true;
-        s1.close();
-
     }
 
     @FXML
-    void cardsBtnClick(ActionEvent event) {
-        Scanner s = new Scanner(System.in);
+    void cardsBtnClick(ActionEvent event) throws NumberFormatException, IOException {
         System.out.println("Enter number of cards");
-        int num = s.nextInt();
+        int num = Integer.parseInt(br.readLine());
         cm = new Card(num);
         System.out.println("Deck of cards created");
         b2 = true;
-        s.close();
 
     }
 
@@ -104,20 +104,17 @@ public class MenuScreenController {
     }
 
     @FXML
-    void playerBtnClick(ActionEvent event) {
-        Scanner s = new Scanner(System.in);
+    void playerBtnClick(ActionEvent event) throws NumberFormatException, IOException {
         System.out.println("Enter number of players");
-        int num = s.nextInt();
-        s.nextLine();
+        int num = Integer.parseInt(br.readLine());
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of player-");
-            String name = s.nextLine();
-            Player player = new Player(name);
+            String name = br.readLine();
+            Player player = new Player(name, this.units);
             list.add(player);
         }
         System.out.println("Players created.");
         b3 = true;
-        s.close();
 
     }
 
@@ -134,34 +131,32 @@ public class MenuScreenController {
     }
 
     @FXML
-    void unitBtnClick(ActionEvent event) {
-        Scanner s = new Scanner(System.in);
+    void unitBtnClick(ActionEvent event) throws IOException {
         System.out.println("Enter number of units");
-        int num = s.nextInt();
-        s.nextLine();
+        int num = Integer.parseInt(br.readLine());;
         units = new Unit[num];
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of this unit");
-            String name = s.next();
+            String name = br.readLine();
             units[i] = new Unit(name);
             System.out.println("Enter amount for this unit " + name);
-            int amt = s.nextInt();
+            int amt = Integer.parseInt(br.readLine());
             units[i].setAmount(amt);
             System.out.println("Are there any additional properties to this unit? \n (Enter Y/N)");
-            String inp = s.next();
+            String inp = br.readLine();
             if (inp.equalsIgnoreCase("Y")) {
                 System.out.println("Enter number of properties.");
-                int n = s.nextInt();
+                int n = Integer.parseInt(br.readLine());
                 for (int j = 0; j < n; j++) {
                     System.out.println("Enter property name");
-                    String prop = s.next();
+                    String prop = br.readLine();
                     System.out.println("Enter value");
-                    String val = s.next();
+                    String val = br.readLine();
+                    units[i].setProperty(prop, val);
                 }
-                System.out.println("Successfully created " + name + " unit!");
             }
+            System.out.println("Successfully created " + name + " unit!");
         }
         b6 = true;
-        s.close();
     }
 }

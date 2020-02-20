@@ -10,7 +10,7 @@ public class Tile {
 	 * @param nameofTile defines tile name
 	 * @param internalValue stores amount associated with specific tile.
 	 * @param unit is any object that can be associated with current tile.For instance, Money, house, hotel etc.
-	 * @param neighbourTile stores neighbour tiles of the current tile.
+	 * @param neighbourTile stores neighbor tiles of the current tile.
 	 * @param playerlog monitors players activity on current tile such as how many times player has been to this tile.
 	 * @param CurrentPlayer defines current player who has landed on this tile.
 	 * @param mainPlayer is the player who owns this tile.
