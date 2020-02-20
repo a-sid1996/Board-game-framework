@@ -7,7 +7,6 @@ public class PlayerTest {
 
     @org.junit.Test
     public void updateCurrentTile() {
-        Player pm = new Player(name);
     }
 
 }

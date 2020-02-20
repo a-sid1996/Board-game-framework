@@ -21,17 +21,17 @@ public class BoardModel {
     }
 
     public void populateBoard(String ans) throws IOException {
-        // TODO Auto-generated method stub        
+        // TODO Auto-generated method stub
         boolean needCustomNames = ans.equals("Y");
         for (int i = 0; i < width; i++) {
             ArrayList<Tile> temp = new ArrayList<>();
             for (int j = 0; j < height; j++) {
                 String str;
-                if (!needCustomNames) {
-                    str = "coordinate " + i + " " + j;
-                } else {
+                if (needCustomNames) {
                     System.out.println("Enter name of tile at (" + (i + 1) + ", " + (j + 1) + ")");
                     str = BoardModel_br.readLine();
+                } else {
+                    str = "coordinate " + i + " " + j;
                 }
                 temp.add(new Tile(str, i, j));
             }
