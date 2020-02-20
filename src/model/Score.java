@@ -12,8 +12,7 @@ public class Score {
 	 * @param playerList            Stores list of all players
 	 * @param playerName            Stores player object with its name
 	 * @param playerBalance         stores players with their respective balance
-	 * @param PlayerCurrentPosition stores player and their current respective
-	 *                              position
+	 * @param PlayerCurrentPosition stores player and their current respective position
 	 * @param PlayerCards           stores player and list of cards they posses
 	 */
 

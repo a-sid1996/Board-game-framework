@@ -19,7 +19,7 @@ public class Dice {
 	 * @return Method returns random numbers between 1 and appropriate number as per
 	 *         noOfDice added
 	 */
-	public int diceroll(int noOfDice) {
+	public static int diceroll(int noOfDice) {
 		Random rand = new Random();
 		int sum = 0;
 		for (int i = 0; i < noOfDice; i++) {
@@ -28,4 +28,7 @@ public class Dice {
 		}
 		return sum;
 	}
+	
+
 }
+

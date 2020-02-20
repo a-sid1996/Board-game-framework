@@ -17,7 +17,7 @@ public class Card {
 	private HashMap<Integer, String> descOfCards;
 
 	/**
-	 * @param 
+	 * @param num is total number of cards required for the game
 	 */
 	public Card(int num) {
 		this.noOfCards = num;
