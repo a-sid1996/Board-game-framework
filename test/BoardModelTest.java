@@ -11,7 +11,11 @@ public class BoardModelTest {
     @org.junit.Test
     public void populateBoard() {
         BoardModel bm = new BoardModel(height, width);
-        bm.populateBoard("Y");
+        try {
+            bm.populateBoard("N");
+        } catch (Exception ex) {
+            Assert.assertNull(ex);
+        }
         ArrayList<ArrayList<Tile>> tiles = bm.getTiles();
         for (int i = 0; i < width; i++) {
             Assert.assertNotNull(tiles.get(i));
@@ -25,11 +29,14 @@ public class BoardModelTest {
         }
     }
 
-
     @org.junit.Test
     public void tileConnectCoordinate() {
         BoardModel bm = new BoardModel(height, width);
-        bm.populateBoard("Y");
+        try {
+            bm.populateBoard("N");
+        } catch (Exception ex) {
+            Assert.assertNull(ex);
+        }
         boolean result = bm.tileConnectCoordinate(0, 0, 1, 0);
         Assert.assertTrue(result);
         result = bm.tileConnectCoordinate(width, 0, 0, 0);
@@ -53,7 +60,11 @@ public class BoardModelTest {
     @org.junit.Test
     public void getTile() {
         BoardModel bm = new BoardModel(height, width);
-        bm.populateBoard("Y");
+        try {
+            bm.populateBoard("N");
+        } catch (Exception ex) {
+            Assert.assertNull(ex);
+        }
         Assert.assertNotNull(bm.getTile("0 0"));
         Assert.assertNull(bm.getTile(-1 + " " + -1));
         Assert.assertNull(bm.getTile(height + " " + -1));

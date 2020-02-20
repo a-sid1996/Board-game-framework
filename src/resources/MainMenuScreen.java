@@ -25,4 +25,5 @@ public class MainMenuScreen extends Application {
 			e.printStackTrace();
 		}
 	}
+
 }

@@ -1,9 +1,13 @@
 package model;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class BoardModel {
 
+	BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
     private int height, width;
     private ArrayList<ArrayList<Tile>> tiles = new ArrayList<>();
 
@@ -16,19 +20,18 @@ public class BoardModel {
         return tiles;
     }
 
-    public void populateBoard(String ans) {
+    public void populateBoard(String ans) throws IOException {
         // TODO Auto-generated method stub
-        Scanner s = new Scanner(System.in);
         boolean needCustomNames = ans.equals("Y");
         for (int i = 0; i < width; i++) {
             ArrayList<Tile> temp = new ArrayList<>();
             for (int j = 0; j < height; j++) {
                 String str;
                 if (needCustomNames) {
-                    str = "coordinate " + i + " " + j;
-                } else {
                     System.out.println("Enter name of tile at (" + (i + 1) + ", " + (j + 1) + ")");
-                    str = s.next();
+                    str = BoardModel_br.readLine();
+                } else {
+                    str = "coordinate " + i + " " + j;
                 }
                 temp.add(new Tile(str, i, j));
             }

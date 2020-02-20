@@ -27,7 +27,9 @@
             </Text>
             <ImageView fitHeight="213.0" fitWidth="216.0" layoutX="215.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resources/mono_image.jpg" />
+
+                  <Image url="@../../resources/mono_image.jpg" />
+
                </image>
             </ImageView>
       </children>
