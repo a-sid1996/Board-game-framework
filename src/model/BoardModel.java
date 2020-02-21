@@ -7,7 +7,7 @@ import java.util.*;
 
 public class BoardModel {
 
-	BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
     private int height, width;
     private ArrayList<ArrayList<Tile>> tiles = new ArrayList<>();
 
