@@ -1,9 +1,17 @@
 package model;
 
 import java.util.HashMap;
-
+/*
+ * This method class represents units characteristics, like movement types, life, price, etc. 
+ */
 public class Unit {
 
+	/**
+	 * @param name is a name of the unit
+	 * @param amount is any value associated with the Unit
+	 * @param property stores unit type and its unique property such as House, Hotel
+	 * @param Tile is a tile associated with current unit
+	 */
 	private String name;
 	private int amount;
 	private HashMap<String, String> property;

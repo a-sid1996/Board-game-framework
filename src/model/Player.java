@@ -64,8 +64,8 @@ public class Player {
 		}
 		return null;
 	}
-	
-	public void setMoney(int amt) {
+
+    public void setMoney(int amt) {
 		for(Unit u : this.asset) {
 			if(u.getName().equalsIgnoreCase("money")) {
 				u.setAmount(amt);

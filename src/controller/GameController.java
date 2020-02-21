@@ -72,8 +72,6 @@ public class GameController {
 		
 }
 
-
-
 //Dummy function for future build 
 //	public void performpayment(List<Player> list, Player player, int amount) 
 //	{

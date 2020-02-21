@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PlayerTurnModule<Player> {
+public class PlayerTurnModule<Player> 
+{
 
-	/** Iterator for list. */
-	private Iterator<Player> iterator;
-
-	/** Generic list. */
+	/**
+	 * @param iterator object to iterate over List of players
+	 * @param list of players
+	 */
+	private Iterator<Player>  iterator;
 	private ArrayList<Player> list;
 
 	public PlayerTurnModule(ArrayList<Player> list) {
@@ -19,17 +21,19 @@ public class PlayerTurnModule<Player> {
 
 	public Player next() {
 		// if we get to the end, start again
-		if (!iterator.hasNext()) {
+		if (!iterator.hasNext()) 
+		{
 			iterator = list.iterator();
 		}
 		return iterator.next();
 	}
 
-	public Player update(Player item) {
+	public Player update(Player item) 
+	{
 		Player p = null;
 		while (iterator.hasNext()) {
 			p = iterator.next();
-			if (item.equals(p)) {
+			if (item.equals(p)) {	
 				break;
 			}
 		}
