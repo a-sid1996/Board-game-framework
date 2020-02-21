@@ -51,7 +51,7 @@ public class MenuScreenController {
                 int ySource = Integer.parseInt(br.readLine());
                 int xDest = Integer.parseInt(br.readLine());
                 int yDest = Integer.parseInt(br.readLine());
-                bc.tileConnectCoordinate(xSource, ySource, xDest, yDest);
+                bc.connectTiles(xSource, ySource, xDest, yDest);
                 System.out.println("Tiles connected.");
             }
         } else {
