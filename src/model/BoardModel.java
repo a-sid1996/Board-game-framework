@@ -5,8 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+/**
+ * Board class contains methods related to gaming board. 
+ */
 public class BoardModel {
-
+	
+   /**
+    * @param height is the height of board 
+    * @param width is the width of board
+    * @param tiles is a collection of tiles representated as 
+    */
 	BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
     private int height, width;
     private ArrayList<ArrayList<Tile>> tiles = new ArrayList<>();
@@ -16,6 +24,9 @@ public class BoardModel {
         this.width = width;
     }
 
+    /**
+     * @return is a metric of total tiles in a board
+     */
     public ArrayList<ArrayList<Tile>> getTiles() {
         return tiles;
     }
@@ -83,10 +94,14 @@ public class BoardModel {
 
     }
 
-    public String tileConnectName(String nameSource, String nameDest) {
-        return "Names entered are invaid.";
-    }
 
+    /**
+     * @param xsource is the x coordinate of the first tile
+     * @param ysource is the y coordinate of the first tile
+     * @param xdest is the x coordinate of the second tile 
+     * @param ydest is the y coordinate of the second tile
+     * @return is true if both the tiles are connected or false if both the tiles are not connected
+     */
     public boolean tileConnectCoordinate(int xSource, int ySource, int xDest, int yDest) {
         if (xSource < width && xDest < width && xSource > -1 && ySource > -1 && xDest > -1 && yDest > -1 && (xDest < tiles.size() && xSource < tiles.size()) && (yDest < tiles.get(0).size() && ySource < tiles.get(0).size())) {
             if (ySource < height && yDest < height) {
@@ -97,6 +112,10 @@ public class BoardModel {
         return false;
     }
 
+    /**
+     * @param coordinates stored x and y coordinates passed as a string
+     * @return is a tile located at the coordinates passed
+     */
     public Tile getTile(String coordinates) {
         String[] coo = coordinates.split(" ");
         if (Integer.parseInt(coo[0]) > -1 && Integer.parseInt(coo[1]) > -1 && Integer.parseInt(coo[0]) < height && Integer.parseInt(coo[1]) < width) {
