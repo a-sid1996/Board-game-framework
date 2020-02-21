@@ -1,6 +1,5 @@
-import model.Player;
-import model.PlayerTurnModule;
-import model.Unit;
+package model;
+
 import org.junit.Assert;
 
 import java.util.ArrayList;
@@ -51,7 +50,6 @@ public class PlayerTurnModuleTest {
         Assert.assertEquals(turn.next(), player2);
         Assert.assertEquals(turn.next(), player3);
         Assert.assertEquals(turn.next(), player4);
-
     }
 
 }
