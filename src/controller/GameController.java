@@ -52,10 +52,10 @@ public class GameController {
         // TODO Auto-generated method stub
         for (Player player : list) {
             for (Unit u : units) {
-                if (u.getUnitType().equalsIgnoreCase(Unit.UnitType.MONEY.toString())) {
-                    player.setMoney((int) (u.getAmount() / list.size()));
-                    break;
-                }
+                player.setAsset(new Unit(u.getUnitType(), u.getAmount()/list.size()));
+//                if (u.getUnitType().equalsIgnoreCase(Unit.UnitType.MONEY.toString())) {
+//                    break;
+//                }
             }
         }
     }

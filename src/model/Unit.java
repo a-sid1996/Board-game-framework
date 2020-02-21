@@ -36,6 +36,12 @@ public class Unit {
         this.unitType = unitType;
         this.property = new HashMap<>();
     }
+    
+    public Unit(String unitType, int amount) {
+        this.unitType = unitType;
+        this.property = new HashMap<>();
+        this.amount = amount;    	
+    }
 
     public Tile getTile() {
         return this.tile;

@@ -65,6 +65,16 @@ public class Player {
         }
         return null;
     }
+    
+    public ArrayList<Unit> getAssetList(String unitType) {
+    	ArrayList<Unit> temp = new ArrayList<>();
+    	for(Unit u : this.asset) {
+    		if(u.getUnitType().equalsIgnoreCase(unitType)) {
+    			temp.add(u);
+    		}
+    	}
+    	return temp;
+    }
 
     public boolean deductMoney(int amount) {
         if (amount >= 0) {
