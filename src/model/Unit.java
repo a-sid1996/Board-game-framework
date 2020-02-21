@@ -1,7 +1,7 @@
 package model;
 
 import java.util.HashMap;
-/*
+/**
  * This method class represents units characteristics, like movement types, life, price, etc. 
  */
 public class Unit {
@@ -17,11 +17,17 @@ public class Unit {
 	private HashMap<String, String> property;
 	private Tile tile;
 	
+	/**
+	 * @param is a name of the unit
+	 */
 	public Unit(String name) {
 		this.name = name;
 		this.property = new HashMap<>();
 	}
 	
+	/**
+	 * @return is a tile on which this unit is located
+	 */
 	public Tile getTile() {
 		return this.tile;
 	}
@@ -30,6 +36,9 @@ public class Unit {
 		this.tile = tile;
 	}
 	
+	/**
+	 * @return is an amount associated with this unit
+	 */
 	public int getAmount() {
 		return this.amount;
 	}
@@ -38,6 +47,9 @@ public class Unit {
 		this.amount = amount;
 	}
 	
+	/**
+	 * @return is a name of the unit
+	 */
 	public String getName() {
 		return this.name;
 	}
@@ -46,6 +58,9 @@ public class Unit {
 		this.name = name;
 	}
 	
+	/**
+	 * @return is a map that stores unit type and its unique property such as House, Hotel
+	 */
 	public HashMap<String, String> getProperty() {
 		return this.property;
 	}

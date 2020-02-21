@@ -3,48 +3,52 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a player object and its properties
+ */
 public class Player {
 	/**
 	 * @param name        represents player's name
 	 * @param currentTile shows tiles that are owned by current player.
-	 * @param Balance     represents players possesion or unit. For instance, in
+	 * @param asset       represents players possesion or unit. For instance, in
 	 *                    monopoly it is money and in Risk it is Army/Troops.
 	 * @param score       is an object of Score class.
 	 * @param cardList    stores list of cards player posseses.
 	 */
 
-	// Key attribute which holds the name of the player
 	private String name;
-
-	// key attribute which holds the current location of the player that is set to 1
-	// initially.
 	private ArrayList<Tile> currentTile;
-
-	// key attribute which holds the balance of the player that is set to 1500$
-	// initially.=
 	private ArrayList<Unit> asset;
-
-	// Object of Score class
 	Score score;
-
-	// Object of Card
-	/** Card List */
 	private List<Card> cardList = new ArrayList<Card>();
 
+	/**
+	 * @param name  is a name of a player passed when instantiating the player
+	 *              object
+	 * @param units is an array of units passed when
+	 */
 	public Player(String name, Unit[] units) {
 		this.name = name;
 		this.asset = new ArrayList<>();
-		for(Unit unit : units) {
+		for (Unit unit : units) {
 			Unit u = new Unit(unit.getName());
 			this.asset.add(u);
 		}
 	}
 
-	// Getter method to get the name of the player
+	/**
+	 * @return is a name of the player
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * This method sets the name of the player when a new player object is created
+	 * and at the same time updates the final score module
+	 * 
+	 * @param name is a name of the player
+	 */
 	public void setName(String name) {
 		this.name = name;
 		if (!score.PlayerName.containsKey(this)) {
@@ -53,7 +57,12 @@ public class Player {
 	}
 
 	/**
-	 * @return returns balance of current player
+	 * It will return Unit on a this tile
+	 * 
+	 * @param bal  is the description of the unit that a user want to fetch that is
+	 *             on current tile
+	 * @param tile is the tile owned by a player
+	 * @return returns asset or a unit owned by the current player on a tile passed
 	 * 
 	 */
 	public Unit getAsset(String bal, Tile tile) {
@@ -65,55 +74,65 @@ public class Player {
 		return null;
 	}
 
-    public void setMoney(int amt) {
-		for(Unit u : this.asset) {
-			if(u.getName().equalsIgnoreCase("money")) {
+	/**
+	 * setMoney sets balance possessed by the current user
+	 * 
+	 * @param amt money that a current player should possess
+	 */
+	public void setMoney(int amt) {
+		for (Unit u : this.asset) {
+			if (u.getName().equalsIgnoreCase("money")) {
 				u.setAmount(amt);
 			}
 		}
 	}
-	
+
+	/**
+	 * getMoney returns balance of the current player
+	 * 
+	 * @return amount or balance associated with this player
+	 */
 	public int getMoney() {
-		for(Unit u : this.asset) {
-			if(u.getName().equalsIgnoreCase("money")) {
+		for (Unit u : this.asset) {
+			if (u.getName().equalsIgnoreCase("money")) {
 				return u.getAmount();
 			}
 		}
 		return -1;
 	}
 
-	// Setter method to set the balance of the player
+	/**
+	 * setAsset sets assets possessed by current player such as plot, money, hotel
+	 * or any other unit
+	 * 
+	 * @param is a type of unit that we want to store as a player possession
+	 * @return amount or balance associated with this player
+	 */
 	public void setAsset(Unit balance) {
-
 		this.asset.add(balance);
-
 		if (!score.PlayerBalance.containsKey(this)) {
-			// score.PlayerBalance.put(this, balance);
+			score.PlayerBalance.put(this, this.asset);
 		} else {
 			score.PlayerBalance.put(this, this.asset);
 		}
-
 	}
 
 	/**
 	 * @return returns currentTile of current player
-	 * 
 	 */
 	public ArrayList<Tile> getCurrentTile() {
 		return currentTile;
 	}
 
-	// This method updates the location of the player based on the number rolled by
-	// him.
+	/**
+	 * This method will be called after player will make a move and lands on a tile
+	 * other than its current tile It will simultaneously update score module
+	 * 
+	 * @param diceNumber is a current dice number player got
+	 * @param current    tile is the starting or current position of this player
+	 */
 	public void updateCurrentTile(int diceNumber, Tile currentTile) {
-		/* Logic of set plot needs to be changed */
-		/*
-		 * if(Math.abs(currentPlot+diceNumber)>24) currentPlot=
-		 * (Math.abs(currentPlot+diceNumber))%24; else
-		 * currentPlot=Math.abs(currentPlot+diceNumber);
-		 */
 		this.currentTile.add(currentTile);
-
 		if (!score.PlayerCurrentPosition.containsKey(this)) {
 			score.PlayerCurrentPosition.put(this, this.currentTile);
 		} else {
@@ -129,6 +148,10 @@ public class Player {
 		return this.cardList;
 	}
 
+	/**
+	 * @param card is card purchased by a player and has to added in players possession of cards
+	 * 
+	 */
 	public void setCardList(Card card) {
 		this.cardList.add(card);
 		if (!score.PlayerCards.containsKey(this)) {

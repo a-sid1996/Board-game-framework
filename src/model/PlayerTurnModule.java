@@ -19,6 +19,9 @@ public class PlayerTurnModule<Player>
 		iterator = list.iterator();
 	}
 
+	/**
+	 * @return is a player object whose turn is next 
+	 */
 	public Player next() {
 		// if we get to the end, start again
 		if (!iterator.hasNext()) 
@@ -28,6 +31,10 @@ public class PlayerTurnModule<Player>
 		return iterator.next();
 	}
 
+	/**
+	 * @param item is an object of player whose turn has to be skipped
+	 * @return is a player object after skipping an initial turn
+	 */
 	public Player update(Player item) 
 	{
 		Player p = null;
@@ -40,6 +47,9 @@ public class PlayerTurnModule<Player>
 		return p;
 	}
 
+	/**
+	 * @return is a list of players
+	 */
 	public List<Player> getList() {
 		return list;
 	}
