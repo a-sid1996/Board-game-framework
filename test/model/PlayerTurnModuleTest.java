@@ -5,16 +5,17 @@ import org.junit.Assert;
 import java.util.ArrayList;
 
 public class PlayerTurnModuleTest {
+    Score score = new Score();
 
     @org.junit.Test
     public void updateTurn() {
         Unit[] units = new Unit[2];
         units[0] = new Unit("money");
         units[1] = new Unit("hotel");
-        Player player1 = new Player("player1", units);
-        Player player2 = new Player("player2", units);
-        Player player3 = new Player("player3", units);
-        Player player4 = new Player("player4", units);
+        Player player1 = new Player("player1", units, score);
+        Player player2 = new Player("player2", units, score);
+        Player player3 = new Player("player3", units, score);
+        Player player4 = new Player("player4", units, score);
         ArrayList<Player> players = new ArrayList<>();
         players.add(player1);
         players.add(player2);
@@ -35,10 +36,10 @@ public class PlayerTurnModuleTest {
         units[0] = new Unit("money");
         units[1] = new Unit("hotel");
 
-        Player player1 = new Player("player1", units);
-        Player player2 = new Player("player2", units);
-        Player player3 = new Player("player3", units);
-        Player player4 = new Player("player4", units);
+        Player player1 = new Player("player1", units, score);
+        Player player2 = new Player("player2", units, score);
+        Player player3 = new Player("player3", units, score);
+        Player player4 = new Player("player4", units, score);
         ArrayList<Player> players = new ArrayList<>();
         players.add(player1);
         players.add(player2);

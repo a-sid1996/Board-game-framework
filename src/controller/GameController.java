@@ -14,12 +14,21 @@ import model.Unit;
  */
 public class GameController {
     /**
+<<<<<<< HEAD
+     * list has a list of all the players
+     * bc is an object of Board model
+     * cm is  an object of Card
+     * Score is an object of Score module
+     * turn is an object of Player turn module which is of type player
+     * units is an object of unit class
+=======
      * @param list has a list of all the players
      * @param bc is an object of Board model
      * @param cm is an object of Card
      * @param score is an object of Score module
      * @param turn is an object of Player turn module which is of type player
      * @param units is an object of unit class
+>>>>>>> bdcd5e7c53b32f21d78b755f02219a20f1694aa8
      */
     ArrayList<Player> list = new ArrayList<Player>();
     BoardModel bc;
@@ -52,6 +61,7 @@ public class GameController {
 
         for (Player play : list) {
             System.out.println(play.getName() + ": " + play.getMoney());
+            
         }
 
     }

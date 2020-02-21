@@ -27,19 +27,14 @@ public class Player {
      */
     private List<Card> cardList = new ArrayList<Card>();
 
-    /**
-     * @param name  is a name of a player passed when instantiating the player
-     *              object
-     * @param units is an array of units passed when
-     */
-
-    public Player(String name, Unit[] units) {
+    public Player(String name, Unit[] units, Score score) {
         this.name = name;
         this.asset = new ArrayList<>();
-        for (Unit unit : units) {
-            Unit u = new Unit(unit.getUnitType());
-            this.asset.add(u);
-        }
+//        for (Unit unit : units) {
+//            Unit u = new Unit(unit.getUnitType());
+//            this.asset.add(u);
+//        }
+        this.score = score;
     }
 
     /**
@@ -165,12 +160,12 @@ public class Player {
     public void setAsset(Unit balance) {
 
         this.asset.add(balance);
+        this.score.PlayerBalance.put(this, this.asset);
 
-        if (!score.PlayerBalance.containsKey(this)) {
-            // score.PlayerBalance.put(this, balance);
-        } else {
-            score.PlayerBalance.put(this, this.asset);
-        }
+//        if (!this.score.PlayerBalance.containsKey(this)) {
+//        } else {
+//            this.score.PlayerBalance.put(this, this.asset);
+//        }
 
     }
 
