@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import model.Player;
 import model.PlayerTurnModule;
+import model.Score;
 import model.Unit;
 
 import org.junit.Assert;
@@ -19,11 +20,12 @@ public class TurnModuleTest {
 		Unit[] units = new Unit[2];
 		units[0] = new Unit("money");
 		units[1] = new Unit("hotel");
+		Score score = new Score();
 		
-		Player player1 = new Player("player1", units);
-		Player player2 = new Player("player2", units);
-		Player player3 = new Player("player3", units);
-		Player player4 = new Player("player4", units);
+		Player player1 = new Player("player1", units, score);
+		Player player2 = new Player("player2", units, score);
+		Player player3 = new Player("player3", units, score);
+		Player player4 = new Player("player4", units, score);
 		ArrayList<Player> players = new ArrayList<>();
 		players.add(player1);
 		players.add(player2);

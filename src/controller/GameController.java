@@ -18,7 +18,7 @@ public class GameController {
      * list has a list of all the players
      * bc is an object of Board model
      * cm is  an object of Card
-     * socre is an object of Score module
+     * Score is an object of Score module
      * turn is an object of Player turn module which is of type player
      * units is an object of unit class
      */
@@ -44,6 +44,7 @@ public class GameController {
 
         for (Player play : list) {
             System.out.println(play.getName() + ": " + play.getMoney());
+            
         }
 
     }
@@ -52,7 +53,8 @@ public class GameController {
         // TODO Auto-generated method stub
         for (Player player : list) {
             for (Unit u : units) {
-                player.setAsset(new Unit(u.getUnitType(), u.getAmount()/list.size()));
+            	Unit temp = new Unit(u.getUnitType(), u.getAmount()/list.size());
+                player.setAsset(temp);
 //                if (u.getUnitType().equalsIgnoreCase(Unit.UnitType.MONEY.toString())) {
 //                    break;
 //                }

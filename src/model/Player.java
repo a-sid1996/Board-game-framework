@@ -33,13 +33,14 @@ public class Player {
      */
     private List<Card> cardList = new ArrayList<Card>();
 
-    public Player(String name, Unit[] units) {
+    public Player(String name, Unit[] units, Score score) {
         this.name = name;
         this.asset = new ArrayList<>();
-        for (Unit unit : units) {
-            Unit u = new Unit(unit.getUnitType());
-            this.asset.add(u);
-        }
+//        for (Unit unit : units) {
+//            Unit u = new Unit(unit.getUnitType());
+//            this.asset.add(u);
+//        }
+        this.score = score;
     }
 
     // Getter method to get the name of the player
@@ -123,12 +124,12 @@ public class Player {
     public void setAsset(Unit balance) {
 
         this.asset.add(balance);
+        this.score.PlayerBalance.put(this, this.asset);
 
-        if (!score.PlayerBalance.containsKey(this)) {
-            // score.PlayerBalance.put(this, balance);
-        } else {
-            score.PlayerBalance.put(this, this.asset);
-        }
+//        if (!this.score.PlayerBalance.containsKey(this)) {
+//        } else {
+//            this.score.PlayerBalance.put(this, this.asset);
+//        }
 
     }
 

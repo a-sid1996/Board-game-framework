@@ -110,7 +110,7 @@ public class MenuScreenController {
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of player-");
             String name = br.readLine();
-            Player player = new Player(name, this.units);
+            Player player = new Player(name, this.units, this.score);
             list.add(player);
         }
         System.out.println("Players created.");
