@@ -51,7 +51,6 @@ public class PlayerTurnModuleTest {
         Assert.assertEquals(turn.next(), player2);
         Assert.assertEquals(turn.next(), player3);
         Assert.assertEquals(turn.next(), player4);
-
     }
 
 }
