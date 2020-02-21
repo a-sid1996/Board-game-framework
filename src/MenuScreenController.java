@@ -58,6 +58,7 @@ public class MenuScreenController {
             bc.setConnections();
         }
         System.out.println("Board created.");
+        System.out.println(bc);
         b1 = true;
     }
 
