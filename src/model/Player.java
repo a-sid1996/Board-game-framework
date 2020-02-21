@@ -129,6 +129,12 @@ public class Player {
         return currentTile;
     }
 
+    public void removeCurrentTile(Tile currentTile) {
+    	if (this.currentTile.contains(currentTile)) {
+    		this.currentTile.remove(currentTile);
+    	}
+    }
+    
     // This method updates the location of the player based on the number rolled by
     // him.
     public void updateCurrentTile(int diceNumber, Tile currentTile) {
