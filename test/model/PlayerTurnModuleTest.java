@@ -1,6 +1,5 @@
-import model.Player;
-import model.PlayerTurnModule;
-import model.Unit;
+package model;
+
 import org.junit.Assert;
 
 import java.util.ArrayList;

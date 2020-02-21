@@ -1,5 +1,5 @@
-import model.Player;
-import model.Unit;
+package model;
+
 import org.junit.Assert;
 
 public class PlayerTest {

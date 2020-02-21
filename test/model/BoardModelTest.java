@@ -1,5 +1,5 @@
-import model.BoardModel;
-import model.Tile;
+package model;
+
 import org.junit.Assert;
 
 import java.util.ArrayList;
