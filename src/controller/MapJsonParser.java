@@ -79,13 +79,19 @@ public class MapJsonParser {
 				tempRent = tempRent.replace("[", "");
 				tempRent = tempRent.replace("]", "");
 				String vals[] = tempRent.split(",");
-				ArrayList<Unit> tempList = new ArrayList<Unit>();
+				ArrayList<Integer> rentList = new ArrayList<Integer>();
+				
+				for(String s: vals) 
+				{
+					rentList.add(Integer.parseInt(s));
+				}
 
 				System.out.println("name is " + name);
 				System.out.println("x is  " + x);
 				System.out.println("y is " + y);
 				System.out.println("cost is " + cost);
 				System.out.println("house is  " + house);
+				System.out.println("rent is "+rentList);
 
 				Tile tile1 = new Tile(name, x, y);
 				tile1.setValue("Cost", cost);
@@ -121,7 +127,7 @@ public class MapJsonParser {
 				System.out.println("y is " + y);
 
 				Tile tile3 = new Tile(name, x, y);
-				// tile0.setValue("Cost", cost);
+		
 				TileList.add(tile3);
 
 			}
