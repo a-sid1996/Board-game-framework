@@ -1,3 +1,4 @@
+package resources;
 
 
 import java.io.BufferedReader;
@@ -16,7 +17,7 @@ import model.PlayerTurnModule;
 import model.Score;
 import model.Unit;
 
-public class MenuScreenController {
+public class MenuScreenController1 {
 
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ArrayList<Player> list = new ArrayList<Player>();
