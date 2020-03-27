@@ -30,10 +30,10 @@ public class Player {
     public Player(String name, Unit[] units, Score score) {
         this.name = name;
         this.asset = new ArrayList<>();
-//        for (Unit unit : units) {
-//            Unit u = new Unit(unit.getUnitType());
-//            this.asset.add(u);
-//        }
+        for (Unit unit : units) {
+            Unit u = new Unit(unit.getUnitType());
+            this.asset.add(u);
+        }
         this.score = score;
     }
 

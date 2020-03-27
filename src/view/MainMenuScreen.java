@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class MainMenuScreen extends Application {
 
     public static void main(String[] args) {
@@ -26,5 +27,4 @@ public class MainMenuScreen extends Application {
             e.printStackTrace();
         }
     }
-
 }

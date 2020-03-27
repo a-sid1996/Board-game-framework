@@ -19,7 +19,7 @@ import model.Unit;
 
 public class MenuScreenController1 {
 
-	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ArrayList<Player> list = new ArrayList<Player>();
     BoardModel bc;
     Card cm;
@@ -59,6 +59,7 @@ public class MenuScreenController1 {
             bc.setConnections();
         }
         System.out.println("Board created.");
+        System.out.println(bc);
         b1 = true;
     }
 
@@ -122,19 +123,22 @@ public class MenuScreenController1 {
     @FXML
     void scoreBtnClick(ActionEvent event) {
         score = new Score();
+        System.out.println("Score Module initiated");
         b4 = true;
     }
 
     @FXML
     void turnBtnClick(ActionEvent event) {
         turn = new PlayerTurnModule<Player>(list);
+        System.out.println("Turn Module initiated");
         b5 = true;
     }
 
     @FXML
     void unitBtnClick(ActionEvent event) throws IOException {
         System.out.println("Enter number of units");
-        int num = Integer.parseInt(br.readLine());;
+        int num = Integer.parseInt(br.readLine());
+        ;
         units = new Unit[num];
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of this unit");

@@ -1,3 +1,6 @@
+/**
+ * This model package contains all the classes that comes under model module under MVC architecture.
+ */
 package model;
 
 import java.io.BufferedReader;
