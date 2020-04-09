@@ -1,5 +1,5 @@
-import model.BoardModel;
-import model.Tile;
+package model;
+
 import org.junit.Assert;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class BoardModelTest {
         } catch (Exception ex) {
             Assert.assertNull(ex);
         }
-        ArrayList<ArrayList<Tile>> tiles = bm.getTiles();
+        ArrayList<ArrayList<Tile>> tiles = bm.getBoard();
         for (int i = 0; i < width; i++) {
             Assert.assertNotNull(tiles.get(i));
             ArrayList<Tile> temp = tiles.get(i);
@@ -37,23 +37,23 @@ public class BoardModelTest {
         } catch (Exception ex) {
             Assert.assertNull(ex);
         }
-        boolean result = bm.tileConnectCoordinate(0, 0, 1, 0);
+        boolean result = bm.connectTiles(0, 0, 1, 0);
         Assert.assertTrue(result);
-        result = bm.tileConnectCoordinate(width, 0, 0, 0);
+        result = bm.connectTiles(width, 0, 0, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, width, 0, 0);
+        result = bm.connectTiles(0, width, 0, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, 0, height, 0);
+        result = bm.connectTiles(0, 0, height, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, 0, 0, height);
+        result = bm.connectTiles(0, 0, 0, height);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(-1, 0, 0, 0);
+        result = bm.connectTiles(-1, 0, 0, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, -1, 0, 0);
+        result = bm.connectTiles(0, -1, 0, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, 0, -1, 0);
+        result = bm.connectTiles(0, 0, -1, 0);
         Assert.assertFalse(result);
-        result = bm.tileConnectCoordinate(0, 0, 0, -1);
+        result = bm.connectTiles(0, 0, 0, -1);
         Assert.assertFalse(result);
     }
 

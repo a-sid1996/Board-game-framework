@@ -121,12 +121,8 @@ public class Tile {
     /**
      * @return is a list of all the neighbours of the current tile
      */
-    public ArrayList<String> getNeighbours() {
-        ArrayList<String> temp = new ArrayList<String>();
-        for (Tile i : neighbourTile) {
-            temp.add(i.nameOfTile);
-        }
-        return temp;
+    public ArrayList<Tile> getNeighbours() {
+        return neighbourTile;
     }
 
     public void addNeigbour(Tile tile) {

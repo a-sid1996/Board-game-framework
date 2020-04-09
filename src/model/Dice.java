@@ -19,16 +19,13 @@ public class Dice {
      * @return Method returns random numbers between 1 and appropriate number as per
      * noOfDice added
      */
-    public static int diceroll(int noOfDice) {
+    public static int[] diceroll(int noOfDice) {
         Random rand = new Random();
-        int sum = 0;
+        int[] result = new int[noOfDice];
         for (int i = 0; i < noOfDice; i++) {
-            int diceOutput = rand.nextInt(5) + 1;
-            sum = +diceOutput;
+            result[i] = rand.nextInt(5) + 1;
         }
-        return sum;
+        return result;
     }
-
-
 }
 

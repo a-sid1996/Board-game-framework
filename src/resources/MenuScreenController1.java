@@ -1,3 +1,4 @@
+package resources;
 
 
 import java.io.BufferedReader;
@@ -16,9 +17,9 @@ import model.PlayerTurnModule;
 import model.Score;
 import model.Unit;
 
-public class MenuScreenController {
+public class MenuScreenController1 {
 
-	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ArrayList<Player> list = new ArrayList<Player>();
     BoardModel bc;
     Card cm;
@@ -51,13 +52,14 @@ public class MenuScreenController {
                 int ySource = Integer.parseInt(br.readLine());
                 int xDest = Integer.parseInt(br.readLine());
                 int yDest = Integer.parseInt(br.readLine());
-                bc.tileConnectCoordinate(xSource, ySource, xDest, yDest);
+                bc.connectTiles(xSource, ySource, xDest, yDest);
                 System.out.println("Tiles connected.");
             }
         } else {
             bc.setConnections();
         }
         System.out.println("Board created.");
+        System.out.println(bc);
         b1 = true;
     }
 
@@ -110,7 +112,7 @@ public class MenuScreenController {
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of player-");
             String name = br.readLine();
-            Player player = new Player(name, this.units);
+            Player player = new Player(name, this.units, this.score);
             list.add(player);
         }
         System.out.println("Players created.");
@@ -121,19 +123,22 @@ public class MenuScreenController {
     @FXML
     void scoreBtnClick(ActionEvent event) {
         score = new Score();
+        System.out.println("Score Module initiated");
         b4 = true;
     }
 
     @FXML
     void turnBtnClick(ActionEvent event) {
         turn = new PlayerTurnModule<Player>(list);
+        System.out.println("Turn Module initiated");
         b5 = true;
     }
 
     @FXML
     void unitBtnClick(ActionEvent event) throws IOException {
         System.out.println("Enter number of units");
-        int num = Integer.parseInt(br.readLine());;
+        int num = Integer.parseInt(br.readLine());
+        ;
         units = new Unit[num];
         for (int i = 0; i < num; i++) {
             System.out.println("Enter name of this unit");
