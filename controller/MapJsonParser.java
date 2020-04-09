@@ -1,11 +1,13 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeMap;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import model.Tile;
 import model.Unit;
@@ -13,7 +15,7 @@ import model.Unit;
 public class MapJsonParser {
 	private static final Tile Null = null;
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String args[]) throws Exception {
 
 		ArrayList<Tile> TileList = new ArrayList<Tile>();
 		String jsonInput = "{\r\n" + 
@@ -97,7 +99,8 @@ public class MapJsonParser {
 				"				 \"e_cost\": \"120\",\r\n" + 
 				"				 \"f_rent\": \"[8,40,100,300,450,600]\",\r\n" + 
 				"				 \"g_house\": \"50\"\r\n" + 
-				"				 },{\r\n" + 
+				"				 },\r\n" + 
+				"				 {\r\n" + 
 				"				 \"a_name\": \"Jail\",\r\n" + 
 				"				 \"b_type\": \"jail\",\r\n" + 
 				"				 \"c_x\": \"0\",\r\n" + 
