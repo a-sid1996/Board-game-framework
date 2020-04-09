@@ -89,8 +89,7 @@ public class ConcreteCards {
 	       case("Advance to go. Collect 200$ from bank") :
 	       {
 	    	   gameController.fortification(banker,currentPlayer, 200);
-	       }
-	       	    
+	       }     	    
 	    }
 		
 		
