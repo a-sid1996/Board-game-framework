@@ -90,7 +90,7 @@ public class GameController {
 	 * @param player2 is a player who is receiving an asset
 	 * @param amount is the money to be transferred between players
 	 */
-	private void fortification(Player player1, Player player2, int amount) 
+	public void fortification(Player player1, Player player2, int amount) 
 	{
 			if (player1.getMoney() > amount && player1.getMoney() > 0 && amount > 0) 
 			{
