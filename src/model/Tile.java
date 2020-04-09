@@ -15,15 +15,17 @@ public class Tile {
      * @param CurrentPlayer defines current player who has landed on this tile.
      * @param mainPlayer is the player who owns this tile.
      */
+	
     private int x, y;
     private String nameOfTile;
-    private HashMap<String, Integer> internalValue;
+    private HashMap<String, Integer> internalValue = new HashMap<String, Integer>();
     private ArrayList<Unit> unit = new ArrayList<Unit>();
     private ArrayList<Tile> neighbourTile = new ArrayList<Tile>();
     private HashMap<String, Integer> playerLog;
     private Player currentPlayer;
     private String mainPlayer;
-
+    
+    
 
     /**
      * @param nameOfTile is a unique name assigned to current tile

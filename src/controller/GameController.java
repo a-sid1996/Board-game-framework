@@ -64,47 +64,22 @@ public class GameController {
             System.out.println(play.getName() + ": " + play.getMoney());
 
         }
-
-    }
-
-    /**
-     * It starts the execution of reinforcement phase.
-     * Most common reinforcement strategy in all board game is the distribution of units equally among players
-     *
-     * @param bc    is an object of board model
-     * @param cm    is an object of card model
-     * @param list  represents list of player objects playing the game
-     * @param turn  represents current turn of the player and he will roll the dice
-     * @param units are total units used in game
-     */
-    private void reinforcement(ArrayList<Player> list, Unit[] units) {
-        // TODO Auto-generated method stub
-        for (Player player : list) {
-            for (Unit u : units) {
-                player.addMoney((u.getAmount() / list.size()));
-                /*if (u.getUnitType().equalsIgnoreCase(Unit.UnitType.MONEY.toString())) {
-                    break;
-                }*/
-            }
-        }
-    }
-
-    /**
-     * It starts the execution of fortification phase.
-     * Most common fortification strategy in all board game is passing of assets between players according to the rules of the game.
-     *
-     * @param player1 is a player who is giving an  asset
-     * @param player2 is a player who is receiving an asset
-     * @param amount  is the money to be transferred between players
-     * @return true: if fortification was successful. false otherwise.
-     */
-    public boolean fortification(Player player1, Player player2, int amount) {
-        boolean isMoneyDeductedFromPlayer1 = player1.deductMoney(amount);
-        if (isMoneyDeductedFromPlayer1) {
-            return player2.addMoney(amount);
-        }
-        return false;
-    }
+	/**
+	 * It starts the execution of fortification phase. 
+	 * Most common fortification strategy in all board game is passing of assets between players according to the rules of the game.
+	 * 
+	 * @param player1 is a player who is giving an  asset
+	 * @param player2 is a player who is receiving an asset
+	 * @param amount is the money to be transferred between players
+	 */
+	public void fortification(Player player1, Player player2, int amount) 
+	{
+			if (player1.getMoney() > amount && player1.getMoney() > 0 && amount > 0) 
+			{
+				player1.setMoney(player1.getMoney() - amount);
+				player2.setMoney(player2.getMoney() + amount);
+			}
+	}
 }
 
 /*Dummy function for future build
