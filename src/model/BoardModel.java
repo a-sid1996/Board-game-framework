@@ -19,38 +19,43 @@ public class BoardModel {
      */
     private BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
     private int height, width;
-    private ArrayList<ArrayList<Tile>> board = new ArrayList<>();
+    private ArrayList<Tile> board = new ArrayList<>();
+    private int num;
 
-    public BoardModel(int height, int width) {
-        this.height = height;
-        this.width = width;
-    }
+//    public BoardModel(int num) {
+//        this.height = height;
+//        this.width = width;
+//    }
 
     /**
      * @return is a metric of total board in a board
      */
-    public ArrayList<ArrayList<Tile>> getBoard() {
+    public ArrayList<Tile> getBoard() {
         return board;
     }
-
-    public void populateBoard(String ans) throws IOException {
-        // TODO Auto-generated method stub
-        boolean needCustomNames = ans.equals("Y");
-        for (int i = 0; i < width; i++) {
-            ArrayList<Tile> temp = new ArrayList<>();
-            for (int j = 0; j < height; j++) {
-                String str;
-                if (needCustomNames) {
-                    System.out.println("Enter name of tile at (" + (i + 1) + ", " + (j + 1) + ")");
-                    str = BoardModel_br.readLine();
-                } else {
-                    str = "coordinate " + i + " " + j;
-                }
-                temp.add(new Tile(str, i, j));
-            }
-            board.add(temp);
-        }
+    
+    public void setBoard(ArrayList<Tile> board) {
+    	this.board = board;
     }
+    
+//    public void populateBoard(String ans) throws IOException {
+//        // TODO Auto-generated method stub
+//        boolean needCustomNames = ans.equals("Y");
+//        for (int i = 0; i < width; i++) {
+//            ArrayList<Tile> temp = new ArrayList<>();
+//            for (int j = 0; j < height; j++) {
+//                String str;
+//                if (needCustomNames) {
+//                    System.out.println("Enter name of tile at (" + (i + 1) + ", " + (j + 1) + ")");
+//                    str = BoardModel_br.readLine();
+//                } else {
+//                    str = "coordinate " + i + " " + j;
+//                }
+//                temp.add(new Tile(str, i, j));
+//            }
+//            board.add(temp);
+//        }
+//    }
 
 
     /**
@@ -63,13 +68,21 @@ public class BoardModel {
     }
 
     public Tile getTile(int row, int column) {
-        if (row >= 0 && row < board.size()) {
-            ArrayList<Tile> boardRow = getBoard().get(row);
-            if (column >= 0 && column < boardRow.size()) {
-                return boardRow.get(column);
-            }
-        }
-        return null;
+    	
+    	for(Tile tile : board) {
+    		if(tile.getTileCoordinates().equals(row + " " + column)) {
+    			return tile;
+    		}
+    	}
+		return null;
+    	
+//        if (row >= 0 && row < board.size()) {
+//            ArrayList<Tile> boardRow = getBoard().get(row);
+//            if (column >= 0 && column < boardRow.size()) {
+//                return boardRow.get(column);
+//            }
+//        }
+//        return null;
     }
 
     public void setConnections() {

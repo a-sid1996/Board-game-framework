@@ -55,7 +55,7 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <ComboBox fx:id="playerNumber" layoutX="320.0" layoutY="128.0" prefWidth="150.0" promptText="number of players" />
-            <Button layoutX="284.0" layoutY="198.0" mnemonicParsing="false" text="Start game" />
+            <Button layoutX="284.0" layoutY="198.0" mnemonicParsing="false" onAction="#startGameClick" text="Start game" />
             <TextField fx:id="mapLocation" layoutX="320.0" layoutY="73.0" prefHeight="26.0" prefWidth="150.0" />
             <Text layoutX="213.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Map" wrappingWidth="108.2640380859375" />
             <Text layoutX="148.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select number of players" />
