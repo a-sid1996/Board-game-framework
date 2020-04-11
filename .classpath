@@ -8,5 +8,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/Monoply_temp/Board-game-framework/src/resources/icepdf-viewer.jar"/>
 	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/Monoply_temp/Board-game-framework/src/resources/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/commons-io-2.6/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/commons-io-2.6/commons-io-2.6-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

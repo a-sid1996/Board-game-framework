@@ -18,8 +18,9 @@ public class Tile {
 	
     private int x, y;
     private String nameOfTile;
+    private String typeOfTile;
     private HashMap<String, Integer> internalValue = new HashMap<String, Integer>();
-    private ArrayList<Unit> unit = new ArrayList<Unit>();
+	private ArrayList<Unit> unit = new ArrayList<Unit>();
     private ArrayList<Tile> neighbourTile = new ArrayList<Tile>();
     private HashMap<String, Integer> playerLog;
     private Player currentPlayer;
@@ -55,7 +56,8 @@ public class Tile {
     public int getValue(String key) {
         return internalValue.get(key);
     }
-
+    
+ 
     public void setPlayer(Player player) {
 
         this.currentPlayer = player;
@@ -132,6 +134,23 @@ public class Tile {
     public void removeNeigbour(Tile tile) {
         neighbourTile.remove(tile);
     }
+
+	public String getTypeOfTile() {
+		return typeOfTile;
+	}
+
+	public void setTypeOfTile(String typeOfTile) {
+		this.typeOfTile = typeOfTile;
+	}
+	
+	public HashMap<String, Integer> getInternalValue() {
+		return internalValue;
+	}
+
+
+
+    
+
 
 
 }
