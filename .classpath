@@ -6,7 +6,13 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/Monoply_temp/Board-game-framework/src/resources/icepdf-viewer.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kjagani/OneDrive - Laurentide Controls/Desktop/Monoply_temp/Board-game-framework/src/resources/java-json.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFx">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/15149/eclipse-workspace/Monopoly/src/resources/icepdf-viewer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/15149/eclipse-workspace/Monopoly/src/resources/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/15149/Desktop/Concordia/SOEN 6441/Board-game-framework/src/resources/org.apache.commons.io.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

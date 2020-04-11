@@ -29,7 +29,6 @@ public class GameController {
 	GameController gc;
 	Score score;
 	PlayerTurnModule<Player> turn;
-	Unit[] units;
 
 	/**
 	 * It starts the execution of the startup phase. starts reinforcement phase
@@ -38,20 +37,17 @@ public class GameController {
 	 * @param cm is an object of card model
 	 * @param list represents list of player objects playing the game
 	 * @param turn represents current turn of the player and he will roll the dice
-	 * @param units are total units used in game
 	 * 
 	 */
-	public GameController(BoardModel bc, Card cm, ArrayList<Player> list, Score score, PlayerTurnModule<Player> turn,
-			Unit[] units) {
+	public GameController(BoardModel bc, Card cm, ArrayList<Player> list, Score score, PlayerTurnModule<Player> turn) {
 		// TODO Auto-generated constructor stub
 		this.bc = bc;
 		this.cm = cm;
 		this.list = list;
 		this.score = score;
 		this.turn = turn;
-		this.units = units;
 		
-		reinforcement(list, units);
+//		reinforcement(list, units);
 
 		for (Player play : list) {
 			System.out.println(play.getName() + ": " + play.getMoney());
