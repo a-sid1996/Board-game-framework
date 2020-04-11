@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeMap;
@@ -19,8 +20,8 @@ public class MapJsonParser {
 	private static final Tile Null = null;
 
 //	public static void main(String args[]) throws Exception {
-	public ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException {
-		ArrayList<Tile> TileList = new ArrayList<Tile>();
+	public static ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException {
+		final ArrayList<Tile> TileList = new ArrayList<Tile>();
 		String jsonInput = FileUtils.readFileToString(new File(jsonInput1));
 		JSONObject outerObject = new JSONObject(jsonInput);
 		JSONObject innerObject = outerObject.getJSONObject("JObjects");
