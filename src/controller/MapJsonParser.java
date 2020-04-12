@@ -21,7 +21,7 @@ public class MapJsonParser {
 	static  ArrayList<Tile> TileList = new ArrayList<Tile>();
 
 //	public static void main(String args[]) throws Exception {
-	public static ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException, InvalidMapException {
+	public ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException, InvalidMapException {
 		
 		String jsonInput = FileUtils.readFileToString(new File(jsonInput1));
 		JSONObject outerObject = new JSONObject(jsonInput);
@@ -240,18 +240,7 @@ public class MapJsonParser {
 				TileList.add(tile);
 
 			}	
-
-		}
-		System.out.println("Total tile objects created :  " +TileList.size());
-		
-			for(Tile tile : TileList) 
-			{
-				System.out.println(tile.getTileName());
-				System.out.println(tile.getTileCoordinates());
-				
-				System.out.println("-------------");
-			}
-		
+		}		
 		return TileList;
 		
 	}

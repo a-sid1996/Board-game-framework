@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 
 public class MainScreenController  {
 	
@@ -23,7 +24,7 @@ public class MainScreenController  {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/newGame.fxml"));
             Parent root = (Parent) loader.load();
             Scene newScene = new Scene(root);
-            Stage newStage = new Stage();
+            Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
             newStage.setScene(newScene);
             newStage.show();
         } catch (Exception e) {
