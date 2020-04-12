@@ -1,40 +1,46 @@
-package controller;
+package resources;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStream;
+import org.apache.commons.io.*;
+import org.apache.commons.io.IOUtils;
+
 import model.Tile;
 import model.Unit;
 
-public class MapJsonParser {
-	private static final Tile Null = null;
-	static  ArrayList<Tile> TileList = new ArrayList<Tile>();
 
-//	public static void main(String args[]) throws Exception {
-	public static ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException, InvalidMapException {
+public class maptest {
+	private static final Tile Null = null;
+	public static ArrayList<Tile> TileList = new ArrayList<Tile>();
+	
+	public static void main(String args[]) throws Exception {
 		
-		String jsonInput = FileUtils.readFileToString(new File(jsonInput1));
-		JSONObject outerObject = new JSONObject(jsonInput);
+		File f = new File("C:\\Users\\kjagani\\OneDrive - Laurentide Controls\\Desktop\\Monoply_temp\\Board-game-framework\\src\\controller\\FinalMapFile.json");
+		
+		InputStream is = new FileInputStream("C:\\Users\\kjagani\\OneDrive - Laurentide Controls\\Desktop\\Monoply_temp\\Board-game-framework\\src\\controller\\FinalMapFile.json");
+        String jsonTxt = IOUtils.toString(is, "UTF-8");
+       // System.out.println(jsonTxt);
+		
+		// "I want to iterate though the objects in the array..."
+		JSONObject outerObject = new JSONObject(jsonTxt);
 		JSONObject innerObject = outerObject.getJSONObject("JObjects");
 		JSONArray jsonArray = innerObject.getJSONArray("JArray1");
-		for (int i = 0, size = jsonArray.length(); i < size; i++) 
-		{
+		for (int i = 0, size = jsonArray.length(); i < size; i++) {
 			JSONObject objectInArray = jsonArray.getJSONObject(i);
 			String[] elementNames = JSONObject.getNames(objectInArray);
-
 			TreeMap<String, Object> tmap = new TreeMap<String, Object>();
-			for (String elementName : elementNames) 
-			{
+			for (String elementName : elementNames) {
 				String value = objectInArray.getString(elementName);
 				boolean flag = true;
 				//System.out.println(value.length());
@@ -124,13 +130,14 @@ public class MapJsonParser {
 			}
 			
 			Tile tile = null;
-			
+			System.out.println(tmap);
 			if (tmap.get("b_type").equals("go")) {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("go");
 				TileList.add(tile);
 
 			}
@@ -139,7 +146,7 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				int house = Integer.parseInt((String) tmap.get("g_house"));
 				String tempRent = (String) tmap.get("f_rent");
@@ -153,7 +160,8 @@ public class MapJsonParser {
 					rentList.add(Integer.parseInt(s));
 				}
 				
-				tile = new Tile(name, x, y);				
+				tile = new Tile(name, x, y);	
+				tile.setTypeOfTile("property");
 				tile.setValue("Cost", cost);
 				tile.setValue("house", house);
 				tile.setValue("rent1", rentList.get(0));
@@ -170,8 +178,9 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("communit-chest");
 				TileList.add(tile);
 
 			}
@@ -180,9 +189,10 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
-				tile = new Tile(name, x, y);		
+				tile = new Tile(name, x, y);	
+				tile.setTypeOfTile("tax");
 				TileList.add(tile);
 
 			}
@@ -191,9 +201,10 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("railroad");
 				tile.setValue("Cost", cost);
 				TileList.add(tile);
 
@@ -203,8 +214,9 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("chance");
 				TileList.add(tile);
 
 			}
@@ -213,8 +225,9 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("go-to-jail");
 				TileList.add(tile);
 
 			}
@@ -223,36 +236,36 @@ public class MapJsonParser {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("utility");
 				tile.setValue("Cost", cost);
 				TileList.add(tile);
 
 			}
-
+      
 			else if (tmap.get("b_type").equals("free-parking")) {
 
 				String name = (String) tmap.get("a_name");
 				int x = Integer.parseInt((String) tmap.get("c_x"));
-				int y = Integer.parseInt((String) tmap.get("d_y"));
+				int y = Integer.parseInt((String) tmap.get("c_x"));
 				tile = new Tile(name, x, y);
+				tile.setTypeOfTile("free-parking");
 				TileList.add(tile);
 
 			}	
 
 		}
 		System.out.println("Total tile objects created :  " +TileList.size());
-		
-			for(Tile tile : TileList) 
-			{
-				System.out.println(tile.getTileName());
-				System.out.println(tile.getTileCoordinates());
-				
-				System.out.println("-------------");
-			}
-		
-		return TileList;
+//		for(Tile tile : TileList) 
+//		{
+//			System.out.println(tile.getTileName());
+//			System.out.println(tile.getTileCoordinates());
+//			
+//			System.out.println("-------------");
+//		}
+//	// new HAshMap("name of tile" , Tile);
 		
 	}
 }

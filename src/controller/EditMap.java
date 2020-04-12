@@ -11,7 +11,7 @@ public class EditMap {
 
 	BoardModel boardModel;
 	MapJsonParser map;
-	public static ArrayList<Tile> al = new ArrayList<Tile>(MapJsonParser.TileList);
+	static ArrayList<Tile> al = new ArrayList<Tile>(MapJsonParser.TileList);
 	
 	public static void EditValues()
 	{
