@@ -8,6 +8,7 @@ import model.Card;
 import model.Player;
 import model.PlayerTurnModule;
 import model.Score;
+import model.Tile;
 import model.Unit;
 
 /**
@@ -48,6 +49,34 @@ public class GameController {
 		this.turn = turn;
 	}
 
+	public Player nextPlayer() {
+		return turn.next();
+	}
+
+	public void movePlayer(Player p, int result) {
+		// TODO Auto-generated method stub
+		for(Player player : list) {
+			if(player == p) {
+				Tile t = p.getCurrentTile().get(0);
+				
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * It starts the execution of reinforcement phase. 
 	 * Most common reinforcement strategy in all board game is the distribution of units equally among players 

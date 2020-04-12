@@ -126,11 +126,12 @@ public class newGameController {
 	        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	        newStage.setScene(newScene);
 	        newStage.show();
+	        gameScreenController controller = loader.getController();
+	        controller.setGameController(gc);
+
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
-
-		
 	}
 
 }
