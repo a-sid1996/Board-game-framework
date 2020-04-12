@@ -45,14 +45,7 @@ public class GameController {
 		this.cm = cm;
 		this.list = list;
 		this.score = score;
-		this.turn = turn;
-		
-//		reinforcement(list, units);
-
-		for (Player play : list) {
-			System.out.println(play.getName() + ": " + play.getMoney());
-		}
-
+		this.turn = turn;		
 	}
 
 	/**
