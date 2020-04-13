@@ -1,13 +1,19 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import model.BoardModel;
 import model.Card;
 import model.Player;
 import model.PlayerTurnModule;
 import model.Score;
+import model.Tile;
 import model.Unit;
 
 /**
@@ -26,7 +32,6 @@ public class GameController {
 	ArrayList<Player> list = new ArrayList<Player>();
 	BoardModel bc;
 	Card cm;
-	GameController gc;
 	Score score;
 	PlayerTurnModule<Player> turn;
 
@@ -46,15 +51,58 @@ public class GameController {
 		this.list = list;
 		this.score = score;
 		this.turn = turn;
-		
-//		reinforcement(list, units);
-
-		for (Player play : list) {
-			System.out.println(play.getName() + ": " + play.getMoney());
-		}
-
 	}
 
+	public Player nextPlayer() {
+		return turn.next();
+	}
+	
+	public Player getPlayer(Player player) {
+		return list.get(list.indexOf(player));
+	}
+	
+	public void movePlayer(Player p, int result, GameController gc) throws IOException {
+		// TODO Auto-generated method stub
+	//	for(Player player : list) {
+	//		if(player == p) {
+		Tile resultTile;
+		if(bc.getBoard().size() <= bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result) {
+			p.addMoney(200);
+			resultTile = bc.getBoard().get( bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result - bc.getBoard().size());
+		} else {
+			resultTile = bc.getBoard().get( bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result);
+		}
+		p.updateCurrentTile(resultTile, 1);
+		p.removeCurrentTile(p.getCurrentTile().get(1));
+		
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/offerScreen.fxml"));
+        Parent root = (Parent) loader.load();
+        Scene newScene = new Scene(root);
+        Stage newStage = new Stage();
+        newStage.setScene(newScene);
+        offerScreenController os = loader.getController();
+        os.setOfferType(resultTile, p);
+        os.setController(gc);
+        newStage.showAndWait();
+	}
+
+		//}
+	//}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * It starts the execution of reinforcement phase. 
 	 * Most common reinforcement strategy in all board game is the distribution of units equally among players 

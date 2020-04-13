@@ -12,9 +12,9 @@ public class PlayerTurnModule<Player>
 	 * @param list of players
 	 */
 	private Iterator<Player>  iterator;
-	private ArrayList<Player> list;
+	private List<Player> list;
 
-	public PlayerTurnModule(ArrayList<Player> list) {
+	public PlayerTurnModule(List<Player> list) {
 		this.list = list;
 		iterator = list.iterator();
 	}

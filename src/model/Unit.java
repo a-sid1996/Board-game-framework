@@ -7,7 +7,7 @@ import java.util.HashMap;
  */
 public class Unit {
     public enum UnitType {
-        ARMY("army"), HOTEL("hotel"), MONEY("money");
+        PROPERTY("property"), HOTEL("hotel"), MONEY("money");
 
         public String unitType;
 
@@ -35,9 +35,10 @@ public class Unit {
     /**
      * @param is a name of the unit
      */
-    public Unit(String unitType) {
+    public Unit(String unitType, Tile tile) {
         this.unitType = unitType;
         this.property = new HashMap<>();
+        this.tile = tile;
     }
 
     public Unit(String unitType, int amount) {

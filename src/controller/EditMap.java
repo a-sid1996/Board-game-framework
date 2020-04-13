@@ -34,7 +34,7 @@ public class EditMap {
 		
 		for(Tile tile : al)
 		{
-			String type = tile.getTypeOfTile();
+			String type = tile.getType();
 			if(type.equalsIgnoreCase("Property"))
 			{
 			   AvenuePlots.add(tile.getTileName());
@@ -43,7 +43,7 @@ public class EditMap {
 		
 		for(Tile tile : al)
 		{
-			String type = tile.getTypeOfTile();
+			String type = tile.getType();
 			if(type.equalsIgnoreCase("tax") || type.equalsIgnoreCase("railroad") || type.equalsIgnoreCase("utility") )
 			{
 			   otherEditablePlots.add(tile.getTileName());
