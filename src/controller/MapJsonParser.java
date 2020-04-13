@@ -112,7 +112,7 @@ public class MapJsonParser {
 					}
 					else 
 					{
-						throw new InvalidMapException("Invalid Map : over all  ");
+						throw new InvalidMapException("Invalid Map : Coordinates can not be float ");
 					}
 								
 				}				
@@ -242,7 +242,7 @@ public class MapJsonParser {
 			}	
 
 		}
-		System.out.println("Total tile objects created :  " +TileList.size());
+		
 		
 			for(Tile tile : TileList) 
 			{

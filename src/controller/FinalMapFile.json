@@ -2,7 +2,7 @@
   "JObjects": {
     "JArray1": [
       {
-        "a_name": "Goaaaaaa",
+        "a_name": "Go",
         "b_type": "go",
         "c_x": "10",
         "d_y": "0"
@@ -20,7 +20,7 @@
         "a_name": "Community Chest",
         "b_type": "community-chest",
         "c_x": "8",
-        "d_y": "0"
+        "d_y": "8"
       },
       {
         "a_name": "Baltic Avenue",
