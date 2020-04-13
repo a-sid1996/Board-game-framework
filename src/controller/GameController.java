@@ -1,8 +1,13 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import model.BoardModel;
 import model.Card;
 import model.Player;
@@ -27,7 +32,6 @@ public class GameController {
 	ArrayList<Player> list = new ArrayList<Player>();
 	BoardModel bc;
 	Card cm;
-	GameController gc;
 	Score score;
 	PlayerTurnModule<Player> turn;
 
@@ -52,16 +56,38 @@ public class GameController {
 	public Player nextPlayer() {
 		return turn.next();
 	}
-
-	public void movePlayer(Player p, int result) {
-		// TODO Auto-generated method stub
-		for(Player player : list) {
-			if(player == p) {
-				Tile t = p.getCurrentTile().get(0);
-				
-			}
-		}
+	
+	public Player getPlayer(Player player) {
+		return list.get(list.indexOf(player));
 	}
+	
+	public void movePlayer(Player p, int result, GameController gc) throws IOException {
+		// TODO Auto-generated method stub
+	//	for(Player player : list) {
+	//		if(player == p) {
+		Tile resultTile;
+		if(bc.getBoard().size() <= bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result) {
+			p.addMoney(200);
+			resultTile = bc.getBoard().get( bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result - bc.getBoard().size());
+		} else {
+			resultTile = bc.getBoard().get( bc.getBoard().indexOf( p.getCurrentTile().get(0) ) + result);
+		}
+		p.updateCurrentTile(resultTile, 1);
+		p.removeCurrentTile(p.getCurrentTile().get(1));
+		
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/offerScreen.fxml"));
+        Parent root = (Parent) loader.load();
+        Scene newScene = new Scene(root);
+        Stage newStage = new Stage();
+        newStage.setScene(newScene);
+        offerScreenController os = loader.getController();
+        os.setOfferType(resultTile, p);
+        os.setController(gc);
+        newStage.showAndWait();
+	}
+
+		//}
+	//}
 	
 	
 	

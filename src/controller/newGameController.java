@@ -24,6 +24,7 @@ import model.Card;
 import model.Player;
 import model.PlayerTurnModule;
 import model.Score;
+import model.Tile;
 import model.Unit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,7 +32,7 @@ import javafx.event.ActionEvent;
 
 public class newGameController {
 
-	ObservableList<String> number = FXCollections.observableArrayList("1","2","3","4","5");
+	ObservableList<String> number = FXCollections.observableArrayList("2","3","4","5");
 	
 	@FXML
 	private TextField mapLocation;
@@ -101,22 +102,26 @@ public class newGameController {
 		units[0] = new Unit("money", 10000000);
 		units[1] = new Unit("hotel", 1000);
 
-		Player bank = new Player("bank", units, score);
+		ArrayList<Tile> t = new ArrayList<Tile>();
+		t.add(bc.getBoard().get(0));
+
+		Player bank = new Player("bank", units, score, t);
 
 		ArrayList<Player> players = new ArrayList<Player>();
 		players.add(bank);
 
 		for (int i=0; i<numPLayers; i++) {
 			Unit[] unitP = new Unit[2];
-			unitP[0] = new Unit("money", 5000);
+			unitP[0] = new Unit("money", 1500);
 			unitP[1] = new Unit("hotel", 0);
-
-			Player p = new Player("player"+i, unitP, score);
+			ArrayList<Tile> t1 = new ArrayList<Tile>();
+			t1.add(bc.getBoard().get(0));
+			Player p = new Player("player"+i, unitP, score, t1);
 			players.add(p);
 		}
 
 		Card cards = new Card(10);
-		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(players);
+		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(players.subList(1, players.size()));
 		GameController gc = new GameController(bc, cards, players, score, ptm);
 
 	    try {

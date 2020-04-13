@@ -13,9 +13,9 @@
    <children>
       <AnchorPane prefHeight="558.0" prefWidth="848.0">
          <children>
-            <Button fx:id="diceBtn" layoutX="88.0" layoutY="119.0" mnemonicParsing="false" onAction="#diceBtnClick" text="Roll dice" />
+            <Button fx:id="diceBtn" layoutX="88.0" layoutY="128.0" mnemonicParsing="false" onAction="#diceBtnClick" text="Roll dice" />
             <Label layoutX="50.0" layoutY="47.0" prefHeight="26.0" prefWidth="75.0" text="Now Playing" />
-            <Label fx:id="playerLabel" layoutX="74.0" layoutY="83.0" prefHeight="26.0" prefWidth="68.0" text="Player 1" />
+            <Label fx:id="playerLabel" layoutX="50.0" layoutY="87.0" prefHeight="26.0" prefWidth="75.0" text="Player 1" textAlignment="CENTER" />
             <Label layoutX="184.0" layoutY="51.0" text="Position" />
             <Label layoutX="646.0" layoutY="38.0" text="Scores" />
             <GridPane fx:id="scoreGrid" layoutX="513.0" layoutY="87.0" prefHeight="322.0" prefWidth="302.0">
@@ -33,7 +33,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <Label fx:id="diceResult" layoutX="192.0" layoutY="123.0" />
+            <Label fx:id="diceResult" layoutX="164.0" layoutY="131.0" prefHeight="38.0" prefWidth="186.0" />
          </children>
       </AnchorPane>
    </children>
