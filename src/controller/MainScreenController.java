@@ -35,7 +35,7 @@ public class MainScreenController  {
 	@FXML
 	 void mapEditorClick(ActionEvent event) throws NumberFormatException, IOException{
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/mapEditor.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MapEdit.fxml"));
             Parent root = (Parent) loader.load();
             Scene newScene = new Scene(root);
             Stage newStage = new Stage();

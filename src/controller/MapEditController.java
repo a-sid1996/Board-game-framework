@@ -2,6 +2,7 @@ package controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import org.json.JSONException;
 
@@ -68,8 +69,73 @@ public class MapEditController {
 		MapJsonParser m = new MapJsonParser();
 		tileList = m.MapJsonParser1(mapLocation.getText());
 		
-		
-		
+		String resp = "Y";
+		while(resp.equalsIgnoreCase("Y")) {
+	        Scanner sc = new Scanner(System.in);
+			System.out.println("Enter property type to edit (Propert/ railroad/ utility/ tax) :");
+			String p = sc.nextLine();
+			System.out.println("Enter name of the tile to edit :");
+			String name = sc.nextLine();
+			System.out.println("Which property you want to edit (house/ cost/ rent1/ rent2/ rent3/ rent4/ rent5/ rent6)  : ");
+			String typeToedit = sc.nextLine();
+			System.out.println("Enter new amount");
+			int amount = Integer.parseInt(sc.nextLine());
+			
+			EditMap em = new EditMap();
+			
+			System.out.println("Before Tile Edit : ");	
+			for(Tile tile : tileList)
+			{ 
+					
+				if(tile.getTileName().equalsIgnoreCase(name))
+				{
+					System.out.println(tile.getInternalValue());
+				}
+			}
+			
+			
+			if(p.equalsIgnoreCase("Property"))
+			{
+				if(typeToedit.equalsIgnoreCase("cost"))
+				{
+					em.EditAvenueCost(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("cost")){
+					em.EditAvenuehouse(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("house")){
+					em.EditAvenueCost(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent1")){
+					em.EditAvenueRent1(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent2")){
+					em.EditAvenueRent2(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent3")){
+					em.EditAvenueRent3(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent4")){
+					em.EditAvenueRent4(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent5")){
+					em.EditAvenueRent5(name,amount);
+				}else if(typeToedit.equalsIgnoreCase("rent6")){
+					em.EditAvenueRent6(name,amount);
+				}			
+			}
+			
+			else if(p.equalsIgnoreCase("tax") || p.equalsIgnoreCase("utility") || p.equalsIgnoreCase("railroad"))
+			{
+				em.EditOtherPlotCost(name, amount);
+			}
+			
+			System.out.println("Tile after edit : ");		
+			for(Tile tile : tileList)
+			{ 
+				if(tile.getTileName().equalsIgnoreCase(name))
+				{
+					System.out.println(tile.getInternalValue());
+				}
+			}
+
+			System.out.println("Wish to edit more? (Y?N)");
+			resp = sc.nextLine();
+
+		}		
     }
 
 
