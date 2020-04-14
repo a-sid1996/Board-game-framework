@@ -27,14 +27,14 @@ public class Player {
      */
     private List<Card> cardList = new ArrayList<Card>();
 
-    public Player(String name, Unit[] units, Score score) {
+    public Player(String name, Unit[] units, Score score, ArrayList<Tile> currentTile) {
         this.name = name;
         this.asset = new ArrayList<>();
         for (Unit unit : units) {
-            Unit u = new Unit(unit.getUnitType());
-            this.asset.add(u);
+            this.asset.add(unit);
         }
         this.score = score;
+        this.currentTile = currentTile;
     }
 
     /**
@@ -189,9 +189,12 @@ public class Player {
      * @param diceNumber is a current dice number player got
      * @param current    tile is the starting or current position of this player
      */
-    public void updateCurrentTile(int diceNumber, Tile currentTile) {
-        this.currentTile.add(currentTile);
-
+    public void updateCurrentTile(Tile currentTile, int i) {
+    	if(i == 0) {
+            this.currentTile.add(currentTile);
+    	} else {
+            this.currentTile.add(0, currentTile);
+    	}
         if (!score.PlayerCurrentPosition.containsKey(this)) {
             score.PlayerCurrentPosition.put(this, this.currentTile);
         } else {

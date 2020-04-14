@@ -10,7 +10,7 @@ import java.util.Random;
 public class Dice {
     private int noOfDice;
 
-    Dice(int noOfDice) {
+    public Dice(int noOfDice) {
         this.noOfDice = noOfDice;
     }
 
@@ -19,13 +19,13 @@ public class Dice {
      * @return Method returns random numbers between 1 and appropriate number as per
      * noOfDice added
      */
-    public static int[] diceroll(int noOfDice) {
+    public int diceroll() {
         Random rand = new Random();
-        int[] result = new int[noOfDice];
-        for (int i = 0; i < noOfDice; i++) {
-            result[i] = rand.nextInt(5) + 1;
-        }
-        return result;
+//        int[] result = new int[noOfDice];
+//        for (int i = 0; i < noOfDice; i++) {
+//            result[i] = rand.nextInt(5) + 1;
+//        }
+        return rand.nextInt(6) + 1;
     }
 }
 

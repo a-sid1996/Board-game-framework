@@ -18,12 +18,13 @@ public class Tile {
 	
     private int x, y;
     private String nameOfTile;
+    private String type;
     private HashMap<String, Integer> internalValue = new HashMap<String, Integer>();
-    private ArrayList<Unit> unit = new ArrayList<Unit>();
+	private ArrayList<Unit> unit = new ArrayList<Unit>();
     private ArrayList<Tile> neighbourTile = new ArrayList<Tile>();
     private HashMap<String, Integer> playerLog;
     private Player currentPlayer;
-    private String mainPlayer;
+    private Player mainPlayer;
     
     
 
@@ -32,10 +33,16 @@ public class Tile {
      * @param x          is the x coordinate of the current tile
      * @param y          is the y coordinate of the current tile
      */
-    public Tile(String nameOfTile, int X, int Y) {
+    public Tile(String nameOfTile, int X, int Y, String type) {
         this.nameOfTile = nameOfTile;
         this.x = X;
         this.y = Y;
+        this.type = type;
+        this.mainPlayer = null;
+    }
+    
+    public Tile() {
+    	
     }
 
     /**
@@ -55,7 +62,8 @@ public class Tile {
     public int getValue(String key) {
         return internalValue.get(key);
     }
-
+    
+ 
     public void setPlayer(Player player) {
 
         this.currentPlayer = player;
@@ -71,11 +79,11 @@ public class Tile {
     /**
      * @return is a player who owns this tile
      */
-    public String getMainPlayer() {
+    public Player getMainPlayer() {
         return this.mainPlayer;
     }
 
-    public void setMainPlayer(String playerName) {
+    public void setMainPlayer(Player playerName) {
         this.mainPlayer = playerName;
     }
 
@@ -132,6 +140,19 @@ public class Tile {
     public void removeNeigbour(Tile tile) {
         neighbourTile.remove(tile);
     }
+
+	public String getType() {
+		return type;
+	}
+	
+	public HashMap<String, Integer> getInternalValue() {
+		return internalValue;
+	}
+
+
+
+    
+
 
 
 }

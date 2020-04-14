@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="252.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.offerScreenController">
+   <children>
+      <AnchorPane prefHeight="405.0" prefWidth="574.0">
+         <children>
+            <Label layoutX="43.0" layoutY="36.0" prefHeight="18.0" prefWidth="152.0" text="Your dice landed on:">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="tileType" layoutX="202.0" layoutY="32.0" text="Property">
+               <font>
+                  <Font name="Gabriola" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="further" layoutX="160.0" layoutY="159.0" text="Choose one of the following options-">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="buyBtn" layoutX="64.0" layoutY="189.0" mnemonicParsing="false" onAction="#buyBtnClick" text="Buy" />
+            <Button fx:id="rentBtn" layoutX="61.0" layoutY="189.0" mnemonicParsing="false" onAction="#rentBtnClick" text="Pay Rent" />
+            <Button fx:id="cancelBtn" layoutX="457.0" layoutY="189.0" mnemonicParsing="false" onAction="#cancelBtnClick" text="Cancel" />
+            <Label fx:id="instruction" layoutX="134.0" layoutY="88.0" text="You can buy this for">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="amount" layoutX="307.0" layoutY="88.0" text="Label">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="buildHouseBtn" layoutX="56.0" layoutY="189.0" mnemonicParsing="false" onAction="#buildHouseBtn" text="Build House" />
+            <Button fx:id="percenBtn" layoutX="58.0" layoutY="189.0" mnemonicParsing="false" onAction="#percenBtnClick" text="Pay 10% of net worth" />
+            <Button fx:id="flatPrice" layoutX="268.0" layoutY="189.0" mnemonicParsing="false" onAction="#flatClick" text="Pay 200 flat" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

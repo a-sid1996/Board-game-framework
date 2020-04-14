@@ -13,8 +13,8 @@ public class Card {
      * @param noOfCards   defines specific ID assigned to all cards
      * @param descOfCards defines description stored in all cards
      */
-    private int noOfCards;
-    private HashMap<Integer, String> descOfCards;
+    private static  int noOfCards;
+    static HashMap<Integer, String> descOfCards;
 
     /**
      * @param num is total number of cards required for the game

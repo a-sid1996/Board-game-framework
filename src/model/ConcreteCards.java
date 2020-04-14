@@ -11,6 +11,14 @@ public class ConcreteCards {
 	Card card;
 	Dice dice;
 	GameController gameController;
+	public static void main(String args[]) 
+    {
+    	ConcreteCards c  = new ConcreteCards();
+    	c.pickCard();
+    	
+    }
+	
+	
 	public ConcreteCards() 
 	{
 		card = new Card(12);
@@ -25,7 +33,7 @@ public class ConcreteCards {
 		card.setDesc(9, "Grand Opera Night. Collect $50 from every player for opening night seats");
 		card.setDesc(10, "You are assessed for street repairs. Pay $40 per plot");
 		card.setDesc(11, "Go to Jail. Pay $50 to the bank");
-		card.setDesc(12, "Advance to go. Collect 200$ from bank");
+		card.setDesc(12, "Advance to go. Collect 200$ from bank");		
 		
 	}
 	
@@ -34,6 +42,7 @@ public class ConcreteCards {
 		
 		String description = card.getDesc();
 		return description;
+		
 		
 	}	
 	
@@ -89,10 +98,10 @@ public class ConcreteCards {
 	       case("Advance to go. Collect 200$ from bank") :
 	       {
 	    	   gameController.fortification(banker,currentPlayer, 200);
-	       }
-	       	    
+	       }     	    
 	    }
-		
+	    
+	    
 		
 		
 	}
