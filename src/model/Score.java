@@ -21,5 +21,7 @@ public class Score {
     public HashMap<Player, ArrayList<Unit>> PlayerBalance = new HashMap<Player, ArrayList<Unit>>();
     public HashMap<Player, ArrayList<Tile>> PlayerCurrentPosition = new HashMap<Player, ArrayList<Tile>>();
     public HashMap<Player, List<Card>> PlayerCards = new HashMap<Player, List<Card>>();
+    
+    
 
 }

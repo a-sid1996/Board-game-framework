@@ -249,10 +249,6 @@ public class MapJsonParser {
 				TileList.add(tile);
 			}
 		}
-
-		for(Tile t : TileList) {
-			System.out.println(t.getTileName());
-		}
 		
 		int temp_x1 = 11;
 		int temp_y1 = 0;

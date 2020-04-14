@@ -33,9 +33,7 @@ public class ConcreteCards {
 		card.setDesc(9, "Grand Opera Night. Collect $50 from every player for opening night seats");
 		card.setDesc(10, "You are assessed for street repairs. Pay $40 per plot");
 		card.setDesc(11, "Go to Jail. Pay $50 to the bank");
-		card.setDesc(12, "Advance to go. Collect 200$ from bank");
-		System.out.println("hi");
-		
+		card.setDesc(12, "Advance to go. Collect 200$ from bank");		
 		
 	}
 	

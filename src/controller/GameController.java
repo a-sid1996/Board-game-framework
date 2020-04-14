@@ -3,7 +3,10 @@ package controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observer;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -61,6 +64,14 @@ public class GameController {
 		return list.get(list.indexOf(player));
 	}
 	
+	public void movePlayer(Player p, Tile t) {
+		if(t.getTileName().equals("Go")) {
+			p.addMoney(200);
+		}
+		p.updateCurrentTile(bc.getBoard().get( bc.getBoard().indexOf(t) ), 1);
+		p.removeCurrentTile(p.getCurrentTile().get(1));		
+	}
+	
 	public void movePlayer(Player p, int result, GameController gc) throws IOException {
 		// TODO Auto-generated method stub
 	//	for(Player player : list) {
@@ -81,17 +92,13 @@ public class GameController {
         Stage newStage = new Stage();
         newStage.setScene(newScene);
         offerScreenController os = loader.getController();
-        os.setOfferType(resultTile, p);
+        os.setOfferType(resultTile, p, cm.getDesc());
         os.setController(gc);
         newStage.showAndWait();
 	}
 
 		//}
 	//}
-	
-	
-	
-	
 	
 	
 	
