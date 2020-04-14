@@ -7,11 +7,20 @@ Project for SOEN 6441
 * Jatan Gohel
 
 ## Download and Installation
-Clone and Open the Project in any Java IDE (eg: Eclipse, IntelliJ IDEA, etc.)
-Before Running the project, ensure you have all the dependencies of the project configured.
-To find the jars of the dependies, please go to `resoureces` directory
-Run `MainMenuScreen.java` to execute the game framework
-One can follow the GUI to create, edit or load map. Sample maps are in the `resoureces` directory.
+1. Clone and Open the Project in any Java IDE (eg: Eclipse, IntelliJ IDEA, etc.)
+2.Before Running the project, ensure you have all the dependencies of the project configured.
+3. To find the jars of the dependies, please go to `resoureces` directory
+4. Run `MainMenuScreen.java` to execute the game framework
+5. One can follow the GUI to create, edit or load map. Sample maps are in the `controller` directory named `FinalMapFile.json` and `FinalMapFile - Copy.json`
+6. Game-specific phases (Monopoly)
+  * Startup Initialization
+  * Reinforcement
+  * Player objects initialization
+  * Banker object initialization
+  * Initial money distribution
+  * Player position setup
+  * Fortification
+7. All the test cases are in the `test` directory. Please make sure `JUnit` is added as dependency to run the test suite.
 
 ## Working with this GitHub repository
 
