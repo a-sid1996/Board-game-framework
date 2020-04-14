@@ -1,0 +1,327 @@
+{
+  "JObjects": {
+    "JArray1": [
+      {
+        "a_name": "",
+        "b_type": "",
+        "c_x": "10",
+        "d_y": "0"
+      },
+      {
+        "a_name": "",
+        "b_type": "property",
+        "c_x": "9",
+        "d_y": "0",
+        "e_cost": "60",
+        "f_rent": "[2,10,30,90,160,250]",
+        "g_house": "50"
+      },
+      {
+        "a_name": "Community Chest",
+        "b_type": "community-chest",
+        "c_x": "8",
+        "d_y": "8"
+      },
+      {
+        "a_name": "Baltic Avenue",
+        "b_type": "property",
+        "c_x": "7",
+        "d_y": "0",
+        "e_cost": "60",
+        "f_rent": "[4,20,60,180,320,450]",
+        "g_house": "50"
+      },
+      {
+        "a_name": "Income Tax",
+        "b_type": "tax",
+        "c_x": "6",
+        "d_y": "0",
+        "e_cost": "200"
+      },
+      {
+        "a_name": "Reading Railroad",
+        "b_type": "railroad",
+        "c_x": "5",
+        "d_y": "0",
+        "e_cost": "200"
+        "f_rent": "[25]",
+        
+      },
+      {
+        "a_name": "Oriental Avenue",
+        "b_type": "property",
+        "c_x": "4",
+        "d_y": "0",
+        "e_cost": "100",
+        "f_rent": "[6,30,90,270,400,550]",
+        "g_house": "50"
+      },
+      {
+        "a_name": "Chance",
+        "b_type": "chance",
+        "c_x": "3",
+        "d_y": "0"
+      },
+      {
+        "a_name": "Vermont Avenue",
+        "b_type": "property",
+        "c_x": "2",
+        "d_y": "0",
+        "e_cost": "100",
+        "f_rent": "[6,30,90,270,400,550]",
+        "g_house": "50"
+      },
+      {
+        "a_name": "Connecticut Avenue",
+        "b_type": "property",
+        "c_x": "1",
+        "d_y": "0",
+        "e_cost": "120",
+        "f_rent": "[8,40,100,300,450,600]",
+        "g_house": "50"
+      },
+      {
+        "a_name": "Jail",
+        "b_type": "jail",
+        "c_x": "0",
+        "d_y": "0"
+      },
+      {
+        "a_name": "St. Charles Place",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "1",
+        "e_cost": "140",
+        "f_rent": "[10,50,150,450,625,750]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Electric Compand_y",
+        "b_type": "utility",
+        "c_x": "0",
+        "d_y": "2",
+        "e_cost": "150"
+      },
+      {
+        "a_name": "States Avenue",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "3",
+        "e_cost": "140",
+        "f_rent": "[10,50,150,450,625,750]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Virginia Avenue",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "4",
+        "e_cost": "160",
+        "f_rent": "[12,60,180,500,700,900]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Pennsylvania Railroad",
+        "b_type": "railroad",
+        "c_x": "0",
+        "d_y": "5",
+        "e_cost": "200"
+        "f_rent": "[25]",
+        
+      },
+      {
+        "a_name": "St. James Place",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "6",
+        "e_cost": "180",
+        "f_rent": "[14,70,200,550,750,950]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Community Chest",
+        "b_type": "community-chest",
+        "c_x": "0",
+        "d_y": "7"
+      },
+      {
+        "a_name": "Tennessee Avenue",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "8",
+        "e_cost": "180",
+        "f_rent": "[14,70,200,550,750,950]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Newyork Avenue",
+        "b_type": "property",
+        "c_x": "0",
+        "d_y": "9",
+        "e_cost": "200",
+        "f_rent": "[16,80,220,600,800,1000]",
+        "g_house": "100"
+      },
+      {
+        "a_name": "Free Parking",
+        "b_type": "free-parking",
+        "c_x": "0",
+        "d_y": "10"
+      },
+      {
+        "a_name": "Kentucky Avenue",
+        "b_type": "property",
+        "c_x": "1",
+        "d_y": "10",
+        "e_cost": "220",
+        "f_rent": "[18,90,250,700,875,1050]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "Chance",
+        "b_type": "chance",
+        "c_x": "2",
+        "d_y": "10"
+      },
+      {
+        "a_name": "Indiana Avenue",
+        "b_type": "property",
+        "c_x": "3",
+        "d_y": "10",
+        "e_cost": "220",
+        "f_rent": "[18,90,250,700,875,1050]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "Illnois Avenue",
+        "b_type": "property",
+        "c_x": "4",
+        "d_y": "10",
+        "e_cost": "240",
+        "f_rent": "[20,100,300,750,925,1100]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "B. & O. Railroad",
+        "b_type": "railroad",
+        "c_x": "5",
+        "d_y": "10",
+        "e_cost": "200"
+        "f_rent": "[25]",
+        
+      },
+      {
+        "a_name": "Atlatic Avenue",
+        "b_type": "property",
+        "c_x": "6",
+        "d_y": "10",
+        "e_cost": "260",
+        "f_rent": "[22,110,330,800,975,1150]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "Ventura Avenue",
+        "b_type": "property",
+        "c_x": "7",
+        "d_y": "10",
+        "e_cost": "260",
+        "f_rent": "[22,110,330,800,975,1150]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "Water Works",
+        "b_type": "utility",
+        "c_x": "8",
+        "d_y": "10",
+        "e_cost": "150"
+      },
+      {
+        "a_name": "Marvin Gardens",
+        "b_type": "property",
+        "c_x": "9",
+        "d_y": "10",
+        "e_cost": "280",
+        "f_rent": "[24,120,360,850,1025,1200]",
+        "g_house": "150"
+      },
+      {
+        "a_name": "Go To Jail",
+        "b_type": "go-to-jail",
+        "c_x": "10",
+        "d_y": "10"
+      },
+      {
+        "a_name": "Pacific Avenue",
+        "b_type": "property",
+        "c_x": "10",
+        "d_y": "9",
+        "e_cost": "300",
+        "f_rent": "[26,130,390,900,1100,1275]",
+        "g_house": "200"
+      },
+      {
+        "a_name": "North Carolina Avenue",
+        "b_type": "property",
+        "c_x": "10",
+        "d_y": "8",
+        "e_cost": "300",
+        "f_rent": "[26,130,390,900,1100,1275]",
+        "g_house": "200"
+      },
+      {
+        "a_name": "Community Chest",
+        "b_type": "community-chest",
+        "c_x": "10",
+        "d_y": "7"
+      },
+      {
+        "a_name": "Pennsylvania Avenue",
+        "b_type": "property",
+        "c_x": "10",
+        "d_y": "6",
+        "e_cost": "320",
+        "f_rent": "[28,150,450,1000,1200,1400]",
+        "g_house": "200"
+      },
+      {
+        "a_name": "Shortline",
+        "b_type": "railroad",
+        "c_x": "10",
+        "d_y": "5",
+        "e_cost": "200"
+        "f_rent": "[25]",
+      },
+      {
+        "a_name": "Chance",
+        "b_type": "chance",
+        "c_x": "10",
+        "d_y": "4"
+      },
+      {
+        "a_name": "Park Place",
+        "b_type": "property",
+        "c_x": "10",
+        "d_y": "3",
+        "e_cost": "350",
+        "f_rent": "[35,175,500,1100,1300,1500]",
+        "g_house": "200"
+      },
+      {
+        "a_name": "Luxury Tax",
+        "b_type": "tax",
+        "c_x": "10",
+        "d_y": "2",
+        "e_cost": "100"
+      },
+      {
+        "a_name": "Boardwalk",
+        "b_type": "property",
+        "c_x": "10",
+        "d_y": "1",
+        "e_cost": "400",
+        "f_rent": "[50,200,600,1400,1700,2000]",
+        "g_house": "200"
+      }
+    ]
+  }
+}

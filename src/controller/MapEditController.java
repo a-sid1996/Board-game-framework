@@ -78,7 +78,9 @@ public class MapEditController {
 		tileList = m.MapJsonParser1(mapLocation.getText());
 		
 		String resp = "Y";
+		updateGrid();
 		while(resp.equalsIgnoreCase("Y")) {
+			updateGrid();
 	        Scanner sc = new Scanner(System.in);
 			System.out.println("Enter property type to edit (Propert/ railroad/ utility/ tax) :");
 			String p = sc.nextLine();
@@ -143,8 +145,6 @@ public class MapEditController {
 			System.out.println("Wish to edit more? (Y?N)");
 			resp = sc.nextLine();
 			
-			updateGrid();
-
 		}		
     }
 
@@ -155,6 +155,7 @@ public class MapEditController {
     private void updateGrid() {
 		// TODO Auto-generated method stub
     	for(Tile t : tileList) {
+    		System.out.println(t.getTileName());
     		Label l = new Label(t.getTileName());
     		tileGrid.add(l, 0, tileList.indexOf(t)+1);
     	}

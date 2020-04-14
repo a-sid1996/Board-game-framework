@@ -14,7 +14,7 @@
    <children>
       <AnchorPane prefHeight="744.0" prefWidth="718.0">
          <children>
-            <GridPane fx:id="tileGrid" layoutX="7.0" layoutY="19.0" prefHeight="714.0" prefWidth="270.0">
+            <GridPane fx:id="tileGrid" layoutX="7.0" layoutY="19.0" prefHeight="54.0" prefWidth="270.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>

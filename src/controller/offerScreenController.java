@@ -196,13 +196,19 @@ public class offerScreenController {
 				cancelBtn.setVisible(false);
 			}
 			
-		} else if (resultTile.getType().equals("community-chest") || resultTile.getType().equals("chance")) {
+		} else if (resultTile.getType().equals("community-chest")) {
 			
-			amount.setVisible(true);
 			further.setVisible(true);
 			instruction.setVisible(true);
 
 		    instruction.setText("You received the following card");
+		    tileType.setText(desc);
+		    further.setText("The transaction has been processed. (Press OK!)");
+		    cancelBtn.setText("OK!");
+			chance(player, desc);
+			
+		} else if(resultTile.getType().equals("chance")) {
+			further.setVisible(true);
 		    tileType.setText(desc);
 		    further.setText("The transaction has been processed. (Press OK!)");
 		    cancelBtn.setText("OK!");
@@ -216,9 +222,6 @@ public class offerScreenController {
 			
 		} else if (resultTile.getType().equals("go-to-jail")) {
 			
-//		    instruction.setText("You received the following card");
-//		    tileType.setText(desc);
-
 			further.setVisible(true);
 		    further.setText("A fine of $50 would be collected. (Press OK!)");
 		    cancelBtn.setText("OK!");
