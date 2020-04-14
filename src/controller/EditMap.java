@@ -21,18 +21,21 @@ public class EditMap {
 	 * */
 	BoardModel boardModel;
 	MapJsonParser map;
-	static ArrayList<Tile> al = new ArrayList<Tile>(MapJsonParser.TileList);
+	ArrayList<Tile> al = new ArrayList<Tile>(MapJsonParser.TileList);
+
+	public ArrayList<Tile> getTileList() {
+		return al;
+	}
 	
 	/**
      * This method is used for displaying list of editable  tiles on main screen
      */
-	public static void EditValues()
+	public void EditValues()
 	{
-		
 		ArrayList<String> AvenuePlots = new ArrayList<String>();
 		ArrayList<String> otherEditablePlots = new ArrayList<>();
 		
-		for(Tile tile : al)
+		for(Tile tile : getTileList())
 		{
 			String type = tile.getType();
 			if(type.equalsIgnoreCase("Property"))
@@ -41,7 +44,7 @@ public class EditMap {
 			}
 		}
 		
-		for(Tile tile : al)
+		for(Tile tile : getTileList())
 		{
 			String type = tile.getType();
 			if(type.equalsIgnoreCase("tax") || type.equalsIgnoreCase("railroad") || type.equalsIgnoreCase("utility") )
@@ -50,22 +53,24 @@ public class EditMap {
 			}
 		}
 	}
-	
-	
+
+
 	/**
      * This method is used to edit cost of avenue plots
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of cost
      */
-	public static void EditAvenueCost(String name, int cost) 
+	public boolean EditAvenueCost(String name, int cost)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("Cost", cost);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -73,15 +78,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of house price
      */
-	public static void EditAvenuehouse(String name, int house) 
+	public boolean EditAvenuehouse(String name, int house)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("house", house);
+				return true;
 			}
 		}
+		return false;
 		
 	}
 	
@@ -90,15 +97,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 1st rent
      */
-	public static void EditAvenueRent1(String name, int rent1) 
+	public boolean EditAvenueRent1(String name, int rent1)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent1", rent1);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -106,15 +115,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 2nd rent
      */
-	public static void EditAvenueRent2(String name, int rent2) 
+	public boolean EditAvenueRent2(String name, int rent2)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent2", rent2);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -122,15 +133,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 3rd rent
      */
-	public static void EditAvenueRent3(String name, int rent3) 
+	public boolean EditAvenueRent3(String name, int rent3)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent3", rent3);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -138,15 +151,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 4th rent
      */
-	public static void EditAvenueRent4(String name, int rent4) 
+	public boolean EditAvenueRent4(String name, int rent4)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent4", rent4);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -154,15 +169,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 5th rent
      */
-	public static void EditAvenueRent5(String name, int rent5) 
+	public boolean EditAvenueRent5(String name, int rent5)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent5", rent5);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -170,15 +187,17 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of 6th rent
      */
-	public static void EditAvenueRent6(String name, int rent6) 
+	public boolean EditAvenueRent6(String name, int rent6)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("rent6", rent6);
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	/**
@@ -186,16 +205,16 @@ public class EditMap {
      * @param name is the name of tile to be edited
      * @param cost is editable amount instead of assigned cost
      */
-	public static void EditOtherPlotCost(String name, int cost) 
+	public boolean EditOtherPlotCost(String name, int cost)
 	{
-		for(Tile t : al) 
+		for(Tile t : getTileList())
 		{
 			if(t.getTileName().equalsIgnoreCase(name)) 
 			{
 				t.setValue("cost", cost);
+				return true;
 			}
 		}
+		return false;
 	}
-	
-	
 }	
