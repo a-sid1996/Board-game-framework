@@ -15,7 +15,6 @@ public class Dice {
     }
 
     /**
-     * @param noOfDice displays total numbers of dice user need for their game
      * @return Method returns random numbers between 1 and appropriate number as per
      * noOfDice added
      */

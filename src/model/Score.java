@@ -8,14 +8,6 @@ import java.util.*;
  */
 public class Score {
 
-    /**
-     * @param playerList            Stores list of all players
-     * @param playerName            Stores player object with its name
-     * @param playerBalance         stores players with their respective balance
-     * @param PlayerCurrentPosition stores player and their current respective position
-     * @param PlayerCards           stores player and list of cards they posses
-     */
-
     public ArrayList<Player> PlayerList = new ArrayList<Player>();
     public HashMap<Player, String> PlayerName = new HashMap<Player, String>();
     public HashMap<Player, ArrayList<Unit>> PlayerBalance = new HashMap<Player, ArrayList<Unit>>();

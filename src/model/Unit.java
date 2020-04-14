@@ -33,7 +33,8 @@ public class Unit {
     private Tile tile;
 
     /**
-     * @param is a name of the unit
+     * @param unitType is a name of the unit
+     * @param tile unit type
      */
     public Unit(String unitType, Tile tile) {
         this.unitType = unitType;

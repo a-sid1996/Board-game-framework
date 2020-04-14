@@ -61,7 +61,7 @@ public class Player {
     /**
      * It will return Unit on a this tile
      *
-     * @param bal  is the description of the unit that a user want to fetch that is
+     * @param unitType is the description of the unit that a user want to fetch that is
      *             on current tile
      * @param tile is the tile owned by a player
      * @return returns asset or a unit owned by the current player on a tile passed
@@ -154,8 +154,7 @@ public class Player {
      * setAsset sets assets possessed by current player such as plot, money, hotel
      * or any other unit
      *
-     * @param is a type of unit that we want to store as a player possession
-     * @return amount or balance associated with this player
+     * @param balance is a type of unit that we want to store as a player possession
      */
     public void setAsset(Unit balance) {
 
@@ -186,8 +185,8 @@ public class Player {
      * This method will be called after player will make a move and lands on a tile
      * other than its current tile It will simultaneously update score module
      *
-     * @param diceNumber is a current dice number player got
-     * @param current    tile is the starting or current position of this player
+     * @param currentTile tile is the starting or current position of this player
+     * @param i is the index
      */
     public void updateCurrentTile(Tile currentTile, int i) {
     	if(i == 0) {

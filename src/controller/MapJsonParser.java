@@ -26,8 +26,11 @@ public class MapJsonParser {
 //	public static void main(String args[]) throws Exception {
 	/**
 	 *This method is  parses Json map file, validates the data and create different tile objects based on the Json Data 
-	 *@param Json map file as string input
-	 *@return List of tile objects 
+	 *@param jsonInput1 map file as string input
+	 * @return map json
+	 * @throws JSONException JSON Exception
+	 * @throws IOException Input Output Exception
+	 * @throws InvalidMapException Invalid Map Exception
 	 */
 	public ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException, InvalidMapException {
 		

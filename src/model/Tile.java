@@ -30,8 +30,9 @@ public class Tile {
 
     /**
      * @param nameOfTile is a unique name assigned to current tile
-     * @param x          is the x coordinate of the current tile
-     * @param y          is the y coordinate of the current tile
+     * @param X          is the x coordinate of the current tile
+     * @param Y          is the y coordinate of the current tile
+     * @param type tile type
      */
     public Tile(String nameOfTile, int X, int Y, String type) {
         this.nameOfTile = nameOfTile;
@@ -45,9 +46,6 @@ public class Tile {
     	
     }
 
-    /**
-     * @return is coordiantes of the current tile in the plane
-     */
     public String getTileCoordinates() {
         return Integer.toString(x) + " " + Integer.toString(y);
     }
@@ -56,9 +54,6 @@ public class Tile {
         this.internalValue.put(key, value);
     }
 
-    /**
-     * @return is internal value associated with current tile
-     */
     public int getValue(String key) {
         return internalValue.get(key);
     }
@@ -148,11 +143,5 @@ public class Tile {
 	public HashMap<String, Integer> getInternalValue() {
 		return internalValue;
 	}
-
-
-
-    
-
-
 
 }

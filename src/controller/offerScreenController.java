@@ -159,9 +159,9 @@ public class offerScreenController {
     
     /**
      *This method gets executed when user wants to play a rent to another user
-     *@param destination tile
-     *@param current player
-     *@param description 
+     *@param inst tile
+     *@param p player
+     *@param resultTile resultTile
      */
     public void setOfferType(Tile resultTile, Player p, String inst) {
     	tileType.setText(resultTile.getTileName());
@@ -242,8 +242,8 @@ public class offerScreenController {
 
     /**
      *This method gets executed when user lands on Chance cards
-     *@param current player
-     *@param description on the card
+     *@param p player
+     *@param desc description on the card
      */
 	void chance(Player p, String desc) {
 		// TODO Auto-generated method stub
@@ -334,6 +334,4 @@ public class offerScreenController {
 	    }		    
 
 	}
-    
-
 }
