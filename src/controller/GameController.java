@@ -2,11 +2,6 @@ package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Observer;
-
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,8 +18,7 @@ import model.Unit;
  * This controller class is the main controller of the framework which initializes all model objects and  
  * 
  * */
-public class GameController {
-	/**
+public class GameController implements gameScreenController.GameControlObserver {	/**
 	 *@param list has a list of all the players
 	 *@param bc is an object of Board model
 	 *@param cm is an object of Card
@@ -72,6 +66,12 @@ public class GameController {
 		p.removeCurrentTile(p.getCurrentTile().get(1));		
 	}
 	
+
+	@Override
+	public void onDiceRolled(Player player, int result, GameController gameController) throws IOException {
+		movePlayer(player, result, gameController);
+	}
+	
 	public void movePlayer(Player p, int result, GameController gc) throws IOException {
 		// TODO Auto-generated method stub
 	//	for(Player player : list) {
@@ -92,8 +92,8 @@ public class GameController {
         Stage newStage = new Stage();
         newStage.setScene(newScene);
         offerScreenController os = loader.getController();
-        os.setOfferType(resultTile, p, cm.getDesc());
         os.setController(gc);
+        os.setOfferType(resultTile, p, cm.getDesc());
         newStage.showAndWait();
 	}
 

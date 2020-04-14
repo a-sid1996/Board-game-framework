@@ -62,7 +62,7 @@ public class Unit {
      * @return is an amount associated with this unit
      */
     public int getAmount() {
-        return this.amount;
+        return amount;
     }
 
     public void setAmount(int amount) {

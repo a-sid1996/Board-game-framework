@@ -113,7 +113,7 @@ public class Player {
      */
     public boolean addMoney(int amount) {
         if (amount >= 0) {
-            for (Unit u : this.asset) {
+            for (Unit u : asset) {
                 if (u.getUnitType().equalsIgnoreCase(Unit.UnitType.MONEY.toString())) {
                     u.setAmount(u.getAmount() + amount);
                     return true;

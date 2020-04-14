@@ -21,11 +21,11 @@ public class Dice {
      */
     public int diceroll() {
         Random rand = new Random();
-//        int[] result = new int[noOfDice];
-//        for (int i = 0; i < noOfDice; i++) {
-//            result[i] = rand.nextInt(5) + 1;
-//        }
-        return rand.nextInt(6) + 1;
+        int result = 0;
+        for (int i = 0; i < noOfDice; i++) {
+            result = result + rand.nextInt(6) + 1;
+        }
+        return result;
     }
 }
 

@@ -44,6 +44,8 @@
         "c_x": "5",
         "d_y": "0",
         "e_cost": "200"
+        "f_rent": "[25]",
+        
       },
       {
         "a_name": "Oriental Avenue",
@@ -124,6 +126,8 @@
         "c_x": "0",
         "d_y": "5",
         "e_cost": "200"
+        "f_rent": "[25]",
+        
       },
       {
         "a_name": "St. James Place",
@@ -203,6 +207,8 @@
         "c_x": "5",
         "d_y": "10",
         "e_cost": "200"
+        "f_rent": "[25]",
+        
       },
       {
         "a_name": "Atlatic Avenue",
@@ -283,6 +289,7 @@
         "c_x": "10",
         "d_y": "5",
         "e_cost": "200"
+        "f_rent": "[25]",
       },
       {
         "a_name": "Chance",

@@ -193,8 +193,11 @@ public class MapJsonParser {
 				int x = Integer.parseInt((String) tmap.get("c_x"));
 				int y = Integer.parseInt((String) tmap.get("d_y"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
+				int rent = Integer.parseInt((String) tmap.get("f_rent"));
+
 				tile = new Tile(name, x, y, "railroad");
 				tile.setValue("Cost", cost);
+				tile.setValue("rent1", rent);
 				TileList.add(tile);
 
 			}
