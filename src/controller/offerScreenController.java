@@ -59,7 +59,22 @@ public class offerScreenController {
 
     @FXML
     void buildHouseBtn(ActionEvent event) {
-
+    	if(player.getMoney() > tile.getValue("house")) {
+//    		gc.getPlayer(player).deductMoney(tile.getValue("Cost"));
+        	gc.list.get(0).addMoney(tile.getValue("house"));
+        	player.deductMoney(tile.getValue("house"));
+        	Unit unit = new Unit("property", tile);
+        	player.setAsset(unit);
+        	tile.setMainPlayer(player);
+    	} else {
+			Alert errorAlert = new Alert(AlertType.ERROR);
+			errorAlert.setHeaderText("Insufficient funds");
+			errorAlert.setContentText("You do not have suficient funds to build this.");
+			errorAlert.showAndWait();
+    	}
+	    Stage stage = (Stage) cancelBtn.getScene().getWindow();
+	    stage.close();
+    	
     }    
     @FXML
     void buyBtnClick(ActionEvent event) {
@@ -92,8 +107,9 @@ public class offerScreenController {
 
     @FXML
     void percenBtnClick(ActionEvent event) {
-  	   player.deductMoney((int)(player.getMoney()*0.1));
-  	   gc.list.get(0).addMoney(200);
+    	int money = (int)(player.getMoney()*0.1);
+  	   player.deductMoney(money);
+  	   gc.list.get(0).addMoney(money);
 	    Stage stage = (Stage) cancelBtn.getScene().getWindow();
 	    stage.close();
     }
@@ -135,8 +151,16 @@ public class offerScreenController {
 		buyBtn.setVisible(false);
 		percenBtn.setVisible(false);
 		flatPrice.setVisible(false);
+		
+		amount.setVisible(false);
+		further.setVisible(false);
+		instruction.setVisible(false);
     	
 		if (resultTile.getType().equals("property") || resultTile.getType().equals("railroad")) {
+			amount.setVisible(true);
+			further.setVisible(true);
+			instruction.setVisible(true);
+
 			if(resultTile.getMainPlayer() == null) {
 				buyBtn.setVisible(true);
 				amount.setText(String.valueOf(resultTile.getValue("Cost")));
@@ -152,31 +176,43 @@ public class offerScreenController {
 			
 		} else if (resultTile.getType().equals("community-chest") || resultTile.getType().equals("chance")) {
 			
+			amount.setVisible(true);
+			further.setVisible(true);
+			instruction.setVisible(true);
+
 		    instruction.setText("You received the following card");
 		    tileType.setText(desc);
 		    further.setText("The transaction has been processed. (Press OK!)");
 		    cancelBtn.setText("OK!");
 			chance(player, desc);
+			
 		} else if (resultTile.getType().equals("tax")) {
 			
+			further.setVisible(true);
 			percenBtn.setVisible(true);
 			flatPrice.setVisible(true);
 			
 		} else if (resultTile.getType().equals("go-to-jail")) {
 			
-		    instruction.setText("You received the following card");
-		    tileType.setText(desc);
+//		    instruction.setText("You received the following card");
+//		    tileType.setText(desc);
+
+			further.setVisible(true);
 		    further.setText("A fine of $50 would be collected. (Press OK!)");
 		    cancelBtn.setText("OK!");
+			p.deductMoney(50);
+			gc.list.get(0).addMoney(50);
 			gc.movePlayer(p, gc.bc.getTile("10 10"));
 
 		} else if (resultTile.getType().equals("utility")) {
-			
+
+			instruction.setVisible(true);
 			flatPrice.setVisible(true);
 			instruction.setText("Pay $200 Utility bill");
 			flatPrice.setText("Pay Utility bill");
 		
 		} else if (resultTile.getType().equals("free-parking")) {
+			instruction.setVisible(true);
 			instruction.setText("Welcome to free resting place.");
 		}
 
@@ -190,16 +226,19 @@ public class offerScreenController {
 	       case("Move To Go") :
 	       {
 	    	   gc.movePlayer(player, gc.bc.getBoard().get(0));
+	    	   break;
 	       }  
 	       case("Bank error in your favor. Collect $125") :
 	       {
 	    	   p.addMoney(125);
 	    	   gc.list.get(0).deductMoney(125);
+	    	   break;
 	       }
 	       case("You have won a CrossWord Competition. Collect $100") :
 	       {
 	    	   p.addMoney(100);
 	    	   gc.list.get(0).deductMoney(100);
+	    	   break;
 	       }
 	       case("You have been elected as the Chairman of the Board. Pay each player $50") :
 	       {
@@ -208,28 +247,33 @@ public class offerScreenController {
 			    	   gc.fortification(p, player, 50);
 	    		   }
 	    	   }
+	    	   break;
 	       }
 	       case("Building loan matures. Collect $150 from Bank") :
 	       {
 	    	   p.addMoney(150);
 	    	   gc.list.get(0).deductMoney(150);
+	    	   break;
 	       }
 	       case("Go To Jail. Pay bank $100") :
 	       {
 	    	   p.deductMoney(100);
 	    	   gc.list.get(0).addMoney(100);
 	    	   gc.movePlayer(p, gc.bc.getTile("0 0"));
+	    	   break;
 	       }
 	       case("You inherit $100") :
 	       {
 	    	   p.addMoney(100);
 	    	   gc.list.get(0);
 	    	   gc.list.get(0).deductMoney(100);
+	    	   break;
 	       }
 	       case("Hospital fees. Pay $50") :
 	       {
 	    	   p.deductMoney(50);
 	    	   gc.list.get(0).addMoney(50);
+	    	   break;
 	       }
 	       case("Grand Opera Night. Collect $50 from every player for opening night seat") :
 	       {
@@ -238,23 +282,27 @@ public class offerScreenController {
 			    	   gc.fortification(player, p, 50);
 	    		   }
 	    	   }
+	    	   break;
 	       }
 	       case("You are assessed for street repairs. Pay $40 per plot") :
 	       {
 	    	   p.deductMoney(40);
 	    	   gc.list.get(0).addMoney(40);
+	    	   break;
 	       }
 	       case("Go to Jail. Pay $50 to the bank") :
 	       {
 	    	   p.deductMoney(50);
 	    	   gc.list.get(0).addMoney(50);
 	    	   gc.movePlayer(p, gc.bc.getTile("0 0"));
+	    	   break;
 	       }
 	       case("Advance to go. Collect 200$ from bank") :
 	       {
 	    	   gc.movePlayer(p, gc.bc.getBoard().get(0));
 	    	   p.addMoney(200);
 	    	   gc.list.get(0).deductMoney(200);
+	    	   break;
 	       }     	    
 	    }		    
 

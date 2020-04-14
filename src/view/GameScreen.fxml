@@ -12,12 +12,12 @@
    <children>
       <AnchorPane prefHeight="662.0" prefWidth="970.0">
          <children>
-            <Button fx:id="diceBtn" layoutX="244.0" layoutY="395.0" mnemonicParsing="false" onAction="#diceBtnClick" text="Roll dice" />
-            <Label layoutX="14.0" layoutY="395.0" prefHeight="26.0" prefWidth="75.0" text="Now Playing" />
-            <Label fx:id="playerLabel" layoutX="96.0" layoutY="399.0" prefHeight="18.0" prefWidth="138.0" text="Player 1" textAlignment="CENTER" />
+            <Button fx:id="diceBtn" layoutX="241.0" layoutY="438.0" mnemonicParsing="false" onAction="#diceBtnClick" text="Roll dice" />
+            <Label layoutX="11.0" layoutY="438.0" prefHeight="26.0" prefWidth="75.0" text="Now Playing" />
+            <Label fx:id="playerLabel" layoutX="93.0" layoutY="442.0" prefHeight="18.0" prefWidth="138.0" text="Player 1" textAlignment="CENTER" />
             <Label layoutX="209.0" layoutY="21.0" text="Scores" />
-            <Label fx:id="diceResult" layoutX="346.0" layoutY="395.0" prefHeight="26.0" prefWidth="224.0" />
-            <GridPane fx:id="scoreGrid" layoutX="25.0" layoutY="54.0" prefHeight="338.0" prefWidth="500.0">
+            <Label fx:id="diceResult" layoutX="316.0" layoutY="438.0" prefHeight="26.0" prefWidth="224.0" />
+            <GridPane fx:id="scoreGrid" layoutX="25.0" layoutY="54.0" prefHeight="308.0" prefWidth="500.0">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.60000610351562" minWidth="10.0" prefWidth="114.60000610351562" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.60003662109375" minWidth="10.0" prefWidth="234.59999389648436" />
@@ -34,7 +34,7 @@
               </rowConstraints>
             </GridPane>
             <Label layoutX="709.0" layoutY="30.0" text="Possed Properties" />
-            <GridPane fx:id="posessedProp" layoutX="551.0" layoutY="54.0" prefHeight="94.0" prefWidth="386.0">
+            <GridPane fx:id="posessedProp" layoutX="551.0" layoutY="54.0" prefHeight="190.0" prefWidth="386.0">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="81.5999755859375" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.4000244140625" minWidth="10.0" prefWidth="74.0000244140625" />
@@ -43,27 +43,9 @@
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.2000732421875" minWidth="10.0" prefWidth="60.800048828125" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="45.599981689453124" minHeight="10.0" prefHeight="32.799993896484374" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="47.19998779296874" minHeight="10.0" prefHeight="28.800006103515628" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
-            <GridPane fx:id="gameBoard" layoutX="3.0" layoutY="444.0" prefHeight="178.0" prefWidth="946.0">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="265.5999816894531" minHeight="10.0" prefHeight="55.199972534179665" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="260.80002746582034" minHeight="10.0" prefHeight="83.99999084472657" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="249.80002746582034" minHeight="10.0" prefHeight="96.20000915527346" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
          </children>

@@ -51,10 +51,11 @@ public class gameScreenController{
 
     	Dice dice = new Dice(1);
     	int result = dice.diceroll();
-    	gc.movePlayer(p, result, gc);
+    	diceResult.setVisible(true);
     	diceResult.setText("User rolled a " + result);
-
-
+    	gc.movePlayer(p, result, gc);
+    	
+    	
     	
         for(GameControlObserver gameControlObserver : observers) {
       		gameControlObserver.onDiceRolled(p, result, gc);
@@ -107,7 +108,6 @@ public class gameScreenController{
 		
     	p = gc.nextPlayer();
 		playerLabel.setText(p.getName());
-		diceResult.setText("");
 
 	}
     
