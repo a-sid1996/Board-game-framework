@@ -83,7 +83,7 @@ public class newGameController {
 			errorAlert.setContentText("Please select number of players.");
 			errorAlert.showAndWait();
 			return;
-		} else if(mapLocation.getText().isEmpty()) {
+		} else if(mapLocation.getText().isBlank()) {
 			Alert errorAlert = new Alert(AlertType.ERROR);
 			errorAlert.setHeaderText("Input not valid");
 			errorAlert.setContentText("Please select correct map file.");
