@@ -141,13 +141,15 @@ public class GameController implements gameScreenController.GameControlObserver 
 	 * @param player2 is a player who is receiving an asset
 	 * @param amount is the money to be transferred between players
 	 */
-	public void fortification(Player player1, Player player2, int amount) 
+	public boolean fortification(Player player1, Player player2, int amount)
 	{
 			if (player1.getMoney() > amount && player1.getMoney() > 0 && amount > 0) 
 			{
 				player1.setMoney(player1.getMoney() - amount);
 				player2.setMoney(player2.getMoney() + amount);
+				return true;
 			}
+			return false;
 	}
 		
 }

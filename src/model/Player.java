@@ -77,7 +77,7 @@ public class Player {
 
     public ArrayList<Unit> getAssetList(String unitType) {
         ArrayList<Unit> temp = new ArrayList<>();
-        for (Unit u : this.asset) {
+        for (Unit u : asset) {
             if (u.getUnitType().equalsIgnoreCase(unitType)) {
                 temp.add(u);
             }

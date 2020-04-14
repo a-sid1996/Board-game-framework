@@ -10,8 +10,8 @@ public class PlayerTurnModuleTest {
     @org.junit.Test
     public void updateTurn() {
         Unit[] units = new Unit[2];
-        units[0] = new Unit("money");
-        units[1] = new Unit("hotel");
+        units[0] = new Unit("money",100);
+        units[1] = new Unit("hotel",100);
     	ArrayList<Tile> t = new ArrayList<Tile>();
         Player player1 = new Player("player1", units, score, t);
         Player player2 = new Player("player2", units, score, t);
@@ -34,9 +34,9 @@ public class PlayerTurnModuleTest {
     @org.junit.Test
     public void nextTurn() {
         Unit[] units = new Unit[2];
-        units[0] = new Unit("money");
-        units[1] = new Unit("hotel");
-
+        units[0] = new Unit("money",100);
+        units[1] = new Unit("hotel",100);
+        ArrayList<Tile> t = new ArrayList<Tile>();
         Player player1 = new Player("player1", units, score, t);
         Player player2 = new Player("player2", units, score, t);
         Player player3 = new Player("player3", units, score, t);
