@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.beans.InvalidationListener;
 import javafx.event.ActionEvent;
@@ -13,9 +14,18 @@ import model.Player;
 import model.Unit;
 
 public class gameScreenController {
+	private static ArrayList<GameControlObserver> observers = new ArrayList<>();
 
 	private GameController gc;
 	private Player p;
+
+	public static void addObserver(GameControlObserver gameControlObserver) {
+		observers.add(gameControlObserver);
+	}
+
+	public static void removeObserver(GameControlObserver gameControlObserver) {
+		observers.remove(gameControlObserver);
+	}
 	
     @FXML
     private Button diceBtn;
@@ -35,7 +45,11 @@ public class gameScreenController {
     	Dice dice = new Dice(1);
     	int result = dice.diceroll();
     	diceResult.setText("User rolled a " + result);
-    	gc.movePlayer(p, result, gc);
+
+    	for(GameControlObserver gameControlObserver : observers) {
+    		gameControlObserver.onDiceRolled(p, result, gc);
+		}
+
     	System.out.println(p.getName() + " "  +p.getMoney() + "--------------here");
     	for(Unit u : p.getAssetList("property")) {
     		System.out.println(u.getTile().getTileName());
@@ -55,6 +69,8 @@ public class gameScreenController {
     	this.gc = gc;
     	updateScreen();
     }
-    
 
+    interface GameControlObserver {
+    	void onDiceRolled(Player player, int result, GameController gameController) throws IOException;
+	}
 }

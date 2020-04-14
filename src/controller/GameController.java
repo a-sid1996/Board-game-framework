@@ -20,7 +20,7 @@ import model.Unit;
  * This controller class is the main controller of the framework which initializes all model objects and  
  * 
  * */
-public class GameController {
+public class GameController implements gameScreenController.GameControlObserver {
 	/**
 	 *@param list has a list of all the players
 	 *@param bc is an object of Board model
@@ -142,7 +142,11 @@ public class GameController {
 				player2.setMoney(player2.getMoney() + amount);
 			}
 	}
-		
+
+	@Override
+	public void onDiceRolled(Player player, int result, GameController gameController) throws IOException {
+		movePlayer(player, result, gameController);
+	}
 }
 
 //Dummy function for future build 
