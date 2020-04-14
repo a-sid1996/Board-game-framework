@@ -12,6 +12,9 @@ import model.Player;
 import model.Tile;
 import model.Unit;
 
+/**
+ *This class handles different game playing operations such as Buying plots, building house, paying rent etc. 
+ */
 public class offerScreenController {
 	
 	private GameController gc;
@@ -57,6 +60,10 @@ public class offerScreenController {
     @FXML
     private Button buildHouseBtn;
 
+    /**
+     * THis method gets executed when player wants to build a house on the prpoerth he has bought
+     * @param event of build button clicking
+     */
     @FXML
     void buildHouseBtn(ActionEvent event) {
     	if(player.getMoney() > tile.getValue("house")) {
@@ -75,7 +82,12 @@ public class offerScreenController {
 	    Stage stage = (Stage) cancelBtn.getScene().getWindow();
 	    stage.close();
     	
-    }    
+    }
+    
+    /**
+     * THis method gets executed  when player wants to buy a property he has landed on
+     * @param event of buy button clicking
+     */
     @FXML
     void buyBtnClick(ActionEvent event) {
     	if(player.getMoney() > tile.getValue("Cost")) {
@@ -121,6 +133,10 @@ public class offerScreenController {
 	    stage.close();
     }
 
+    /**
+     *This method gets executed when user wants to play a rent to another user
+     *@param button clicking event
+     */
     @FXML
     void rentBtnClick(ActionEvent event) {
     	
@@ -141,6 +157,12 @@ public class offerScreenController {
 
     }
     
+    /**
+     *This method gets executed when user wants to play a rent to another user
+     *@param destination tile
+     *@param current player
+     *@param description 
+     */
     public void setOfferType(Tile resultTile, Player p, String inst) {
     	tileType.setText(resultTile.getTileName());
     	player = p;
@@ -218,6 +240,11 @@ public class offerScreenController {
 
     }
 
+    /**
+     *This method gets executed when user lands on Chance cards
+     *@param current player
+     *@param description on the card
+     */
 	void chance(Player p, String desc) {
 		// TODO Auto-generated method stub
 	    

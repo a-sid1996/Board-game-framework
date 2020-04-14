@@ -50,14 +50,27 @@ public class GameController implements gameScreenController.GameControlObserver 
 		this.turn = turn;
 	}
 
+	/**
+	 *This method returns turn of the next player
+	 *@return next player object 
+	 */
 	public Player nextPlayer() {
 		return turn.next();
 	}
 	
+	/**
+	 *This method player at specific tile index
+	 *@return player object 
+	 */
 	public Player getPlayer(Player player) {
 		return list.get(list.indexOf(player));
 	}
 	
+	/**
+	 *This method moves player at the specified tile
+	 *@param player object
+	 *@param destination tile object
+	 */
 	public void movePlayer(Player p, Tile t) {
 		if(t.getTileName().equals("Go")) {
 			p.addMoney(200);
@@ -67,11 +80,23 @@ public class GameController implements gameScreenController.GameControlObserver 
 	}
 	
 
+	/**
+	 *This method moves player to the specific tile coordinates passed as result
+	 *@param player is current player object
+	 *@result is resultant coordinates
+	 *@gameController is the object of GameController class
+	 */
 	@Override
 	public void onDiceRolled(Player player, int result, GameController gameController) throws IOException {
 		movePlayer(player, result, gameController);
 	}
 	
+	/**
+	 *This method moves player to the specific tile coordinates passed as result
+	 *@param player is current player object
+	 *@result is resultant coordinates
+	 *@gameController is the object of GameController class
+	 */
 	public void movePlayer(Player p, int result, GameController gc) throws IOException {
 		// TODO Auto-generated method stub
 	//	for(Player player : list) {

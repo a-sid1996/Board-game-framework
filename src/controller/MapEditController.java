@@ -31,6 +31,9 @@ import model.Score;
 import model.Tile;
 import model.Unit;
 
+/**
+*This is a controller class of the map edit functinality
+*/
 public class MapEditController {
 
 	ObservableList<String> number = FXCollections.observableArrayList("2","3","4","5");
@@ -57,6 +60,10 @@ public class MapEditController {
     @FXML
     private Button findBtn;
 
+    /**
+     *This method gets invoked after clicking Edit button functionality
+     *@param even of Edit button click 
+     */
     @FXML
     void findBtnClick(ActionEvent event) throws JSONException, IOException, InvalidMapException {
 		FileChooser fc = new FileChooser();
@@ -142,6 +149,9 @@ public class MapEditController {
     }
 
 
+    /**
+     * This method is for updating the Tile grid after edit operation
+     */
     private void updateGrid() {
 		// TODO Auto-generated method stub
     	for(Tile t : tileList) {
@@ -151,6 +161,10 @@ public class MapEditController {
 	}
 
 
+    /**
+     * Initial game starting phase after existing map is initialized or Edited map initialized
+     * @param Event of clicking the start button
+     */
 	@FXML
     void startBtncCick(ActionEvent event) {
     

@@ -2,6 +2,9 @@ package controller;
 import java.util.logging.Logger;
 import controller.MapJsonParser;
 
+/**
+*This class throws Invalid map Exception from MapJsonParser file
+*/
 public class InvalidMapException extends Exception {
 
 	private static final long serialVersionUID = 1L;

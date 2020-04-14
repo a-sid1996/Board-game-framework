@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="src/resources/java-json.jar"/>
 	<classpathentry kind="lib" path="src/resources/icepdf-viewer.jar"/>
 	<classpathentry kind="lib" path="src/resources/org.apache.commons.io.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

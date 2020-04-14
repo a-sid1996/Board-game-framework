@@ -50,6 +50,9 @@ public class newGameController {
 	}
 	
 
+	/**
+	 * This method gets executed when back button is pressed
+	 */
     @FXML
     void backBtnClick(ActionEvent event) {
         try {
@@ -74,6 +77,10 @@ public class newGameController {
 		playerNumber.setItems(number);
 	}
 	
+	/**
+	 *This method starts actual game play and implements game playing rules 
+	 *@param event of start game
+	 */
 	@FXML
 	void startGameClick(ActionEvent event) throws JSONException, IOException, InvalidMapException {
 

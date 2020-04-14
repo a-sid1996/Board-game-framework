@@ -16,8 +16,16 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
+
+/**
+* This class is the main controller class of the main screen
+*/
 public class MainScreenController  {
 	
+	/**
+	* This method is called when new game button is clicked
+	*@param new game button clicking event
+	*/
 	@FXML
 	 void newGameClick(ActionEvent event) throws NumberFormatException, IOException{
         try {
@@ -32,6 +40,10 @@ public class MainScreenController  {
         }
 	 }
 	
+	/**
+	* This method is called when user clicks on map edit button to change values of existing map files
+	*@param Map edit button clicking even
+	*/
 	@FXML
 	 void mapEditorClick(ActionEvent event) throws NumberFormatException, IOException{
         try {
@@ -46,6 +58,10 @@ public class MainScreenController  {
         }
 	 }
 	
+	/**
+	* Helper method that prints message on the screen and calls another method
+	*@param even type
+	*/
 	@FXML
 	 void helpClick(ActionEvent event) throws NumberFormatException, IOException{
 		System.out.println("Coming soon!");
@@ -55,6 +71,10 @@ public class MainScreenController  {
 	@FXML
 	public Button exitBtn;
 	
+	/**
+	*This method is called after user clicks exit game button
+	*@param even object used above
+	*/
 	@FXML
 	 void exitClick(ActionEvent event) throws NumberFormatException, IOException{
 	    Stage stage = (Stage) exitBtn.getScene().getWindow();

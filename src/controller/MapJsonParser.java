@@ -16,11 +16,19 @@ import org.json.JSONObject;
 import model.Tile;
 import model.Unit;
 
+/**
+ * This class implements map parsing functionality with simultaneously map validation functionality
+ */
 public class MapJsonParser {
 	private static final Tile Null = null;
 	static  ArrayList<Tile> TileList = new ArrayList<Tile>();
 
 //	public static void main(String args[]) throws Exception {
+	/**
+	 *This method is  parses Json map file, validates the data and create different tile objects based on the Json Data 
+	 *@param Json map file as string input
+	 *@return List of tile objects 
+	 */
 	public ArrayList<Tile> MapJsonParser1(String jsonInput1) throws JSONException, IOException, InvalidMapException {
 		
 		String jsonInput = FileUtils.readFileToString(new File(jsonInput1));
