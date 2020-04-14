@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
@@ -134,12 +135,23 @@ public class MapEditController {
 
 			System.out.println("Wish to edit more? (Y?N)");
 			resp = sc.nextLine();
+			
+			updateGrid();
 
 		}		
     }
 
 
-    @FXML
+    private void updateGrid() {
+		// TODO Auto-generated method stub
+    	for(Tile t : tileList) {
+    		Label l = new Label(t.getTileName());
+    		tileGrid.add(l, 0, tileList.indexOf(t)+1);
+    	}
+	}
+
+
+	@FXML
     void startBtncCick(ActionEvent event) {
     
 		BoardModel bc = new BoardModel();

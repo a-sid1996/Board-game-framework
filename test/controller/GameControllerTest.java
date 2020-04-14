@@ -1,4 +1,4 @@
-package controller;
+package test.controller;
 
 import model.Player;
 import model.PlayerTurnModule;

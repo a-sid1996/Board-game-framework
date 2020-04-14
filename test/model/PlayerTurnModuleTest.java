@@ -12,10 +12,11 @@ public class PlayerTurnModuleTest {
         Unit[] units = new Unit[2];
         units[0] = new Unit("money");
         units[1] = new Unit("hotel");
-        Player player1 = new Player("player1", units, score);
-        Player player2 = new Player("player2", units, score);
-        Player player3 = new Player("player3", units, score);
-        Player player4 = new Player("player4", units, score);
+    	ArrayList<Tile> t = new ArrayList<Tile>();
+        Player player1 = new Player("player1", units, score, t);
+        Player player2 = new Player("player2", units, score, t);
+        Player player3 = new Player("player3", units, score, t);
+        Player player4 = new Player("player4", units, score, t);
         ArrayList<Player> players = new ArrayList<>();
         players.add(player1);
         players.add(player2);
@@ -36,10 +37,10 @@ public class PlayerTurnModuleTest {
         units[0] = new Unit("money");
         units[1] = new Unit("hotel");
 
-        Player player1 = new Player("player1", units, score);
-        Player player2 = new Player("player2", units, score);
-        Player player3 = new Player("player3", units, score);
-        Player player4 = new Player("player4", units, score);
+        Player player1 = new Player("player1", units, score, t);
+        Player player2 = new Player("player2", units, score, t);
+        Player player3 = new Player("player3", units, score, t);
+        Player player4 = new Player("player4", units, score, t);
         ArrayList<Player> players = new ArrayList<>();
         players.add(player1);
         players.add(player2);
