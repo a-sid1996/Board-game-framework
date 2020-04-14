@@ -48,4 +48,14 @@ public class EditMapTest {
         Assert.assertTrue(editMap.EditAvenueRent2("r1", 3000));
         Assert.assertFalse(editMap.EditAvenueRent2("r2", 3000));
     }
+
+    @Test
+    public void EditAvenueRent3() {
+        ArrayList<Tile> al = new ArrayList<>();
+        al.add(new Tile("r1", 0, 0, "rent3"));
+        EditMap editMap = Mockito.mock(EditMap.class);
+        Mockito.when(editMap.getTileList()).thenReturn(al);
+        Assert.assertTrue(editMap.EditAvenueRent2("r1", 3000));
+        Assert.assertFalse(editMap.EditAvenueRent2("r2", 3000));
+    }
 }
