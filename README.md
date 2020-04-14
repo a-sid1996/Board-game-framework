@@ -8,7 +8,10 @@ Project for SOEN 6441
 
 ## Download and Installation
 Clone and Open the Project in any Java IDE (eg: Eclipse, IntelliJ IDEA, etc.)
+Before Running the project, ensure you have all the dependencies of the project configured.
+To find the jars of the dependies, please go to `resoureces` directory
 Run `MainMenuScreen.java` to execute the game framework
+One can follow the GUI to create, edit or load map. Sample maps are in the `resoureces` directory.
 
 ## Working with this GitHub repository
 
@@ -45,3 +48,9 @@ Then follow the process in the terminal local directory
   * When the task is finished, open a pull request on the branch
   * Set someone as a reviewer
   * Once the review is complete, merge into dev.
+  
+  
+
+2. Mention steps on how to create a new map, save and load an existing map. Include any sample maps (one correct and one incorrect map) in your project. 
+3. Mention all the game-specific phases. (For teams not implementing RISK)
+4. Mention any other details that you think might be useful for me to test all the requirements for example- test cases etc. (Note: While executing, your game should not crash in the middle so any relevant information is helpful)
