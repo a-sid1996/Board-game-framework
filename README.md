@@ -14,11 +14,11 @@ Project for SOEN 6441
 5. One can follow the GUI to create, edit or load map. Sample maps are in the `controller` directory named `FinalMapFile.json` and `FinalMapFile - Copy.json`
 6. Game-specific phases (Monopoly)
   * Startup Initialization
-  * Reinforcement
   * Player objects initialization
   * Banker object initialization
   * Initial money distribution
   * Player position setup
+  * Reinforcement
   * Fortification
 7. All the test cases are in the `test` directory. Please make sure `JUnit` is added as dependency to run the test suite.
 
