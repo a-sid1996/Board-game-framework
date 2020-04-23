@@ -48,6 +48,7 @@
                 <RowConstraints maxHeight="249.80002746582034" minHeight="10.0" prefHeight="96.20000915527346" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
+            <Button fx:id="exitBtn" layoutX="778.0" layoutY="439.0" mnemonicParsing="false" onAction="#exitBtnCLick" text="Exit" />
          </children>
       </AnchorPane>
    </children>

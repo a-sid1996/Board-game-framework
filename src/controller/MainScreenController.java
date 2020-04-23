@@ -71,6 +71,9 @@ public class MainScreenController  {
 	@FXML
 	public Button exitBtn;
 	
+	@FXML
+	public Button loadBtn;
+	
 	/**
 	*This method is called after user clicks exit game button
 	*@param even object used above
@@ -81,32 +84,43 @@ public class MainScreenController  {
 	    stage.close();
 	 }
 	
-//	public class ViewerCtrl {
-//	 private String filePath;
-//	 
-//	    public ViewerCtrl() {
-//	     this.filePath = "/resources/monins.pdf";
-//	     SwingController controller = new SwingController();
-//
-//	        SwingViewBuilder factory = new SwingViewBuilder(controller);
-//
-//	        JPanel viewerComponentPanel = factory.buildViewerPanel();
-//
-//	        controller.getDocumentViewController().setAnnotationCallback(
-//	                new org.icepdf.ri.common.MyAnnotationCallback(
-//	                        controller.getDocumentViewController()));
-//
-//	        JFrame applicationFrame = new JFrame();
-//	        applicationFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//	        //applicationFrame.getContentPane().add(viewerComponentPanel);
-//	        applicationFrame.add(viewerComponentPanel);
-//	        
-//	        controller.openDocument(filePath);
-//
-//	        applicationFrame.pack();
-//	        applicationFrame.setVisible(true);
-//	    }
-//	}
+	@FXML
+	void tournamentBtnClick(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/tournamentStart.fxml"));
+            Parent root = (Parent) loader.load();
+            Scene newScene = new Scene(root);
+            Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            newStage.setScene(newScene);
+            newStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+	}
+	
+    @FXML
+    void loadBtnCLick(ActionEvent event) {
+
+    	//Your code here
+    	
+    	
+    	GameController gc = new GameController(bc, card, players, score, ptm);
+
+	    try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/GameScreen.fxml"));
+	        Parent root = (Parent) loader.load();
+	        Scene newScene = new Scene(root);
+	        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        newStage.setScene(newScene);
+	        newStage.show();
+	        gameScreenController controller = loader.getController();
+	        controller.setGameController(gc);
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+    }
 	
 }

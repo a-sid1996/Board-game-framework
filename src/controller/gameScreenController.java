@@ -141,6 +141,16 @@ public class gameScreenController{
 
     }
 	
+    @FXML
+    private Button exitBtn;
+	
+    @FXML
+    void exitBtnCLick(ActionEvent event) {
+
+    	//Your code here
+    	
+    }
+	
 	 interface GameControlObserver {
 	    	void onDiceRolled(Player player, int result, GameController gameController) throws IOException;
 		}

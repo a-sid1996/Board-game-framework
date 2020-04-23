@@ -8,10 +8,12 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="newGameBtn" layoutX="283.0" layoutY="44.0" mnemonicParsing="false" onAction="#newGameClick" text="New Game" />
-            <Button fx:id="mapEditorBtn" layoutX="282.0" layoutY="116.0" mnemonicParsing="false" onAction="#mapEditorClick" text="Map Editor" />
-            <Button fx:id="helpBtn" layoutX="300.0" layoutY="191.0" mnemonicParsing="false" onAction="#helpClick" text="Help" />
-            <Button fx:id="exitBtn" cancelButton="true" layoutX="302.0" layoutY="264.0" mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+            <Button fx:id="newGameBtn" layoutX="167.0" layoutY="75.0" mnemonicParsing="false" onAction="#newGameClick" text="New Game" />
+            <Button fx:id="mapEditorBtn" layoutX="166.0" layoutY="151.0" mnemonicParsing="false" onAction="#mapEditorClick" text="Map Editor" />
+            <Button fx:id="helpBtn" layoutX="184.0" layoutY="226.0" mnemonicParsing="false" onAction="#helpClick" text="Help" />
+            <Button fx:id="exitBtn" cancelButton="true" layoutX="186.0" layoutY="299.0" mnemonicParsing="false" onAction="#exitClick" text="Exit" />
+            <Button fx:id="tournamentBtn" layoutX="393.0" layoutY="224.0" mnemonicParsing="false" onAction="#tournamentBtnClick" text="Tournament" />
+            <Button fx:id="loadBtn" layoutX="395.0" layoutY="150.0" mnemonicParsing="false" onAction="#loadBtnCLick" text="Load Game" />
       </children>
     </AnchorPane>
   </children>
