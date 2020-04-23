@@ -16,6 +16,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/15149/Desktop/Concordia/SOEN 6441/Board-game-framework/resources/gson-2.8.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="src/resources/java-json.jar"/>
 	<classpathentry kind="lib" path="src/resources/icepdf-viewer.jar"/>
 	<classpathentry kind="lib" path="src/resources/org.apache.commons.io.jar"/>
