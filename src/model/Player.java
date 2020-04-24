@@ -1,12 +1,14 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This class represents a player object and its properties
  */
-public class Player {
+public class Player implements Serializable {
+    private static final long serialVersionUID = 123L;
     /**
      * @param name        represents player's name
      * @param currentTile shows tiles that are owned by current player.
@@ -19,7 +21,7 @@ public class Player {
     private String name;
     private ArrayList<Tile> currentTile;
     private ArrayList<Unit> asset;
-    Score score;
+    private Score score;
 
 
     /**

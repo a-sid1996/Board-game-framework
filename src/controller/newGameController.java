@@ -143,22 +143,25 @@ public class newGameController {
 		card.setDesc(12, "Advance to go. Collect 200$ from bank");		
 
 		
-		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(players.subList(1, players.size()));
+		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
 		GameController gc = new GameController(bc, card, players, score, ptm);
 
-	    try {
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/GameScreen.fxml"));
-	        Parent root = (Parent) loader.load();
-	        Scene newScene = new Scene(root);
-	        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        newStage.setScene(newScene);
-	        newStage.show();
-	        gameScreenController controller = loader.getController();
-	        controller.setGameController(gc);
-
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+		startGame(gc, event);
 	}
 
+	public static void startGame(GameController gc, ActionEvent event) {
+		try {
+			FXMLLoader loader = new FXMLLoader(newGameController.class.getResource("/view/GameScreen.fxml"));
+			Parent root = (Parent) loader.load();
+			Scene newScene = new Scene(root);
+			Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			newStage.setScene(newScene);
+			newStage.show();
+			gameScreenController controller = loader.getController();
+			controller.setGameController(gc);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javafx.fxml.FXMLLoader;
@@ -18,7 +19,7 @@ import model.Unit;
 /**
  * This controller class is the main controller of the framework which initializes all model objects and
  */
-public class GameController implements gameScreenController.GameControlObserver {
+public class GameController implements gameScreenController.GameControlObserver, Serializable {
     /**
      * @param list has a list of all the players
      * @param bc is an object of Board model

@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -7,7 +8,7 @@ import java.util.Random;
  * This is a model class is for card module that defines common functionalities
  * of cards for Board games. of different players
  */
-public class Card {
+public class Card implements Serializable {
 
     /**
      * @param noOfCards   defines specific ID assigned to all cards
@@ -37,7 +38,7 @@ public class Card {
     public String getDesc() {
         Random random = new Random();
         int rand = random.nextInt(noOfCards);
-
+        rand = rand % descOfCards.size();
         return descOfCards.get(rand);
 
     }

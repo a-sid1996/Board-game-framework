@@ -20,7 +20,7 @@
         "a_name": "Community Chest",
         "b_type": "community-chest",
         "c_x": "8",
-        "d_y": "8"
+        "d_y": "0"
       },
       {
         "a_name": "Baltic Avenue",
@@ -43,9 +43,8 @@
         "b_type": "railroad",
         "c_x": "5",
         "d_y": "0",
-        "e_cost": "200"
-        "f_rent": "[25]",
-        
+        "e_cost": "200",
+        "f_rent": "[25,55,55,55,55,55]"
       },
       {
         "a_name": "Oriental Avenue",
@@ -125,9 +124,8 @@
         "b_type": "railroad",
         "c_x": "0",
         "d_y": "5",
-        "e_cost": "200"
-        "f_rent": "[25]",
-        
+        "e_cost": "200",
+        "f_rent": "[25,12,12,12,12,12]"
       },
       {
         "a_name": "St. James Place",
@@ -206,9 +204,8 @@
         "b_type": "railroad",
         "c_x": "5",
         "d_y": "10",
-        "e_cost": "200"
-        "f_rent": "[25]",
-        
+        "e_cost": "200",
+        "f_rent": "[25,25,12,12,12,12]"
       },
       {
         "a_name": "Atlatic Avenue",
@@ -288,8 +285,8 @@
         "b_type": "railroad",
         "c_x": "10",
         "d_y": "5",
-        "e_cost": "200"
-        "f_rent": "[25]",
+        "e_cost": "200",
+        "f_rent": "[25,12,12,12,12,12]"
       },
       {
         "a_name": "Chance",

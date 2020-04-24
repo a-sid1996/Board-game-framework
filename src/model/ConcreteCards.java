@@ -1,12 +1,13 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Random;
 
 import controller.GameController;
 import model.Card;
 import model.Player;
 
-public class ConcreteCards {
+public class ConcreteCards implements Serializable {
 
 	Card card;
 	Dice dice;

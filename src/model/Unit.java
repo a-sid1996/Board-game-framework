@@ -1,11 +1,12 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
  * This method class represents units characteristics, like movement types, life, price, etc.
  */
-public class Unit {
+public class Unit implements Serializable {
     public enum UnitType {
         PROPERTY("property"), HOTEL("hotel"), MONEY("money");
 

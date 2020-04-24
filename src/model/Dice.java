@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.math.*;
 import java.util.Random;
 
@@ -7,7 +8,7 @@ import java.util.Random;
  * This is a model class for score module that stores different score parameters
  * of different players
  */
-public class Dice {
+public class Dice implements Serializable {
     private int noOfDice;
 
     public Dice(int noOfDice) {

@@ -7,10 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import model.Dice;
-import model.Player;
-import model.Tile;
-import model.Unit;
+import model.*;
+import controller.SaveAndLoad;
 
 import java.util.ArrayList;
 
@@ -45,8 +43,8 @@ public class gameScreenController{
     
     @FXML
     private GridPane gameBoard;
-    
-    @FXML
+
+	@FXML
     void diceBtnClick(ActionEvent event) throws IOException {
 
     	Dice dice = new Dice(1);
@@ -138,7 +136,6 @@ public class gameScreenController{
 //    	}    	
     	
     	updateScoreboard();
-
     }
 	
     @FXML
@@ -146,8 +143,15 @@ public class gameScreenController{
 	
     @FXML
     void exitBtnCLick(ActionEvent event) {
-
-    	//Your code here
+		SaveAndLoad saveAndLoadGame = new SaveAndLoad(gc);
+		if(saveAndLoadGame.saveGame())
+		{
+			System.out.println("Game Saved");
+		}
+		else
+		{
+			System.out.println("Game not saved");
+		}
     	
     }
 	

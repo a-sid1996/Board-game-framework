@@ -1,9 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Tile {
+public class Tile implements Serializable {
 
     /**
      * @param int x and y  are the coordinates of tile on the board

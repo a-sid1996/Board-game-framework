@@ -212,7 +212,7 @@ public class MapEditController {
 		card.setDesc(12, "Advance to go. Collect 200$ from bank");		
 
 		
-		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(players.subList(1, players.size()));
+		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
 		GameController gc = new GameController(bc, card, players, score, ptm);
 
 	    try {

@@ -1,34 +1,30 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class PlayerTurnModule<Player> 
-{
+public class PlayerTurnModule<Player> implements Serializable {
 
 	/**
 	 * @param iterator object to iterate over List of players
 	 * @param list of players
 	 */
-	private Iterator<Player>  iterator;
-	private List<Player> list;
+	private int turnOfPlayer = 0;
+	private ArrayList<Player> list;
 
-	public PlayerTurnModule(List<Player> list) {
+	public PlayerTurnModule(ArrayList<Player> list) {
 		this.list = list;
-		iterator = list.iterator();
+		turnOfPlayer = 0;
 	}
 
 	/**
 	 * @return is a player object whose turn is next 
 	 */
 	public Player next() {
-		// if we get to the end, start again
-		if (!iterator.hasNext()) 
-		{
-			iterator = list.iterator();
-		}
-		return iterator.next();
+		turnOfPlayer = (turnOfPlayer + 1) % list.size();
+		return list.get(turnOfPlayer);
 	}
 
 	/**
@@ -37,14 +33,14 @@ public class PlayerTurnModule<Player>
 	 */
 	public Player update(Player item) 
 	{
-		Player p = null;
+		/*Player p = null;
 		while (iterator.hasNext()) {
 			p = iterator.next();
 			if (item.equals(p)) {	
 				break;
 			}
-		}
-		return p;
+		}*/
+		return null;
 	}
 
 	/**

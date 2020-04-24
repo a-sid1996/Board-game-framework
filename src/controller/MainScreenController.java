@@ -98,29 +98,36 @@ public class MainScreenController  {
         }
 
 	}
+
+	@FXML
+    void loadBtnCLick(ActionEvent event) throws IOException, ClassNotFoundException {
+		SaveAndLoad saveAndLoad = new SaveAndLoad();
+		GameController gc = saveAndLoad.loadGame();
+		newGameController.startGame(gc, event);
+	}
 	
-    @FXML
-    void loadBtnCLick(ActionEvent event) {
-
-    	//Your code here
-    	
-    	
-    	GameController gc = new GameController(bc, card, players, score, ptm);
-
-	    try {
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/GameScreen.fxml"));
-	        Parent root = (Parent) loader.load();
-	        Scene newScene = new Scene(root);
-	        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        newStage.setScene(newScene);
-	        newStage.show();
-	        gameScreenController controller = loader.getController();
-	        controller.setGameController(gc);
-
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-
-    }
+//    @FXML
+//    void loadBtnCLick(ActionEvent event) {
+//
+//    	//Your code here
+//
+//
+//    	GameController gc = new GameController(bc, card, players, score, ptm);
+//
+//	    try {
+//	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/GameScreen.fxml"));
+//	        Parent root = (Parent) loader.load();
+//	        Scene newScene = new Scene(root);
+//	        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//	        newStage.setScene(newScene);
+//	        newStage.show();
+//	        gameScreenController controller = loader.getController();
+//	        controller.setGameController(gc);
+//
+//	    } catch (Exception e) {
+//	        e.printStackTrace();
+//	    }
+//
+//    }
 	
 }
