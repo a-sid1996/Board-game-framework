@@ -213,7 +213,7 @@ public class MapEditController {
 
 		
 		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
-		GameController gc = new GameController(bc, card, players, score, ptm);
+		GameController gc = new GameController(bc, card, players, score, ptm, false);
 
 	    try {
 	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/GameScreen.fxml"));

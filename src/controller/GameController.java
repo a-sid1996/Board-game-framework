@@ -33,6 +33,7 @@ public class GameController implements gameScreenController.GameControlObserver,
     Card cm;
     Score score;
     PlayerTurnModule<Player> turn;
+    boolean tournament = false;
 
     /**
      * It starts the execution of the startup phase. starts reinforcement phase
@@ -43,13 +44,14 @@ public class GameController implements gameScreenController.GameControlObserver,
      * @param turn represents current turn of the player and he will roll the dice
      * @param score score
      */
-    public GameController(BoardModel bc, Card cm, ArrayList<Player> list, Score score, PlayerTurnModule<Player> turn) {
+    public GameController(BoardModel bc, Card cm, ArrayList<Player> list, Score score, PlayerTurnModule<Player> turn, boolean tournament) {
         // TODO Auto-generated constructor stub
         this.bc = bc;
         this.cm = cm;
         this.list = list;
         this.score = score;
         this.turn = turn;
+        this.tournament = tournament;
     }
 
     /**

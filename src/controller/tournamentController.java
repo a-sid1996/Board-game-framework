@@ -1,16 +1,33 @@
 package controller;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
+import org.json.JSONException;
+
+import controller.gameScreenController.GameControlObserver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import model.BoardModel;
+import model.Card;
+import model.Dice;
+import model.Player;
+import model.PlayerTurnModule;
+import model.Score;
+import model.Tile;
+import model.Unit;
 
 public class tournamentController {
 
@@ -18,6 +35,12 @@ public class tournamentController {
 	ObservableList<String> gameNum = FXCollections.observableArrayList("1","2","3","4","5");
 	ObservableList<String> mapNum = FXCollections.observableArrayList("1","2","3","4","5");
 	ObservableList<String> playerStrategy = FXCollections.observableArrayList("Aggresive", "Conservative", "Random", "Cheater");
+
+    @FXML
+    private GridPane resultGrid;
+
+    @FXML
+    private Button exitBtn;
 
     @FXML
     private ComboBox<String> mapBox;
@@ -91,6 +114,43 @@ public class tournamentController {
     @FXML
     private Text enterMax;
     
+    public TextField[] mapL;
+    public Button[] findMapBtn;
+    public TextField[] maxMoveL;
+    public ComboBox<String>[] pStrat;
+    
+    @SuppressWarnings("unchecked")
+	private void initializeButtonArray() {
+		// TODO Auto-generated method stub
+    	
+    	mapL = new TextField[5];
+		mapL[0] = mapL1;
+		mapL[1] = mapL2;
+		mapL[2] = mapL3;
+		mapL[3] = mapL4;
+		mapL[4] = mapL5;
+		
+		findMapBtn = new Button[5];
+		findMapBtn[0] = findMapBtn1;
+		findMapBtn[1] = findMapBtn2;
+		findMapBtn[2] = findMapBtn3;
+		findMapBtn[3] = findMapBtn4;
+		findMapBtn[4] = findMapBtn5;
+
+		maxMoveL = new TextField[5];
+		maxMoveL[0] = maxMoveL1;
+		maxMoveL[1] = maxMoveL2;
+		maxMoveL[2] = maxMoveL3;
+		maxMoveL[3] = maxMoveL4;
+		maxMoveL[4] = maxMoveL5;
+		
+		pStrat = new ComboBox[4];
+		pStrat[0] = pStrat1;
+		pStrat[1] = pStrat2;
+		pStrat[2] = pStrat3;
+		pStrat[3] = pStrat4;
+    }
+
 	@FXML
 	void initialize() {
 		playerBox.setItems(playerNum);
@@ -98,138 +158,51 @@ public class tournamentController {
 		mapBox.setItems(mapNum);
 		
 		enterMax.setVisible(false);
+
+		initializeButtonArray();
+
+		for(int i=0; i<5; i++) {
+			mapL[i].setVisible(false);
+			maxMoveL[i].setVisible(false);
+			findMapBtn[i].setVisible(false);
+		}
 		
-		mapL1.setVisible(false);
-		mapL2.setVisible(false);
-		mapL3.setVisible(false);
-		mapL4.setVisible(false);
-		mapL5.setVisible(false);
-				
-		maxMoveL1.setVisible(false);
-		maxMoveL2.setVisible(false);
-		maxMoveL3.setVisible(false);
-		maxMoveL4.setVisible(false);
-		maxMoveL5.setVisible(false);
-		
-		pStrat1.setVisible(false);
-		pStrat2.setVisible(false);
-		pStrat3.setVisible(false);
-		pStrat4.setVisible(false);
-		
-		findMapBtn1.setVisible(false);
-		findMapBtn2.setVisible(false);
-		findMapBtn3.setVisible(false);
-		findMapBtn4.setVisible(false);
-		findMapBtn5.setVisible(false);
+		for(int i=0; i<4; i++) {
+			pStrat[i].setVisible(false);
+		}
 
 	}
 
-    @FXML
+	@FXML
     void gameBoxClick(ActionEvent event) {
 		int gameN = Integer.parseInt(gameBox.getValue());
-		switch(gameN) {
-			case (1):
-				maxMoveL1.setVisible(true);
-				break;
-			case (2):
-				maxMoveL1.setVisible(true);
-				maxMoveL2.setVisible(true);
-				break;
-			case (3):
-				maxMoveL1.setVisible(true);
-				maxMoveL2.setVisible(true);
-				maxMoveL3.setVisible(true);
-				break;
-			case (4):
-				maxMoveL1.setVisible(true);
-				maxMoveL2.setVisible(true);
-				maxMoveL3.setVisible(true);
-				maxMoveL4.setVisible(true);
-				break;
-			case (5):
-				maxMoveL1.setVisible(true);
-				maxMoveL2.setVisible(true);
-				maxMoveL3.setVisible(true);
-				maxMoveL4.setVisible(true);
-				maxMoveL5.setVisible(true);
-				break;
+
+		for(int i =0; i<gameN; i++) {
+			maxMoveL[i].setVisible(true);
 		}
     }
 
     @FXML
     void mapBoxCLick(ActionEvent event) {
 		int mapN = Integer.parseInt(mapBox.getValue());
-		switch(mapN) {
-			case (1):
-				mapL1.setVisible(true);
-				findMapBtn1.setVisible(true);
-				break;
-			case (2):
-				mapL1.setVisible(true);
-				findMapBtn1.setVisible(true);
-				mapL2.setVisible(true);
-				findMapBtn2.setVisible(true);
-				break;
-			case (3):
-				mapL1.setVisible(true);
-				findMapBtn1.setVisible(true);
-				mapL2.setVisible(true);
-				findMapBtn2.setVisible(true);
-				mapL3.setVisible(true);
-				findMapBtn3.setVisible(true);
-				break;
-			case (4):
-				mapL1.setVisible(true);
-				findMapBtn1.setVisible(true);
-				mapL2.setVisible(true);
-				findMapBtn2.setVisible(true);
-				mapL3.setVisible(true);
-				findMapBtn3.setVisible(true);
-				mapL4.setVisible(true);
-				findMapBtn4.setVisible(true);
-				break;
-			case (5):
-				mapL1.setVisible(true);
-				findMapBtn1.setVisible(true);
-				mapL2.setVisible(true);
-				findMapBtn2.setVisible(true);
-				mapL3.setVisible(true);
-				findMapBtn3.setVisible(true);
-				mapL4.setVisible(true);
-				findMapBtn4.setVisible(true);
-				mapL5.setVisible(true);
-				findMapBtn5.setVisible(true);
-				break;
-			}
+
+		for(int i =0; i<mapN; i++) {
+			mapL[i].setVisible(true);
+			findMapBtn[i].setVisible(true);
+		}
     }
     
     @FXML
     void playerBoxClick(ActionEvent event) {
     	int playerN = Integer.parseInt(playerBox.getValue());
-		switch(playerN) {
-			case (1):
-				pStrat1.setVisible(true);
-				break;
-			case (2):
-				pStrat1.setVisible(true);
-				pStrat2.setVisible(true);
-				break;
-			case (3):
-				pStrat1.setVisible(true);
-				pStrat2.setVisible(true);
-				pStrat3.setVisible(true);
-				break;
-			case (4):
-				pStrat1.setVisible(true);
-				pStrat2.setVisible(true);
-				pStrat3.setVisible(true);
-				pStrat4.setVisible(true);
-				break;
+
+		for(int i =0; i<playerN; i++) {
+			pStrat[i].setVisible(true);
 		}
     }
 
     private void findLocation(TextField mapL12) {
-		// TODO Auto-generated method stub
+    	//TODO Auto-generated method stub
 		
 		FileChooser fc = new FileChooser();
 		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("JSON file", "*.json"));
@@ -265,30 +238,137 @@ public class tournamentController {
     	findLocation(mapL5);
     }
 
-//    @FXML
-//    void pStrat1Click(ActionEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void pStrat2Click(ActionEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void pStrat3Click(ActionEvent event) {
-//
-//    }
-//
-//    @FXML
-//    void pStrat4Click(ActionEvent event) {
-//
-//    }
-//
+    @FXML
+    void pStrat1Click(ActionEvent event) {
+
+    }
+
+    @FXML
+    void pStrat2Click(ActionEvent event) {
+
+    }
+
+    @FXML
+    void pStrat3Click(ActionEvent event) {
+
+    }
+
+    @FXML
+    void pStrat4Click(ActionEvent event) {
+
+    }
     
     @FXML
-    void startBtnClick(ActionEvent event) {
+    void startBtnClick(ActionEvent event) throws JSONException, IOException, InvalidMapException {
     	
+    	checkError(mapBox, "Map");
+    	checkError(gameBox, "Game");
+    	checkError(playerBox, "Player");
+    	
+    	for (int i=0; i<Integer.parseInt(gameBox.getValue()); i++) {
+    		int max = Integer.parseInt(maxMoveL[i].getText())-1;
+    		
+    		for(int j=0; j<Integer.parseInt(mapBox.getValue()); j++) {
+    			String location = mapL[j].getText();
+    			int numPLayers = Integer.valueOf(playerBox.getValue());
+    			BoardModel bc = new BoardModel();
+    			MapJsonParser m = new MapJsonParser();
+    			bc.setBoard(m.MapJsonParser1(location));
+    			
+
+    			Score score = new Score();
+    			Unit[] units = new Unit[2];
+    			units[0] = new Unit("money", 10000000);
+    			units[1] = new Unit("hotel", 1000);
+
+    			ArrayList<Tile> t = new ArrayList<Tile>();
+    			t.add(bc.getBoard().get(0));
+
+    			Player bank = new Player("bank", units, score, t);
+
+    			ArrayList<Player> players = new ArrayList<Player>();
+    			players.add(bank);
+
+    			for (int k=0; i<numPLayers; i++) {
+    				Unit[] unitP = new Unit[2];
+    				unitP[0] = new Unit("money", 1500);
+    				unitP[1] = new Unit("hotel", 0);
+    				ArrayList<Tile> t1 = new ArrayList<Tile>();
+    				t1.add(bc.getBoard().get(0));
+    				Player p = new Player("player"+i, unitP, score, t1);
+    				players.add(p);
+    			}
+
+    			Card card = new Card(12);
+    			
+    			card.setDesc(1, "Move To Go");
+    			card.setDesc(2, "Bank error in your favor. Collect $125");
+    			card.setDesc(3, "You have won a CrossWord Competition. Collect $100");
+    			card.setDesc(4, "You have been elected as the Chairman of the Board. Pay each player $50");
+    			card.setDesc(5, "Building loan matures. Collect $150 from Bank");
+    			card.setDesc(6, "Go To Jail. Do not pass Go. Do not collect $100");
+    			card.setDesc(7, "You inherit $100");
+    			card.setDesc(8, "Hospital fees. Pay $50");
+    			card.setDesc(9, "Grand Opera Night. Collect $50 from every player for opening night seats");
+    			card.setDesc(10, "You are assessed for street repairs. Pay $40 per plot");
+    			card.setDesc(11, "Go to Jail. Pay $50 to the bank");
+    			card.setDesc(12, "Advance to go. Collect 200$ from bank");		
+
+    			
+    			PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
+    			GameController gc = new GameController(bc, card, players, score, ptm, false);
+
+    			String winner = "";
+    			
+    			for(int k=0; k<max; k++) {
+    				
+    				Player p = gc.nextPlayer();
+    				
+        			if(p.getMoney() < 0) {
+        				System.out.println("Since the user is already in debt he is eliminated.");
+        		    	gc.removePlayer(p);
+        			} else {
+        		        if(gc.list.size() <=2) {
+        		        	System.out.println(gc.list.get(1).getName() + " has won!!");
+        		        	winner = gc.list.get(1).getName();
+        		        	return;
+        		        }
+
+        		    	Dice dice = new Dice(1);
+        		    	int result = dice.diceroll();
+        		    	System.out.println("User rolled a " + result);
+        		    	gc.movePlayer(p, result, gc);
+        		    	    		        
+        			}
+
+    			}
+    			if(winner == "") {
+    				winner = "Draw";
+    			}
+    			
+    			System.out.println(winner);
+    		}
+    	}
     }
+    
+    
+    
+    private void checkError(ComboBox<String> box, String string) {
+	// TODO Auto-generated method stub
+    	if(box.getValue() == null) {
+			Alert errorAlert = new Alert(AlertType.ERROR);
+			errorAlert.setHeaderText("Input not valid");
+			errorAlert.setContentText(string + " box input is not valid.");
+			errorAlert.showAndWait();
+			return;
+    	}
+    }
+
+	@FXML
+    void exitBtnClick(ActionEvent event) {
+	    Stage stage = (Stage) exitBtn.getScene().getWindow();
+	    stage.close();
+    }
+
 
 }
