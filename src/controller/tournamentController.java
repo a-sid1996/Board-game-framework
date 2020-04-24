@@ -169,6 +169,7 @@ public class tournamentController {
 		
 		for(int i=0; i<4; i++) {
 			pStrat[i].setVisible(false);
+			pStrat[i].setItems(playerStrategy);
 		}
 
 	}
@@ -261,10 +262,18 @@ public class tournamentController {
     @FXML
     void startBtnClick(ActionEvent event) throws JSONException, IOException, InvalidMapException {
     	
-    	checkError(mapBox, "Map");
-    	checkError(gameBox, "Game");
-    	checkError(playerBox, "Player");
-    	
+    	if(checkError(mapBox, "Map")) {
+    		return;
+    	}
+
+    	if(checkError(playerBox, "Player")) {
+    		return;
+    	}
+
+    	if(checkError(gameBox, "Game")) {
+    		return;
+    	}
+
     	for (int i=0; i<Integer.parseInt(gameBox.getValue()); i++) {
     		int max = Integer.parseInt(maxMoveL[i].getText())-1;
     		
@@ -353,15 +362,45 @@ public class tournamentController {
     
     
     
-    private void checkError(ComboBox<String> box, String string) {
+    private boolean checkError(ComboBox<String> box, String string) {
 	// TODO Auto-generated method stub
+    	    	
     	if(box.getValue() == null) {
 			Alert errorAlert = new Alert(AlertType.ERROR);
 			errorAlert.setHeaderText("Input not valid");
 			errorAlert.setContentText(string + " box input is not valid.");
 			errorAlert.showAndWait();
-			return;
+			return true;
     	}
+    	
+    	for(int i=0; i<Integer.parseInt(box.getValue()); i++) {
+    		if(string.equals("Map")) {
+    			if(mapL[i].getText().isEmpty()) {
+    				Alert errorAlert = new Alert(AlertType.ERROR);
+    				errorAlert.setHeaderText("Input not valid");
+    				errorAlert.setContentText(i + "th" + string + " box input is not valid.");
+    				errorAlert.showAndWait();
+    				return true;
+    			}
+    		} else if (string.equals("Game")) {
+    			if(maxMoveL[i].getText().isEmpty()) {
+    				Alert errorAlert = new Alert(AlertType.ERROR);
+    				errorAlert.setHeaderText("Input not valid");
+    				errorAlert.setContentText(i + "th" + string + " box input is not valid.");
+    				errorAlert.showAndWait();
+    				return true;
+    			}    			
+    		} else {
+    			if(pStrat[i].getValue() == null) {
+    				Alert errorAlert = new Alert(AlertType.ERROR);
+    				errorAlert.setHeaderText("Input not valid");
+    				errorAlert.setContentText(i + "th" + string + " box input is not valid.");
+    				errorAlert.showAndWait();
+    				return true;
+    			}
+    		}
+    	}
+		return false;
     }
 
 	@FXML
