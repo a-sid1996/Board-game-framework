@@ -47,20 +47,32 @@ public class gameScreenController{
 	@FXML
     void diceBtnClick(ActionEvent event) throws IOException {
 
-    	Dice dice = new Dice(1);
-    	int result = dice.diceroll();
-    	diceResult.setVisible(true);
-    	diceResult.setText("User rolled a " + result);
-    	gc.movePlayer(p, result, gc);
-    	
-    	
-    	
-        for(GameControlObserver gameControlObserver : observers) {
-      		gameControlObserver.onDiceRolled(p, result, gc);
-  		}
-    	
-    	updateScreen();
+		if(p.getMoney() < 0) {
+	    	diceResult.setVisible(true);
+	    	diceResult.setText("Since the user is already in debt he is eliminated.");
+	    	gc.removePlayer(p);
+		} else {
+	        if(gc.list.size() <=2) {
+	        	diceResult.setText(gc.list.get(1).getName() + " has won!!");
+	        	return;
+	        }
+
+	    	Dice dice = new Dice(1);
+	    	int result = dice.diceroll();
+	    	diceResult.setVisible(true);
+	    	diceResult.setText("User rolled a " + result);
+	    	gc.movePlayer(p, result, gc);
+	    	
+	    	
+	        for(GameControlObserver gameControlObserver : observers) {
+	      		gameControlObserver.onDiceRolled(p, result, gc);
+	  		}
+	        
+		}
+
+		updateScreen();
     	updateScoreboard();
+
     }
     
     private void updateScoreboard() {

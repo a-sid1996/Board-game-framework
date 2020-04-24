@@ -169,6 +169,19 @@ public class GameController implements gameScreenController.GameControlObserver,
         return false;
     }
 
+	public void removePlayer(Player p) {
+		// TODO Auto-generated method stub
+
+		p.getCurrentTile().get(0).setMainPlayer(null);
+
+		list.get(0).addMoney(p.getMoney());
+		p.deductMoney(p.getMoney());
+		
+		list.remove(p);
+		turn.setList(list);
+
+	}
+
 }
 
 //Dummy function for future build 

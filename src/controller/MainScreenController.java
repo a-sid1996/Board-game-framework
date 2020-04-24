@@ -87,7 +87,7 @@ public class MainScreenController  {
 	@FXML
 	void tournamentBtnClick(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/tournamentStart.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TournamentScreen.fxml"));
             Parent root = (Parent) loader.load();
             Scene newScene = new Scene(root);
             Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
