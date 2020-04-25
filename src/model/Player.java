@@ -22,7 +22,7 @@ public class Player implements Serializable {
     private ArrayList<Tile> currentTile;
     private ArrayList<Unit> asset;
     private Score score;
-
+    private String playerType;
 
     /**
      * Card List
@@ -37,6 +37,17 @@ public class Player implements Serializable {
         }
         this.score = score;
         this.currentTile = currentTile;
+    }
+
+    public Player(String name, Unit[] units, Score score, ArrayList<Tile> currentTile, String playerType) {
+        this.name = name;
+        this.asset = new ArrayList<>();
+        for (Unit unit : units) {
+            this.asset.add(unit);
+        }
+        this.score = score;
+        this.currentTile = currentTile;
+        this.playerType = playerType;
     }
 
     /**
@@ -225,4 +236,11 @@ public class Player implements Serializable {
 
     }
 
+    public String getPlayerType() {
+        return playerType;
+    }
+
+    public void setPlayerType(String playerType) {
+        this.playerType = playerType;
+    }
 }
