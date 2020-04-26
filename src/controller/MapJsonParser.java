@@ -21,7 +21,7 @@ import model.Unit;
  */
 public class MapJsonParser {
 	private static final Tile Null = null;
-	static  ArrayList<Tile> TileList = new ArrayList<Tile>();
+	ArrayList<Tile> TileList = new ArrayList<Tile>();
 
 //	public static void main(String args[]) throws Exception {
 	/**
@@ -166,7 +166,7 @@ public class MapJsonParser {
 				
 				tile = new Tile(name, x, y, "property");				
 				tile.setValue("Cost", cost);
-				tile.setValue("house", house);
+				tile.setValue("hotel", house);
 				tile.setValue("rent1", rentList.get(0));
 				tile.setValue("rent2", rentList.get(1));
 				tile.setValue("rent3", rentList.get(2));

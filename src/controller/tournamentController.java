@@ -293,9 +293,11 @@ public class tournamentController {
         }
 
         for (int i = 0; i < Integer.parseInt(gameBox.getValue()); i++) {
-            int max = Integer.parseInt(maxMoveL[i].getText()) - 1;
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>> i" + i + "  " + Integer.parseInt(gameBox.getValue()));
+            int max = Integer.parseInt(maxMoveL[i].getText());
 
             for (int j = 0; j < Integer.parseInt(mapBox.getValue()); j++) {
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>> j" + j);
                 String location = mapL[j].getText();
                 int numPLayers = Integer.valueOf(playerBox.getValue());
                 BoardModel bc = new BoardModel();
@@ -316,14 +318,14 @@ public class tournamentController {
                 ArrayList<Player> players = new ArrayList<Player>();
                 players.add(bank);
 
-                for (i = 0; i < numPLayers; i++) {
+                for (int k = 0; k < numPLayers; k++) {
                     Unit[] unitP = new Unit[2];
-                    unitP[0] = new Unit("money", 3000);
+                    unitP[0] = new Unit("money", 1500);
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
                     System.out.println("ArrayList of tile t1 ********" +t1.size());
-                    Player p = new Player("player" + i, unitP, score, t1,al.get(i));
+                    Player p = new Player("player" + k, unitP, score, t1,al.get(k));
                     System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
                     players.add(p);
                 }
@@ -384,30 +386,32 @@ public class tournamentController {
                             break;
                     }
 
-                    strategy.setOfferType(resultTile, p, card.getDesc());
-
-                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
-                    System.out.println("-----------------------------------------------------------------");
 
                     if (p.getMoney() < 100) {
                         System.out.println("Since the user is already in debt he is eliminated.");
                         gc.removePlayer(p);
-                    } else {
-                        if (gc.list.size() <= 2) {
-                            System.out.println(gc.list.get(1).getName() + " has won!!");
-                            winner = gc.list.get(1).getName();
-                            return;
-                        }
-
-
                     }
+
+                    if (gc.list.size() <= 2) {
+                        System.out.println(gc.list.get(1).getName() + " has won!!");
+                        winner = gc.list.get(1).getName();
+                        break;
+                    }
+
+                    strategy.setOfferType(resultTile, p, card.getDesc());
+
+
+                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    System.out.println("-----------------------------------------------------------------");
+
 
                 }
                 if (winner == "") {
-                    winner = "Draw";
+                    System.out.println("This game ended in draw!!");
                 }
+                
+                bc.setBoard(null);
 
-                System.out.println(winner);
             }
         }
     }

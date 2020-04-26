@@ -40,6 +40,7 @@ public class StrategyAttack  implements Strategy{
 		        	p.deductMoney(tile.getValue("Cost"));
 		        	Unit unit = new Unit("property", tile);
 		        	p.setAsset(unit);
+		        	p.updateCurrentTile(tile, 0);
 		        	tile.setMainPlayer(p);
 		    	} 
 				else
@@ -54,10 +55,10 @@ public class StrategyAttack  implements Strategy{
 			{
 				if(!resultTile.getType().equals("railroad")){
 				System.out.println("Attacker build" +p.getName());
-				if(p.getMoney() > tile.getValue("house")) 
+				if(p.getMoney() > tile.getValue("hotel")) 
 				{
-		        	gc.list.get(0).addMoney(tile.getValue("house"));
-		        	p.deductMoney(tile.getValue("house"));
+		        	gc.list.get(0).addMoney(tile.getValue("hotel"));
+		        	p.deductMoney(tile.getValue("hotel"));
 		        	Unit unit = new Unit("property", tile);
 		        	p.setAsset(unit);
 		        	tile.setMainPlayer(p);

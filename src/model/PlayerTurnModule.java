@@ -51,6 +51,7 @@ public class PlayerTurnModule<Player> implements Serializable {
 	}
 
 	public void setList(ArrayList<Player> list) {
+		turnOfPlayer--;
 		this.list = list;
 	}
 }

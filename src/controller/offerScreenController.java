@@ -96,6 +96,7 @@ public class offerScreenController {
         	player.deductMoney(tile.getValue("Cost"));
         	Unit unit = new Unit("property", tile);
         	player.setAsset(unit);
+        	player.updateCurrentTile(tile, 0);
         	tile.setMainPlayer(player);
     	} else {
 			Alert errorAlert = new Alert(AlertType.ERROR);

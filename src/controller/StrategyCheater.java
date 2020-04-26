@@ -50,6 +50,7 @@ public class StrategyCheater implements Strategy{
 			        	Unit unit = new Unit("property", tile);
 			        	p.setAsset(unit);
 			        	tile.setMainPlayer(p);
+			        	p.updateCurrentTile(tile, 0);
 			    	} 
 					else
 					{
@@ -68,10 +69,10 @@ public class StrategyCheater implements Strategy{
 				{
 					//build
 					System.out.println("Attacker build" +p.getName());
-					if(p.getMoney() > tile.getValue("house")) 
+					if(p.getMoney() > tile.getValue("hotel")) 
 					{
-			        	gc.list.get(0).addMoney(tile.getValue("house"));
-			        	p.deductMoney(tile.getValue("house"));
+			        	gc.list.get(0).addMoney(tile.getValue("hotel"));
+			        	p.deductMoney(tile.getValue("hotel"));
 			        	Unit unit = new Unit("property", tile);
 			        	p.setAsset(unit);
 			        	tile.setMainPlayer(p);

@@ -15,7 +15,7 @@
             <Button fx:id="exitBtn" cancelButton="true" layoutX="186.0" layoutY="299.0" mnemonicParsing="false" onAction="#exitClick" text="Exit" />
             <Button fx:id="tournamentBtn" layoutX="393.0" layoutY="224.0" mnemonicParsing="false" onAction="#tournamentBtnClick" text="Tournament" />
             <Button fx:id="loadBtn" layoutX="395.0" layoutY="150.0" mnemonicParsing="false" onAction="#loadBtnCLick" text="Load Game" />
-            <TextField fx:id="location" layoutX="359.0" layoutY="115.0" onAction="#locationField" />
+            <TextField fx:id="locationField" layoutX="359.0" layoutY="108.0" />
       </children>
     </AnchorPane>
   </children>

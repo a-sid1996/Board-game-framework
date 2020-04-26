@@ -191,13 +191,17 @@ public class GameController implements gameScreenController.GameControlObserver,
 	public void removePlayer(Player p) {
 		// TODO Auto-generated method stub
 
-		p.getCurrentTile().get(0).setMainPlayer(null);
+//		p.getCurrentTile().get(0).setMainPlayer(null);
+		
+		for(Tile t : p.getCurrentTile()) {
+			t.setMainPlayer(null);
+		}
 
 		list.get(0).addMoney(p.getMoney());
 		p.deductMoney(p.getMoney());
 		
 		list.remove(p);
-		turn.setList(list);
+		turn.setList(new ArrayList<>(list.subList(1, list.size())));
 
 	}
 
