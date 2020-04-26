@@ -391,7 +391,7 @@ public class tournamentController {
                 units[1] = new Unit("hotel", 1000);
 
                 ArrayList<Tile> t = new ArrayList<Tile>(bc.getBoard());
-//                System.out.println("ArrayList of tile  t ********" +t.size());
+                System.out.println("ArrayList of tile  t ********" +t.size());
                 writer.write("\n" +"ArrayList of tile  t ********" +t.size() + "\n");
                 Player bank = new Player("bank", units, score, t);
 
@@ -400,14 +400,14 @@ public class tournamentController {
 
                 for (int k = 0; k < numPLayers; k++) {
                     Unit[] unitP = new Unit[2];
-                    unitP[0] = new Unit("money", 1500);
+                    unitP[0] = new Unit("money", 3000);
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
-//                    System.out.println("ArrayList of tile t1 ********" +t1.size());
+                    System.out.println("ArrayList of tile t1 ********" +t1.size());
                     writer.write("ArrayList of tile t1 ********" +t1.size()+ "\n");
                     Player p = new Player("player" + k, unitP, score, t1,al.get(k));
-//                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
+                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
                     writer.write(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName()+ "\n");
                     players.add(p);
                 }
@@ -445,14 +445,14 @@ public class tournamentController {
                 for (int k = 0; k < max; k++) {
 
                     Player p = gc.nextPlayer();
-//                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
                     writer.write("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
                     Dice dice = new Dice(1);
                     int result = dice.diceroll();
                     writer.write("User rolled a " + result+ "\n");
-//                    System.out.println("User rolled a " + result);
+                    System.out.println("User rolled a " + result);
                     Tile resultTile = gc.movePlayerTournament(p, result, gc);
-//                    System.out.println("you landed on " +resultTile.getTileName());
+                    System.out.println("you landed on " +resultTile.getTileName());
                     writer.write("you landed on " +resultTile.getTileName()+ "\n");
                     switch(p.getPlayerType().toLowerCase()) {
 
@@ -472,13 +472,13 @@ public class tournamentController {
 
 
                     if (p.getMoney() < 100) {
-//                        System.out.println("Since the user is already in debt he is eliminated.");
+                        System.out.println("Since the user is already in debt he is eliminated.");
                     	writer.write("Since the user is already in debt he is eliminated."+ "\n");
                         gc.removePlayer(p);
                     }
 
                     if (gc.list.size() <= 2) {
-//                        System.out.println(gc.list.get(1).getName() + " has won!!");
+                        System.out.println(gc.list.get(1).getName() + " has won!!");
                     	writer.write(gc.list.get(1).getName() + " has won!!"+ "\n");
                         winner = gc.list.get(1).getName();
                         break;
@@ -488,14 +488,14 @@ public class tournamentController {
 
 
                     writer.write("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
-//                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
-//                    System.out.println("-----------------------------------------------------------------");
+                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    System.out.println("-----------------------------------------------------------------");
                     writer.write("-----------------------------------------------------------------"+ "\n");
 
                 }
                 if (winner == "") {
                 	writer.write("This game ended in draw!!"+ "\n"+ "\n");
-//                    System.out.println("This game ended in draw!!");
+                    System.out.println("This game ended in draw!!");
                 	winner = "Draw";
                 }
                 results[i][j] = winner;
