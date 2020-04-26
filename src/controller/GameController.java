@@ -130,6 +130,22 @@ public class GameController implements gameScreenController.GameControlObserver,
         os.setOfferType(resultTile, p, cm.getDesc());
         newStage.showAndWait();
     }
+    
+    public Tile movePlayerTournament(Player p, int result, GameController gc) throws IOException {
+        // TODO Auto-generated method stub
+        //	for(Player player : list) {
+        //		if(player == p) {
+        Tile resultTile;
+        if (bc.getBoard().size() <= bc.getBoard().indexOf(p.getCurrentTile().get(0)) + result) {
+            p.addMoney(200);
+            resultTile = bc.getBoard().get(bc.getBoard().indexOf(p.getCurrentTile().get(0)) + result - bc.getBoard().size());
+        } else {
+            resultTile = bc.getBoard().get(bc.getBoard().indexOf(p.getCurrentTile().get(0)) + result);
+        }
+        p.updateCurrentTile(resultTile, 1);
+        p.removeCurrentTile(p.getCurrentTile().get(1));
+		return resultTile;
+    }
 
     //}
     //}
