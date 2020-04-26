@@ -66,10 +66,10 @@ public class offerScreenController {
      */
     @FXML
     void buildHouseBtn(ActionEvent event) {
-    	if(player.getMoney() > tile.getValue("house")) {
+    	if(player.getMoney() > tile.getValue("hotel")) {
 //    		gc.getPlayer(player).deductMoney(tile.getValue("Cost"));
-        	gc.list.get(0).addMoney(tile.getValue("house"));
-        	player.deductMoney(tile.getValue("house"));
+        	gc.list.get(0).addMoney(tile.getValue("hotel"));
+        	player.deductMoney(tile.getValue("hotel"));
         	Unit unit = new Unit("property", tile);
         	player.setAsset(unit);
         	tile.setMainPlayer(player);

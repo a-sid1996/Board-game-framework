@@ -6,7 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import model.*;
 import controller.SaveAndLoad;
 
@@ -152,11 +154,15 @@ public class gameScreenController{
 	
     @FXML
     private Button exitBtn;
+    
+    @FXML
+    private TextField locationField;
 	
     @FXML
     void exitBtnCLick(ActionEvent event) {
 		SaveAndLoad saveAndLoadGame = new SaveAndLoad(gc);
-		if(saveAndLoadGame.saveGame())
+		
+		if(saveAndLoadGame.saveGame(locationField.getText()))
 		{
 			System.out.println("Game Saved");
 		}
@@ -164,7 +170,10 @@ public class gameScreenController{
 		{
 			System.out.println("Game not saved");
 		}
-    	
+
+		Stage stage = (Stage) exitBtn.getScene().getWindow();
+        stage.close();
+
     }
 	
 	 interface GameControlObserver {

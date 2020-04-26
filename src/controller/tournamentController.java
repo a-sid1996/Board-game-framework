@@ -31,7 +31,7 @@ import model.Unit;
 
 public class tournamentController {
 
-    ObservableList<String> playerNum = FXCollections.observableArrayList("2", "3", "4", "5");
+    ObservableList<String> playerNum = FXCollections.observableArrayList("2", "3", "4");
     ObservableList<String> gameNum = FXCollections.observableArrayList("1", "2", "3", "4", "5");
     ObservableList<String> mapNum = FXCollections.observableArrayList("1", "2", "3", "4", "5");
     ObservableList<String> playerStrategy = FXCollections.observableArrayList("Aggresive", "Conservative", "Random", "Cheater");

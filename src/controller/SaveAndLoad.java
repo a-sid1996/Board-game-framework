@@ -1,14 +1,14 @@
 package controller;
 
 import java.io.*;
-import java.util.HashMap;
 
-import com.sun.corba.se.impl.orbutil.ObjectWriter;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+//import java.util.HashMap;
+//
+//import org.json.simple.JSONObject;
+//import org.json.simple.parser.JSONParser;
+//
+//import com.google.gson.Gson;
+//import com.google.gson.GsonBuilder;
 
 import model.Dice;
 import model.Player;
@@ -42,9 +42,9 @@ public class SaveAndLoad {
         this.gameController = gameController;
     }
 
-    public boolean saveGame() {
+    public boolean saveGame(String file) {
         try {
-            ObjectOutputStream ow = new ObjectOutputStream(new FileOutputStream("riskGame_1.json"));
+            ObjectOutputStream ow = new ObjectOutputStream(new FileOutputStream(file));
             ow.writeObject(this.gameController);
             ow.close();
         } catch (IOException ex) {
@@ -54,8 +54,8 @@ public class SaveAndLoad {
         return true;
     }
 
-    public GameController loadGame() throws IOException, ClassNotFoundException {
-            ObjectInputStream oi = new ObjectInputStream(new FileInputStream("riskGame_1.json"));
+    public GameController loadGame(String file) throws IOException, ClassNotFoundException {
+            ObjectInputStream oi = new ObjectInputStream(new FileInputStream(file));
             Object obj = oi.readObject();
             GameController gc = (GameController) obj;
             oi.close();

@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -100,12 +101,15 @@ public class MainScreenController  {
 	}
 
 	@FXML
+	private TextField locationField;
+	
+	@FXML
     void loadBtnCLick(ActionEvent event) throws IOException, ClassNotFoundException {
 		SaveAndLoad saveAndLoad = new SaveAndLoad();
-		GameController gc = saveAndLoad.loadGame();
+		GameController gc = saveAndLoad.loadGame(locationField.getText());
 		newGameController.startGame(gc, event);
 	}
-	
+
 //    @FXML
 //    void loadBtnCLick(ActionEvent event) {
 //
