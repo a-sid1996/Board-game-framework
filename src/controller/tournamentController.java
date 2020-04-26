@@ -313,6 +313,7 @@ public class tournamentController {
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
                     Player p = new Player("player" + i, unitP, score, t1,al.get(i));
+                    
                     System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile());
                     players.add(p);
                 }
@@ -337,12 +338,46 @@ public class tournamentController {
 
                 PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
                 GameController gc = new GameController(bc, card, players, score, ptm, false);
+                
+                for(Player  p :  players) 
+                {
+                	gc.movePlayer(p,gc.bc.getTile("10 0"));
+                }
 
                 String winner = "";
 
                 for (int k = 0; k < max; k++) {
 
                     Player p = gc.nextPlayer();
+                    Dice dice = new Dice(1);
+                    int result = dice.diceroll();
+                    System.out.println("User rolled a " + result);
+                    Tile resultTile = gc.movePlayerTournament(p, result, gc);
+                    
+                    if(p.getPlayerType().equalsIgnoreCase("Aggresive")) 
+                    {
+                    	StrategyAttack strategyAttack = new StrategyAttack(gc);
+                        strategyAttack.setOfferType(resultTile, p, card.getDesc());                   	
+                    }
+                    
+                    else if(p.getPlayerType().equalsIgnoreCase("Conservative"))
+                    {
+                    	StrategyConservative strategyConservative = new StrategyConservative(gc);
+                    	strategyConservative.setOfferType(resultTile, p, card.getDesc());
+                    }
+                    
+                    else if(p.getPlayerType().equalsIgnoreCase("Random")) 
+                    {
+                    	StrategyRandom strategyRandom= new StrategyRandom(gc);
+                    	strategyRandom.setOfferType(resultTile, p, card.getDesc());
+                    	
+                    }
+                    
+                    else if(p.getPlayerType().equalsIgnoreCase("Cheater"))
+                    {
+                    	StrategyCheater strategyCheater= new StrategyCheater(gc);
+                    	strategyCheater.setOfferType(resultTile, p, card.getDesc());
+                    }
 
                     if (p.getMoney() < 0) {
                         System.out.println("Since the user is already in debt he is eliminated.");
@@ -354,10 +389,6 @@ public class tournamentController {
                             return;
                         }
 
-                        Dice dice = new Dice(1);
-                        int result = dice.diceroll();
-                        System.out.println("User rolled a " + result);
-                        gc.movePlayer(p, result, gc);
 
                     }
 

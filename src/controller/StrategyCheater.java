@@ -150,14 +150,5 @@ public class StrategyCheater implements Strategy{
 		 }
 		
 	}
-
-
-	@Override
-	public void gamePlay() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
 		
 }
