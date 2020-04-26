@@ -201,11 +201,12 @@
       },
       {
         "a_name": "B. & O. Railroad",
-        "b_type": "railroad",
+        "b_type": "property",
         "c_x": "5",
         "d_y": "10",
         "e_cost": "200",
-        "f_rent": "[25,25,12,12,12,12]"
+        "f_rent": "[25,25,12,12,12,12]",
+        "g_house": "150"
       },
       {
         "a_name": "Atlatic Avenue",

@@ -125,7 +125,7 @@ public class GameController implements gameScreenController.GameControlObserver,
         Scene newScene = new Scene(root);
         Stage newStage = new Stage();
         newStage.setScene(newScene);
-        offerScreenController os = loader.getController();
+        offerScreenController os  = loader.getController();
         os.setController(gc);
         os.setOfferType(resultTile, p, cm.getDesc());
         newStage.showAndWait();
@@ -144,6 +144,7 @@ public class GameController implements gameScreenController.GameControlObserver,
         }
         p.updateCurrentTile(resultTile, 1);
         p.removeCurrentTile(p.getCurrentTile().get(1));
+
 		return resultTile;
     }
 

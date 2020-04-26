@@ -121,6 +121,16 @@ public class tournamentController {
     public Button[] findMapBtn;
     public TextField[] maxMoveL;
     public ComboBox<String>[] pStrat;
+    private Strategy strategy;
+
+
+    public Strategy getPlayerStrategy() {
+        return strategy;
+    }
+
+    public void setPlayerStrategy(Strategy playerStrategy) {
+        strategy = playerStrategy;
+    }
 
     @SuppressWarnings("unchecked")
     private void initializeButtonArray() {
@@ -298,8 +308,8 @@ public class tournamentController {
                 units[0] = new Unit("money", 10000000);
                 units[1] = new Unit("hotel", 1000);
 
-                ArrayList<Tile> t = new ArrayList<Tile>();
-                t.add(bc.getBoard().get(0));
+                ArrayList<Tile> t = new ArrayList<Tile>(bc.getBoard());
+                System.out.println("ArrayList of tile  t ********" +t.size());
 
                 Player bank = new Player("bank", units, score, t);
 
@@ -312,9 +322,9 @@ public class tournamentController {
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
+                    System.out.println("ArrayList of tile t1 ********" +t1.size());
                     Player p = new Player("player" + i, unitP, score, t1,al.get(i));
-                    
-                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile());
+                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
                     players.add(p);
                 }
 
@@ -338,6 +348,8 @@ public class tournamentController {
 
                 PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
                 GameController gc = new GameController(bc, card, players, score, ptm, false);
+                offerScreenController os = new offerScreenController();
+                os.setController(gc);
                 
                 for(Player  p :  players) 
                 {
@@ -349,35 +361,32 @@ public class tournamentController {
                 for (int k = 0; k < max; k++) {
 
                     Player p = gc.nextPlayer();
+                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
                     Dice dice = new Dice(1);
                     int result = dice.diceroll();
                     System.out.println("User rolled a " + result);
                     Tile resultTile = gc.movePlayerTournament(p, result, gc);
-                    
-                    if(p.getPlayerType().equalsIgnoreCase("Aggresive")) 
-                    {
-                    	StrategyAttack strategyAttack = new StrategyAttack(gc);
-                        strategyAttack.setOfferType(resultTile, p, card.getDesc());                   	
+                    System.out.println("you landed on " +resultTile.getTileName());
+
+                    switch(p.getPlayerType().toLowerCase()) {
+
+                        case "aggresive":
+                            this.setPlayerStrategy(new StrategyAttack(gc, os));
+                            break;
+                        case "conservative":
+                            this.setPlayerStrategy(new StrategyConservative(gc, os));
+                            break;
+                        case "random":
+                            this.setPlayerStrategy(new StrategyRandom(gc, os));
+                            break;
+                        case "cheater":
+                            this.setPlayerStrategy(new StrategyCheater(gc, os));
+                            break;
                     }
-                    
-                    else if(p.getPlayerType().equalsIgnoreCase("Conservative"))
-                    {
-                    	StrategyConservative strategyConservative = new StrategyConservative(gc);
-                    	strategyConservative.setOfferType(resultTile, p, card.getDesc());
-                    }
-                    
-                    else if(p.getPlayerType().equalsIgnoreCase("Random")) 
-                    {
-                    	StrategyRandom strategyRandom= new StrategyRandom(gc);
-                    	strategyRandom.setOfferType(resultTile, p, card.getDesc());
-                    	
-                    }
-                    
-                    else if(p.getPlayerType().equalsIgnoreCase("Cheater"))
-                    {
-                    	StrategyCheater strategyCheater= new StrategyCheater(gc);
-                    	strategyCheater.setOfferType(resultTile, p, card.getDesc());
-                    }
+
+                    strategy.setOfferType(resultTile, p, card.getDesc());
+
+                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
 
                     if (p.getMoney() < 0) {
                         System.out.println("Since the user is already in debt he is eliminated.");

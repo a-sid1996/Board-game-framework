@@ -18,9 +18,10 @@ public class StrategyRandom implements Strategy{
 	private Player player;
 	private Tile tile;
 	private String desc;
-	
-	StrategyRandom(GameController gc){
+
+	StrategyRandom(GameController gc,offerScreenController oc ){
 		this.gc= gc;
+		this.oc = oc;
 	}
 	
 	public void setOfferType(Tile resultTile, Player p, String desc2) {

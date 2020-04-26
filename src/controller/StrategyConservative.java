@@ -16,8 +16,9 @@ public class StrategyConservative implements Strategy{
 	private Tile tile;
 	private String desc;
 	
-	StrategyConservative(GameController gc){
+	StrategyConservative(GameController gc,offerScreenController oc ){
 		this.gc= gc;
+		this.oc = oc;
 	}
 	
 	public void setOfferType(Tile resultTile, Player p, String desc2) {

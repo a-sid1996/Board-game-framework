@@ -15,8 +15,10 @@ public class StrategyAttack  implements Strategy{
 	private Player player;
 	private Tile tile;
 	private String desc;
+
 	
-	StrategyAttack(GameController gc){
+	StrategyAttack(GameController gc, offerScreenController oc){
+		this.oc = oc;
 		this.gc= gc;
 	}
 	

@@ -19,8 +19,9 @@ public class StrategyCheater implements Strategy{
 	private Tile tile;
 	private String desc;
 	
-	StrategyCheater(GameController gc){
+	StrategyCheater(GameController gc,offerScreenController oc ){
 		this.gc= gc;
+		this.oc = oc;
 	}
 	
 	public void setOfferType(Tile resultTile, Player p, String desc2) {

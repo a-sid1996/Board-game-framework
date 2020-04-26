@@ -289,7 +289,7 @@ public class offerScreenController {
 	       {
 	    	   p.deductMoney(100);
 	    	   gc.list.get(0).addMoney(100);
-	    	   gc.movePlayer(p, gc.bc.getTile("0 0"));
+	    	   //gc.movePlayer(p, gc.bc.getTile("0 0"));
 	    	   break;
 	       }
 	       case("You inherit $100") :
