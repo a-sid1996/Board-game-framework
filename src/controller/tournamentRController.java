@@ -4,11 +4,21 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
+/**
+ * This class is a controller class of Tournament mode result box 
+ */
+
 public class tournamentRController {
 	
     @FXML
     private GridPane resultGrid;
 
+    /**
+     * This method displays results of the tournament game to the game window
+     * @param results is the Output grid of the game
+     * @param gameN is number of games being played
+     * @param mapN is number of maps used in the Tournament
+     */
 	public void setTournamentRController(String[][] results, int gameN, int mapN) {
 		// TODO Auto-generated method stub
 		

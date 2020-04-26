@@ -10,6 +10,10 @@ import controller.GameController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
+/**
+ * This is the implementation of strategy interface where a player is Cheater
+ * Cheater player will not play according to the rules For Instance, He won't pay price, rent upon getting penalized
+ */
 public class StrategyCheater implements Strategy{
 
 	
@@ -19,11 +23,22 @@ public class StrategyCheater implements Strategy{
 	private Tile tile;
 	private String desc;
 	
+	/**
+	 * Constructor to initialize strategyCheater
+	 * @param gc is GameController object
+	 * @param oc is OfferScreenController object
+	 */
 	StrategyCheater(GameController gc,offerScreenController oc ){
 		this.gc= gc;
 		this.oc = oc;
 	}
 	
+	/**
+	 * This method gets executed when player is playing as a cheater
+	 * @param resultTile is the tile player lands on
+	 * @param p is the current player whose turn is going on
+	 * @param desc2 is the description on the card
+	 */
 	public void setOfferType(Tile resultTile, Player p, String desc2) {
 		String tileType = resultTile.getTileName();
     	tile = resultTile;

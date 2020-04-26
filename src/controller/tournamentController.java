@@ -36,6 +36,9 @@ import model.Score;
 import model.Tile;
 import model.Unit;
 
+/**
+ * This is the main controller class of Tournament mode 
+ */
 public class tournamentController {
 
     ObservableList<String> playerNum = FXCollections.observableArrayList("2", "3", "4");
@@ -128,16 +131,26 @@ public class tournamentController {
     public ComboBox<String>[] pStrat;
     private Strategy strategy;
 
-
+    /**
+     * This method returns player strategy
+     * @return Strategy object out of Attacker, defensive, random, cheater
+     */
     public Strategy getPlayerStrategy() {
         return strategy;
     }
 
+    /**
+     * This method sets current players strategy
+     * @param playerStrategy is the object of player's selected strategy
+     */
     public void setPlayerStrategy(Strategy playerStrategy) {
         strategy = playerStrategy;
     }
 
     @SuppressWarnings("unchecked")
+    /**
+     * This method parses user input on view side and stores them into data structures upon button click
+     */
     private void initializeButtonArray() {
         // TODO Auto-generated method stub
 
@@ -169,6 +182,9 @@ public class tournamentController {
         pStrat[3] = pStrat4;
     }
 
+    /**
+     * This method Initializes the tournament
+     */
     @FXML
     void initialize() {
         playerBox.setItems(playerNum);
@@ -193,6 +209,10 @@ public class tournamentController {
 
     }
 
+    /**
+     * This method gets executed upon clicking gameBox clicking event
+     * @param event is the the event of gameBox Button clicking
+     */
     @FXML
     void gameBoxClick(ActionEvent event) {
         int gameN = Integer.parseInt(gameBox.getValue());
@@ -202,6 +222,10 @@ public class tournamentController {
         }
     }
 
+    /**
+     * This method gets executed upon clicking mapBox clicking event
+     * @param event is the the event of  map Button clicking
+     */
     @FXML
     void mapBoxCLick(ActionEvent event) {
         int mapN = Integer.parseInt(mapBox.getValue());
@@ -212,6 +236,10 @@ public class tournamentController {
         }
     }
 
+    /**
+     * This method gets executed upon clicking player clicking event
+     * @param event is the the event of  player Button clicking
+     */
     @FXML
     void playerBoxClick(ActionEvent event) {
         int playerN = Integer.parseInt(playerBox.getValue());
@@ -221,6 +249,10 @@ public class tournamentController {
         }
     }
 
+    /**
+     * This method gets executed upon clicking find location clicking event
+     * @param mapL12 is the text form of file location
+     */
     private void findLocation(TextField mapL12) {
         //TODO Auto-generated method stub
 
@@ -233,55 +265,97 @@ public class tournamentController {
         }
     }
 
+    /**
+     * This method gets executed upon clicking findMapBtn1 clicking event
+     * @param event is the the event of  findMapBtn1 Button clicking
+     */
     @FXML
     void findMapBtn1Click(ActionEvent event) {
         findLocation(mapL1);
     }
 
+    /**
+     * This method gets executed upon clicking findMapBtn2 clicking event
+     * @param event is the the event of  findMapBtn2 Button clicking
+     */
     @FXML
     void findMapBtn2Click(ActionEvent event) {
         findLocation(mapL2);
     }
 
+    /**
+     * This method gets executed upon clicking findMapBtn3 clicking event
+     * @param event is the the event of  findMapBtn3 Button clicking
+     */
     @FXML
     void findMapBtn3Click(ActionEvent event) {
         findLocation(mapL3);
     }
 
+    /**
+     * This method gets executed upon clicking findMapBtn4 clicking event
+     * @param event is the the event of  findMapBtn4 Button clicking
+     */
     @FXML
     void findMapBtn4Click(ActionEvent event) {
         findLocation(mapL4);
     }
 
+    /**
+     * This method gets executed upon clicking findMapBtn5 clicking event
+     * @param event is the the event of  findMapBtn5 Button clicking
+     */
     @FXML
     void findMapBtn5Click(ActionEvent event) {
         findLocation(mapL5);
     }
+    
     ArrayList<String> al = new ArrayList<String>();
+    
+    /**
+     * This method gets executed upon clicking player 1 strategy button
+     * @param event is the the event of  player 1 strategy Button clicking
+     */
     @FXML
     void pStrat1Click(ActionEvent event) {
         String playerType1 = (pStrat1.getValue());
         al.add(playerType1);
     }
 
+    /**
+     * This method gets executed upon clicking player 2 strategy button
+     * @param event is the the event of  player 2 strategy Button clicking
+     */
     @FXML
     void pStrat2Click(ActionEvent event) {
         String playerType2 = (pStrat2.getValue());
         al.add(playerType2);
     }
 
+    /**
+     * This method gets executed upon clicking player 3 strategy button
+     * @param event is the the event of  player 3 strategy Button clicking
+     */
     @FXML
     void pStrat3Click(ActionEvent event) {
         String playerType3 = (pStrat3.getValue());
         al.add(playerType3);
     }
 
+    /**
+     * This method gets executed upon clicking player 4 strategy button
+     * @param event is the the event of  player 4 strategy Button clicking
+     */
     @FXML
     void pStrat4Click(ActionEvent event) {
         String playerType4 = (pStrat4.getValue());
         al.add(playerType4);
     }
 
+    /**
+     * This method gets executed upon clicking Start button
+     * @param event is the the event of  Start Button clicking
+     */
     @FXML
     void startBtnClick(ActionEvent event) throws JSONException, IOException, InvalidMapException {
 
@@ -435,6 +509,11 @@ public class tournamentController {
     }
     
 
+    /**
+     * This method displays results of the tournament game to the game window
+     * @param results is the Output of the game
+     * @param event is the object of button clicking
+     */
     private void showResults(String[][] results, ActionEvent event) throws IOException {
 		// TODO Auto-generated method stub
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/tournamentResult.fxml"));
@@ -447,7 +526,12 @@ public class tournamentController {
 		controller.setTournamentRController(results, Integer.parseInt(gameBox.getValue()), Integer.parseInt(mapBox.getValue()));
 	}
 
-	private boolean checkError(ComboBox<String> box, String string) {
+    /**
+     * This method gets executed upon error in view or invalid view input
+     * @param box is the view  box which gives error
+     * @param string is the type of the box 
+     */
+    private boolean checkError(ComboBox<String> box, String string) {
         // TODO Auto-generated method stub
 
         if (box.getValue() == null) {
@@ -488,6 +572,10 @@ public class tournamentController {
         return false;
     }
 
+    /**
+     * This method gets executed upon clicking exit  button
+     * @param event is the the event of  exit Button clicking
+     */
     @FXML
     void exitBtnClick(ActionEvent event) {
         Stage stage = (Stage) exitBtn.getScene().getWindow();

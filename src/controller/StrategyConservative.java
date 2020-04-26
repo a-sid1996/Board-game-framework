@@ -7,8 +7,11 @@ import controller.GameController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
+/**
+ * This is the implementation of strategy interface where a player is Conservative
+ * Conservative player will play defensively. For Instance, He will not buy any property or build any house
+ */
 public class StrategyConservative implements Strategy{
-
 	
 	private GameController gc;
 	private offerScreenController oc;
@@ -16,11 +19,22 @@ public class StrategyConservative implements Strategy{
 	private Tile tile;
 	private String desc;
 	
+	/**
+	 * Constructor to initialize strategyConservative
+	 * @param gc is GameController object
+	 * @param oc is OfferScreenController object
+	 */
 	StrategyConservative(GameController gc,offerScreenController oc ){
 		this.gc= gc;
 		this.oc = oc;
 	}
 	
+	/**
+	 * This method gets executed when player is playing as a conservative or defensive
+	 * @param resultTile is the tile player lands on
+	 * @param p is the current player whose turn is going on
+	 * @param desc2 is the description on the card
+	 */
 	public void setOfferType(Tile resultTile, Player p, String desc2) {
 		String tileType = resultTile.getTileName();
     	tile = resultTile;

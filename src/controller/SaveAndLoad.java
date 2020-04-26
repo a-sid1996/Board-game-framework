@@ -18,7 +18,9 @@ import model.Unit;
 import model.BoardModel;
 import model.Score;
 
-
+/**
+ * This class implements functionality of saving the game and load the old game after exiting
+ */
 public class SaveAndLoad {
 
 
@@ -33,15 +35,27 @@ public class SaveAndLoad {
 
     GameController gameController;
 
+    /**
+     * Constructor used while loading the game
+     */
     public SaveAndLoad() {
 
     }
 
+    /**
+     * Constructor used while Saving the existing game
+     * @param gameController is GameController object 
+     */
     public SaveAndLoad(GameController gameController) {
         super();
         this.gameController = gameController;
     }
 
+    /**
+     * This method gets executed when user wants to save the existing game
+     * @param file is any file in which we want to store game object
+     * @return boolean whether game is saved or not
+     */
     public boolean saveGame(String file) {
         try {
             ObjectOutputStream ow = new ObjectOutputStream(new FileOutputStream(file));
@@ -54,6 +68,11 @@ public class SaveAndLoad {
         return true;
     }
 
+    /**
+     * This method gets executed when user wants to load existing game
+     * @param file is any file in which we want to store game object
+     * @return GameController object which resumes the game
+     */
     public GameController loadGame(String file) throws IOException, ClassNotFoundException {
             ObjectInputStream oi = new ObjectInputStream(new FileInputStream(file));
             Object obj = oi.readObject();
@@ -62,62 +81,114 @@ public class SaveAndLoad {
             return gc;
     }
 
+    /**
+     * Getter method for Player Object
+     * @return Player Object
+     */
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * Setter method for Player Object
+     * @param player is Player Object
+     */
     public void setPlayer(Player player) {
         this.player = player;
     }
 
-    //
+    /**
+     * Getter method for Dice Object
+     * @return Dice Object
+     */
     public Dice getDice() {
         return dice;
     }
 
+    /**
+     * Setter method for Dice Object
+     * @param dice is Dice Object
+     */
     public void setDice(Dice dice) {
         this.dice = dice;
     }
 
-    //
+    /**
+     * Getter method for Tile Object
+     * @return Tile Object
+     */
     public Tile getTile() {
         return tile;
     }
 
+    /**
+     * Setter method for Tile Object
+     * @param tile is Tile Object
+     */
     public void setTile(Tile tile) {
         this.tile = tile;
     }
 
-    //
+    /**
+     * Getter method for Unit Object
+     * @return Unit Object
+     */
     public Unit getUnit() {
         return unit;
     }
 
+    /**
+     * Setter method for Unit Object
+     * @param unit is Unit Object
+     */
     public void setUnit(Unit unit) {
         this.unit = unit;
     }
 
-    //
+    /**
+     * Getter method for BoardModel Object
+     * @return BoardModel Object
+     */
     public BoardModel getBoardModel() {
         return boardmodel;
     }
 
+    /**
+     * Setter method for BoardModel Object
+     * @param boardModel is BoardModel Object
+     */
     public void setBoardModel(BoardModel boardmodel) {
         this.boardmodel = boardmodel;
     }
 
+    /**
+     * Getter method for Score Object
+     * @return Score Object
+     */
     public Score getScore() {
         return score;
     }
 
+    /**
+     * Setter method for Score Object
+     * @param score is Score Object
+     */
     public void setScore(Score score) {
         this.score = score;
     }
 
+    /**
+     * Getter method for PlayerTurnModule Object
+     * @return PlayerTurnModule Object
+     */
     public PlayerTurnModule getPlayerTurnModule() {
         return playerturnmodule;
     }
 
+    /**
+     * Setter method for Score Object
+     * @param score is Score Object
+     */
     public void setScore(PlayerTurnModule playerturnmodule) {
         this.playerturnmodule = playerturnmodule;
     }
