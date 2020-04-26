@@ -33,7 +33,7 @@ import javafx.event.ActionEvent;
 public class newGameController {
 
 	ObservableList<String> number = FXCollections.observableArrayList("2","3","4","5");
-	
+
 	@FXML
 	private TextField mapLocation;
 
@@ -42,33 +42,33 @@ public class newGameController {
 		FileChooser fc = new FileChooser();
 		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("JSON file", "*.json"));
 		File file = fc.showOpenDialog(null);
-		
+
 		if(file != null) {
 			mapLocation.setText(file.getAbsolutePath());
 		}
-		
+
 	}
-	
+
 
 	/**
 	 * This method gets executed when back button is pressed
 	 */
-    @FXML
-    void backBtnClick(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
-            Parent root = (Parent) loader.load();
-            Scene newScene = new Scene(root);
-            Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            newStage.setScene(newScene);
-            newStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+	@FXML
+	void backBtnClick(ActionEvent event) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
+			Parent root = (Parent) loader.load();
+			Scene newScene = new Scene(root);
+			Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			newStage.setScene(newScene);
+			newStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-    }	
+	}
 
-	
+
 	@FXML
 	private ComboBox<String> playerNumber;
 
@@ -76,7 +76,7 @@ public class newGameController {
 	void initialize() {
 		playerNumber.setItems(number);
 	}
-	
+
 	/**
 	 *This method starts actual game play and implements game playing rules 
 	 *@param event of start game
@@ -97,12 +97,12 @@ public class newGameController {
 			errorAlert.showAndWait();
 			return;
 		}
-		
+
 		int numPLayers = Integer.valueOf(playerNumber.getValue());
 		BoardModel bc = new BoardModel();
 		MapJsonParser m = new MapJsonParser();
 		bc.setBoard(m.MapJsonParser1(mapLocation.getText()));
-		
+
 
 		Score score = new Score();
 		Unit[] units = new Unit[2];
@@ -128,7 +128,7 @@ public class newGameController {
 		}
 
 		Card card = new Card(12);
-		
+
 		card.setDesc(1, "Move To Go");
 		card.setDesc(2, "Bank error in your favor. Collect $125");
 		card.setDesc(3, "You have won a CrossWord Competition. Collect $100");
@@ -140,9 +140,9 @@ public class newGameController {
 		card.setDesc(9, "Grand Opera Night. Collect $50 from every player for opening night seats");
 		card.setDesc(10, "You are assessed for street repairs. Pay $40 per plot");
 		card.setDesc(11, "Go to Jail. Pay $50 to the bank");
-		card.setDesc(12, "Advance to go. Collect 200$ from bank");		
+		card.setDesc(12, "Advance to go. Collect 200$ from bank");
 
-		
+
 		PlayerTurnModule<Player> ptm = new PlayerTurnModule<Player>(new ArrayList<>(players.subList(1, players.size())));
 		GameController gc = new GameController(bc, card, players, score, ptm, false);
 

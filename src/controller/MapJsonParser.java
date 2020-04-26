@@ -21,7 +21,7 @@ import model.Unit;
  */
 public class MapJsonParser {
 	private static final Tile Null = null;
-	ArrayList<Tile> TileList = new ArrayList<Tile>();
+	static ArrayList<Tile> TileList = new ArrayList<Tile>();
 
 //	public static void main(String args[]) throws Exception {
 	/**

@@ -10,6 +10,10 @@ import controller.GameController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
+/**
+ * This is the implementation of strategy interface where a player is aggresive.
+ * Random player will either buy plot/build house or he will not do so. 
+ */
 public class StrategyRandom implements Strategy{
 
 	
@@ -19,11 +23,22 @@ public class StrategyRandom implements Strategy{
 	private Tile tile;
 	private String desc;
 
+	/**
+	 * Constructor to initialize strategyRandom
+	 * @param gc is GameController object
+	 * @param oc is OfferScreenController object
+	 */
 	StrategyRandom(GameController gc,offerScreenController oc ){
 		this.gc= gc;
 		this.oc = oc;
 	}
 	
+	/**
+	 * This method gets executed when player is playing randomly
+	 * @param resultTile is the tile player lands on
+	 * @param p is the current player whose turn is going on
+	 * @param desc2 is the description on the card
+	 */
 	public void setOfferType(Tile resultTile, Player p, String desc2) {
 		String tileType = resultTile.getTileName();
     	tile = resultTile;
