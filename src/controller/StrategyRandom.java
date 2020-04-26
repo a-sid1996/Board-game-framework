@@ -31,18 +31,18 @@ public class StrategyRandom implements Strategy{
     	
     	if (resultTile.getType().equals("property") || resultTile.getType().equals("railroad")) 
     	{
-    		Random r = new Random();
-			int low = 1;
-			int high = 2;
-			int result = r.nextInt(high-low) + low;
-			
     		/*BUY FUNCTIONALITY*/
 			if(resultTile.getMainPlayer() == null) 
 			{
+				Random r = new Random();
+				int low = 1;
+				int high = 3;
+				int result = r.nextInt(high-low) + low;
+				System.out.println("result " +result);
 				if(result == 1)
 				{
 					//buy
-					System.out.println("Attacker buy" +p.getName());
+					System.out.println("Attacker buy " +p.getName());
 					if(p.getMoney() > tile.getValue("Cost"))
 					{
 			        	gc.list.get(0).addMoney(tile.getValue("Cost"));
@@ -58,32 +58,39 @@ public class StrategyRandom implements Strategy{
 				}
 				else 
 				{
-					//not buy and pass
+					System.out.println("Entering else : means player wont BUY anything");
 				}
 			}
 		/*BUILD FUNCTIONALITY*/
 			else if(resultTile.getMainPlayer().equals(p))
 			{
+				Random r = new Random();
+				int low = 1;
+				int high = 2;
+				int result = r.nextInt(high-low) + low;
+				System.out.println("result " +result);
 				if(result == 1)
 				{
-					//build
-					System.out.println("Attacker build" +p.getName());
-					if(p.getMoney() > tile.getValue("house")) 
+					if(!resultTile.getType().equals("railroad"))
 					{
-			        	gc.list.get(0).addMoney(tile.getValue("house"));
-			        	p.deductMoney(tile.getValue("house"));
-			        	Unit unit = new Unit("property", tile);
-			        	p.setAsset(unit);
-			        	tile.setMainPlayer(p);
-			    	} 
-					else 
-					{
-						System.out.println("Insufficient fund");
-			    	}					
+						System.out.println("Attacker build" +p.getName());
+						if(p.getMoney() > tile.getValue("house"))
+						{
+							gc.list.get(0).addMoney(tile.getValue("house"));
+							p.deductMoney(tile.getValue("house"));
+							Unit unit = new Unit("property", tile);
+							p.setAsset(unit);
+							tile.setMainPlayer(p);
+						}
+						else
+						{
+							System.out.println("Insufficient fund");
+						}
+					}
 				}
 				else 
 				{
-					//not build
+					System.out.println("Entering else : means player wont BUILD anything");
 				}								
 			} 
 			

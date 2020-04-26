@@ -255,7 +255,7 @@ public class offerScreenController {
 	    {
 	       case("Move To Go") :
 	       {
-	    	   gc.movePlayer(player, gc.bc.getBoard().get(0));
+	    	   gc.movePlayer(p, gc.bc.getBoard().get(0));
 	    	   break;
 	       }  
 	       case("Bank error in your favor. Collect $125") :

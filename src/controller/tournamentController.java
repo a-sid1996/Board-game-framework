@@ -318,7 +318,7 @@ public class tournamentController {
 
                 for (i = 0; i < numPLayers; i++) {
                     Unit[] unitP = new Unit[2];
-                    unitP[0] = new Unit("money", 1500);
+                    unitP[0] = new Unit("money", 3000);
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
@@ -387,8 +387,9 @@ public class tournamentController {
                     strategy.setOfferType(resultTile, p, card.getDesc());
 
                     System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    System.out.println("-----------------------------------------------------------------");
 
-                    if (p.getMoney() < 0) {
+                    if (p.getMoney() < 100) {
                         System.out.println("Since the user is already in debt he is eliminated.");
                         gc.removePlayer(p);
                     } else {

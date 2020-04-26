@@ -49,8 +49,10 @@ public class StrategyAttack  implements Strategy{
 			} 
 			
 			/*BUILD FUNCTIONALITY*/
+
 			else if(resultTile.getMainPlayer().equals(p))
 			{
+				if(!resultTile.getType().equals("railroad")){
 				System.out.println("Attacker build" +p.getName());
 				if(p.getMoney() > tile.getValue("house")) 
 				{
@@ -63,9 +65,9 @@ public class StrategyAttack  implements Strategy{
 				else 
 				{
 					System.out.println("Insufficient fund");
-		    	}
+		    	}}
 								
-			} 
+			}
 			
 			/*RENT PAYING FUNCTIONALITY*/
 			else 
