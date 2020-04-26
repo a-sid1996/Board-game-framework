@@ -32,7 +32,7 @@ import model.Tile;
 import model.Unit;
 
 /**
-*This is a controller class of the map edit functinality
+*This is a controller class of the map edit functionality
 */
 public class MapEditController {
 
@@ -75,11 +75,12 @@ public class MapEditController {
 		}
 		
 		MapJsonParser m = new MapJsonParser();
-		tileList = m.MapJsonParser1(mapLocation.getText());
+		tileList = m.MapJsonParser1(file.getAbsolutePath());
 		
 		String resp = "Y";
 		updateGrid();
-		while(resp.equalsIgnoreCase("Y")) {
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>");
+		while(resp.equalsIgnoreCase("Y" )) {
 			updateGrid();
 	        Scanner sc = new Scanner(System.in);
 			System.out.println("Enter property type to edit (Propert/ railroad/ utility/ tax) :");
@@ -91,7 +92,7 @@ public class MapEditController {
 			System.out.println("Enter new amount");
 			int amount = Integer.parseInt(sc.nextLine());
 			
-			EditMap em = new EditMap();
+			EditMap em = new EditMap(tileList);
 			
 			System.out.println("Before Tile Edit : ");	
 			for(Tile tile : tileList)

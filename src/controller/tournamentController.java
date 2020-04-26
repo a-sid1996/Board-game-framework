@@ -332,7 +332,7 @@ public class tournamentController {
                     t1.add(bc.getBoard().get(0));
 //                    System.out.println("ArrayList of tile t1 ********" +t1.size());
                     writer.write("ArrayList of tile t1 ********" +t1.size()+ "\n");
-                    Player p = new Player("player" + k, unitP, score, t1,al.get(k));
+                    Player p = new Player("player" + (k+1), unitP, score, t1,al.get(k));
 //                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
                     writer.write(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName()+ "\n");
                     players.add(p);

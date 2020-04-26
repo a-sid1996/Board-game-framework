@@ -50,7 +50,7 @@
               </rowConstraints>
             </GridPane>
             <Button fx:id="exitBtn" layoutX="774.0" layoutY="471.0" mnemonicParsing="false" onAction="#exitBtnCLick" text="Save and Exit" />
-            <TextField fx:id="location" layoutX="743.0" layoutY="438.0" onAction="#locationField" />
+            <TextField fx:id="locationField" layoutX="743.0" layoutY="438.0" />
          </children>
       </AnchorPane>
    </children>
