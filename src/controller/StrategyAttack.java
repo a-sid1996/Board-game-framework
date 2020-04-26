@@ -3,6 +3,11 @@ package controller;
 import model.Player;
 import model.Tile;
 import model.Unit;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import controller.GameController;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -27,7 +32,6 @@ public class StrategyAttack  implements Strategy{
 		player = p;
     	tile = resultTile;
     	desc = desc2;
-    	
     	if (resultTile.getType().equals("property") || resultTile.getType().equals("railroad")) 
     	{
     		/*BUY FUNCTIONALITY*/

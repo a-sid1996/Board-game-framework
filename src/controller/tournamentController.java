@@ -1,6 +1,8 @@
 package controller;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -11,9 +13,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
@@ -36,8 +43,6 @@ public class tournamentController {
     ObservableList<String> mapNum = FXCollections.observableArrayList("1", "2", "3", "4", "5");
     ObservableList<String> playerStrategy = FXCollections.observableArrayList("Aggresive", "Conservative", "Random", "Cheater");
 
-    @FXML
-    private GridPane resultGrid;
 
     @FXML
     private Button exitBtn;
@@ -291,13 +296,14 @@ public class tournamentController {
         if (checkError(gameBox, "Game")) {
             return;
         }
-
+        
+        String[][] results = new String[Integer.parseInt(gameBox.getValue())][Integer.parseInt(mapBox.getValue())];
+//        File obj = new File("gameLogs.txt");
+        BufferedWriter writer = new BufferedWriter(new FileWriter("gameLogs.txt"));
         for (int i = 0; i < Integer.parseInt(gameBox.getValue()); i++) {
-            System.out.println(">>>>>>>>>>>>>>>>>>>>>>> i" + i + "  " + Integer.parseInt(gameBox.getValue()));
             int max = Integer.parseInt(maxMoveL[i].getText());
 
             for (int j = 0; j < Integer.parseInt(mapBox.getValue()); j++) {
-                System.out.println(">>>>>>>>>>>>>>>>>>>>>>> j" + j);
                 String location = mapL[j].getText();
                 int numPLayers = Integer.valueOf(playerBox.getValue());
                 BoardModel bc = new BoardModel();
@@ -311,8 +317,8 @@ public class tournamentController {
                 units[1] = new Unit("hotel", 1000);
 
                 ArrayList<Tile> t = new ArrayList<Tile>(bc.getBoard());
-                System.out.println("ArrayList of tile  t ********" +t.size());
-
+//                System.out.println("ArrayList of tile  t ********" +t.size());
+                writer.write("\n" +"ArrayList of tile  t ********" +t.size() + "\n");
                 Player bank = new Player("bank", units, score, t);
 
                 ArrayList<Player> players = new ArrayList<Player>();
@@ -324,9 +330,11 @@ public class tournamentController {
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
-                    System.out.println("ArrayList of tile t1 ********" +t1.size());
+//                    System.out.println("ArrayList of tile t1 ********" +t1.size());
+                    writer.write("ArrayList of tile t1 ********" +t1.size()+ "\n");
                     Player p = new Player("player" + k, unitP, score, t1,al.get(k));
-                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
+//                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
+                    writer.write(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName()+ "\n");
                     players.add(p);
                 }
 
@@ -363,13 +371,15 @@ public class tournamentController {
                 for (int k = 0; k < max; k++) {
 
                     Player p = gc.nextPlayer();
-                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+//                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    writer.write("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
                     Dice dice = new Dice(1);
                     int result = dice.diceroll();
-                    System.out.println("User rolled a " + result);
+                    writer.write("User rolled a " + result+ "\n");
+//                    System.out.println("User rolled a " + result);
                     Tile resultTile = gc.movePlayerTournament(p, result, gc);
-                    System.out.println("you landed on " +resultTile.getTileName());
-
+//                    System.out.println("you landed on " +resultTile.getTileName());
+                    writer.write("you landed on " +resultTile.getTileName()+ "\n");
                     switch(p.getPlayerType().toLowerCase()) {
 
                         case "aggresive":
@@ -388,12 +398,14 @@ public class tournamentController {
 
 
                     if (p.getMoney() < 100) {
-                        System.out.println("Since the user is already in debt he is eliminated.");
+//                        System.out.println("Since the user is already in debt he is eliminated.");
+                    	writer.write("Since the user is already in debt he is eliminated."+ "\n");
                         gc.removePlayer(p);
                     }
 
                     if (gc.list.size() <= 2) {
-                        System.out.println(gc.list.get(1).getName() + " has won!!");
+//                        System.out.println(gc.list.get(1).getName() + " has won!!");
+                    	writer.write(gc.list.get(1).getName() + " has won!!"+ "\n");
                         winner = gc.list.get(1).getName();
                         break;
                     }
@@ -401,22 +413,41 @@ public class tournamentController {
                     strategy.setOfferType(resultTile, p, card.getDesc());
 
 
-                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
-                    System.out.println("-----------------------------------------------------------------");
-
+                    writer.write("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
+//                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+//                    System.out.println("-----------------------------------------------------------------");
+                    writer.write("-----------------------------------------------------------------"+ "\n");
 
                 }
                 if (winner == "") {
-                    System.out.println("This game ended in draw!!");
+                	writer.write("This game ended in draw!!"+ "\n"+ "\n");
+//                    System.out.println("This game ended in draw!!");
+                	winner = "Draw";
                 }
-                
+                results[i][j] = winner;
                 bc.setBoard(null);
 
             }
         }
+        
+        showResults(results, event);
+        writer.close();
     }
+    
 
-    private boolean checkError(ComboBox<String> box, String string) {
+    private void showResults(String[][] results, ActionEvent event) throws IOException {
+		// TODO Auto-generated method stub
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/tournamentResult.fxml"));
+        Parent root = (Parent) loader.load();
+        Scene newScene = new Scene(root);
+        Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        newStage.setScene(newScene);
+        newStage.show();
+        tournamentRController controller = loader.getController();
+		controller.setTournamentRController(results, Integer.parseInt(gameBox.getValue()), Integer.parseInt(mapBox.getValue()));
+	}
+
+	private boolean checkError(ComboBox<String> box, String string) {
         // TODO Auto-generated method stub
 
         if (box.getValue() == null) {

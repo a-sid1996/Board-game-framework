@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tournamentRController">
+   <children>
+      <AnchorPane prefHeight="401.0" prefWidth="600.0">
+         <children>
+            <GridPane fx:id="resultGrid" layoutX="31.0" layoutY="52.0" prefHeight="311.0" prefWidth="534.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="75.20001831054688" minHeight="9.918212889203915E-6" prefHeight="31.000006103515624" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.79999008178712" minHeight="10.0" prefHeight="55.59999389648438" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="120.79999389648438" minHeight="10.0" prefHeight="60.19997558593751" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="102.59998168945313" minHeight="10.0" prefHeight="53.000024414062494" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="90.00005187988279" minHeight="10.0" prefHeight="59.39999999999998" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="64.19998779296873" minHeight="10.0" prefHeight="59.39999999999998" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label layoutX="281.0" layoutY="5.0" text="Results" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
