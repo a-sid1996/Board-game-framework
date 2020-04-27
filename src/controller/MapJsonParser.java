@@ -165,8 +165,8 @@ public class MapJsonParser {
 				}
 				
 				tile = new Tile(name, x, y, "property");				
-				tile.setValue("Cost", cost);
-				tile.setValue("hotel", house);
+				tile.setValue("cost", cost);
+				tile.setValue("house", house);
 				tile.setValue("rent1", rentList.get(0));
 				tile.setValue("rent2", rentList.get(1));
 				tile.setValue("rent3", rentList.get(2));
@@ -193,7 +193,8 @@ public class MapJsonParser {
 				int x = Integer.parseInt((String) tmap.get("c_x"));
 				int y = Integer.parseInt((String) tmap.get("d_y"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
-				tile = new Tile(name, x, y, "tax");		
+				tile = new Tile(name, x, y, "tax");
+				tile.setValue("cost", cost);
 				TileList.add(tile);
 
 			}
@@ -204,10 +205,25 @@ public class MapJsonParser {
 				int x = Integer.parseInt((String) tmap.get("c_x"));
 				int y = Integer.parseInt((String) tmap.get("d_y"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
+				String tempRent = (String) tmap.get("f_rent");
+				tempRent = tempRent.replace("[", "");
+				tempRent = tempRent.replace("]", "");
+				String vals[] = tempRent.split(",");
+				ArrayList<Integer> rentList = new ArrayList<Integer>();
+
+				for(String s: vals)
+				{
+					rentList.add(Integer.parseInt(s));
+				}
 
 				tile = new Tile(name, x, y, "railroad");
-				tile.setValue("Cost", cost);
-				tile.setValue("rent1", 25);
+				tile.setValue("cost", cost);
+				tile.setValue("rent1", rentList.get(0));
+				tile.setValue("rent2", rentList.get(1));
+				tile.setValue("rent3", rentList.get(2));
+				tile.setValue("rent4", rentList.get(3));
+				tile.setValue("rent5", rentList.get(4));
+				tile.setValue("rent6", rentList.get(5));
 				TileList.add(tile);
 
 			}
@@ -239,7 +255,7 @@ public class MapJsonParser {
 				int y = Integer.parseInt((String) tmap.get("d_y"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				tile = new Tile(name, x, y, "utility");
-				tile.setValue("Cost", cost);
+				tile.setValue("cost", cost);
 				TileList.add(tile);
 
 			}

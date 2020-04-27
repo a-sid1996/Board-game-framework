@@ -70,6 +70,7 @@ public class GameController implements gameScreenController.GameControlObserver,
      * @return player object
      */
     public Player getPlayer(Player player) {
+        System.out.println("HERE  list.indexOf is " +list.indexOf(player));
         return list.get(list.indexOf(player));
     }
 

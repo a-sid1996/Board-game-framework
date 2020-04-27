@@ -14,8 +14,8 @@ public class Card implements Serializable {
      * @param noOfCards   defines specific ID assigned to all cards
      * @param descOfCards defines description stored in all cards
      */
-    private static  int noOfCards;
-    static HashMap<Integer, String> descOfCards;
+    private int noOfCards;
+    HashMap<Integer, String> descOfCards;
 
     /**
      * @param num is total number of cards required for the game

@@ -45,6 +45,7 @@ public class tournamentController {
     ObservableList<String> gameNum = FXCollections.observableArrayList("1", "2", "3", "4", "5");
     ObservableList<String> mapNum = FXCollections.observableArrayList("1", "2", "3", "4", "5");
     ObservableList<String> playerStrategy = FXCollections.observableArrayList("Aggresive", "Conservative", "Random", "Cheater");
+    public static int a = 0;
 
 
     @FXML
@@ -375,6 +376,7 @@ public class tournamentController {
 //        File obj = new File("gameLogs.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter("gameLogs.txt"));
         for (int i = 0; i < Integer.parseInt(gameBox.getValue()); i++) {
+
             int max = Integer.parseInt(maxMoveL[i].getText());
 
             for (int j = 0; j < Integer.parseInt(mapBox.getValue()); j++) {
@@ -383,7 +385,7 @@ public class tournamentController {
                 BoardModel bc = new BoardModel();
                 MapJsonParser m = new MapJsonParser();
                 bc.setBoard(m.MapJsonParser1(location));
-
+                System.out.println("*********** GAME STARTED ************");
 
                 Score score = new Score();
                 Unit[] units = new Unit[2];
@@ -391,8 +393,8 @@ public class tournamentController {
                 units[1] = new Unit("hotel", 1000);
 
                 ArrayList<Tile> t = new ArrayList<Tile>(bc.getBoard());
-                System.out.println("ArrayList of tile  t ********" +t.size());
-                writer.write("\n" +"ArrayList of tile  t ********" +t.size() + "\n");
+               // System.out.println("ArrayList of tile  t ********" +t.size());
+               // writer.write("\n" +"ArrayList of tile  t ********" +t.size() + "\n");
                 Player bank = new Player("bank", units, score, t);
 
                 ArrayList<Player> players = new ArrayList<Player>();
@@ -400,12 +402,12 @@ public class tournamentController {
 
                 for (int k = 0; k < numPLayers; k++) {
                     Unit[] unitP = new Unit[2];
-                    unitP[0] = new Unit("money", 3000);
+                    unitP[0] = new Unit("money", 2500);
                     unitP[1] = new Unit("hotel", 0);
                     ArrayList<Tile> t1 = new ArrayList<Tile>();
                     t1.add(bc.getBoard().get(0));
-                    System.out.println("ArrayList of tile t1 ********" +t1.size());
-                    writer.write("ArrayList of tile t1 ********" +t1.size()+ "\n");
+                    //System.out.println("ArrayList of tile t1 ********" +t1.size());
+                    //writer.write("ArrayList of tile t1 ********" +t1.size()+ "\n");
                     Player p = new Player("player" + (k+1), unitP, score, t1,al.get(k));
 //                    System.out.println(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName());
                     writer.write(p.getName() + " " +p.getPlayerType() +  " " +p.getCurrentTile().get(0).getTileName()+ "\n");
@@ -445,8 +447,8 @@ public class tournamentController {
                 for (int k = 0; k < max; k++) {
 
                     Player p = gc.nextPlayer();
-                    System.out.println("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
-                    writer.write("Player before :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
+                    System.out.println("Player before :" + p.getName() + "/" + p.getPlayerType() + "/" + p.getMoney());
+                    writer.write("Player before :" + p.getName() + "/" + p.getPlayerType() + "/" + p.getMoney()+ "\n");
                     Dice dice = new Dice(1);
                     int result = dice.diceroll();
                     writer.write("User rolled a " + result+ "\n");
@@ -487,8 +489,8 @@ public class tournamentController {
                     strategy.setOfferType(resultTile, p, card.getDesc());
 
 
-                    writer.write("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney()+ "\n");
-                    System.out.println("After :" + p.getName() + "******" + p.getPlayerType() + "******" + p.getMoney());
+                    writer.write("After :" + p.getName() + "/" + p.getPlayerType() + "/" + p.getMoney()+ "\n");
+                    System.out.println("After :" + p.getName() + "/" + p.getPlayerType() + "/" + p.getMoney());
                     System.out.println("-----------------------------------------------------------------");
                     writer.write("-----------------------------------------------------------------"+ "\n");
 
@@ -502,6 +504,7 @@ public class tournamentController {
                 bc.setBoard(null);
 
             }
+            a = 1;
         }
         
         showResults(results, event);

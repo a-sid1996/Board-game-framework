@@ -1,0 +1,3201 @@
+player1 Aggresive Go
+player2 Conservative Go
+player3 Random Go
+player4 Cheater Go
+Player before :player2/Conservative/2500
+User rolled a 4
+you landed on Illnois Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Indiana Avenue
+After :player3/Random/2280
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 5
+you landed on B. & O. Railroad
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 2
+you landed on Chance
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on B. & O. Railroad
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2280
+User rolled a 6
+you landed on Marvin Gardens
+After :player3/Random/2280
+-----------------------------------------------------------------
+Player before :player4/Cheater/2325
+User rolled a 6
+you landed on Pacific Avenue
+After :player4/Cheater/2025
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2450
+User rolled a 1
+you landed on Indiana Avenue
+After :player1/Aggresive/2432
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 2
+you landed on Ventura Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2298
+User rolled a 2
+you landed on Pacific Avenue
+After :player3/Random/2272
+-----------------------------------------------------------------
+Player before :player4/Cheater/2051
+User rolled a 3
+you landed on Pennsylvania Avenue
+After :player4/Cheater/1731
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2432
+User rolled a 6
+you landed on Marvin Gardens
+After :player1/Aggresive/2152
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 6
+you landed on Community Chest
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2272
+User rolled a 1
+you landed on North Carolina Avenue
+After :player3/Random/1972
+-----------------------------------------------------------------
+Player before :player4/Cheater/1731
+User rolled a 4
+you landed on Luxury Tax
+After :player4/Cheater/1731
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2152
+User rolled a 2
+you landed on Pacific Avenue
+After :player1/Aggresive/2126
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on Chance
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/1972
+User rolled a 5
+you landed on Park Place
+After :player3/Random/1622
+-----------------------------------------------------------------
+Player before :player4/Cheater/1757
+User rolled a 2
+you landed on Go
+After :player4/Cheater/1957
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2126
+User rolled a 1
+you landed on North Carolina Avenue
+After :player1/Aggresive/2100
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 6
+you landed on Oriental Avenue
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/1648
+User rolled a 2
+you landed on Boardwalk
+After :player3/Random/1248
+-----------------------------------------------------------------
+Player before :player4/Cheater/1957
+User rolled a 3
+you landed on Baltic Avenue
+After :player4/Cheater/1897
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2100
+User rolled a 6
+you landed on Luxury Tax
+After :player1/Aggresive/2100
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 4
+you landed on Jail
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/1248
+User rolled a 3
+you landed on Community Chest
+After :player3/Random/1598
+-----------------------------------------------------------------
+Player before :player4/Cheater/1897
+User rolled a 4
+you landed on Chance
+After :player4/Cheater/1997
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2100
+User rolled a 5
+you landed on Baltic Avenue
+After :player1/Aggresive/2296
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 6
+you landed on St. James Place
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/1598
+User rolled a 2
+you landed on Income Tax
+After :player3/Random/1498
+-----------------------------------------------------------------
+Player before :player4/Cheater/2001
+User rolled a 4
+you landed on St. Charles Place
+After :player4/Cheater/1861
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2296
+User rolled a 2
+you landed on Reading Railroad
+After :player1/Aggresive/2196
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 6
+you landed on Chance
+After :player2/Conservative/2825
+-----------------------------------------------------------------
+Player before :player3/Random/1498
+User rolled a 2
+you landed on Oriental Avenue
+After :player3/Random/1398
+-----------------------------------------------------------------
+Player before :player4/Cheater/1861
+User rolled a 5
+you landed on St. James Place
+After :player4/Cheater/1681
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2196
+User rolled a 1
+you landed on Oriental Avenue
+After :player1/Aggresive/2190
+-----------------------------------------------------------------
+Player before :player2/Conservative/2825
+User rolled a 1
+you landed on Indiana Avenue
+After :player2/Conservative/2807
+-----------------------------------------------------------------
+Player before :player3/Random/1422
+User rolled a 2
+you landed on Vermont Avenue
+After :player3/Random/1422
+-----------------------------------------------------------------
+Player before :player4/Cheater/1681
+User rolled a 3
+you landed on Newyork Avenue
+After :player4/Cheater/1481
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2190
+User rolled a 4
+you landed on Jail
+After :player1/Aggresive/2190
+-----------------------------------------------------------------
+Player before :player2/Conservative/2807
+User rolled a 2
+you landed on B. & O. Railroad
+After :player2/Conservative/2782
+-----------------------------------------------------------------
+Player before :player3/Random/1422
+User rolled a 2
+you landed on Jail
+After :player3/Random/1422
+-----------------------------------------------------------------
+Player before :player4/Cheater/1506
+User rolled a 6
+you landed on B. & O. Railroad
+After :player4/Cheater/1356
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2190
+User rolled a 5
+you landed on Pennsylvania Railroad
+After :player1/Aggresive/1990
+-----------------------------------------------------------------
+Player before :player2/Conservative/2782
+User rolled a 5
+you landed on Go To Jail
+After :player2/Conservative/2732
+-----------------------------------------------------------------
+Player before :player3/Random/1422
+User rolled a 6
+you landed on St. James Place
+After :player3/Random/1408
+-----------------------------------------------------------------
+Player before :player4/Cheater/1370
+User rolled a 4
+you landed on Marvin Gardens
+After :player4/Cheater/1370
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1990
+User rolled a 2
+you landed on Community Chest
+After :player1/Aggresive/2190
+-----------------------------------------------------------------
+Player before :player2/Conservative/2732
+User rolled a 5
+you landed on Shortline
+After :player2/Conservative/2732
+-----------------------------------------------------------------
+Player before :player3/Random/1408
+User rolled a 2
+you landed on Tennessee Avenue
+After :player3/Random/1408
+-----------------------------------------------------------------
+Player before :player4/Cheater/1370
+User rolled a 2
+you landed on Pacific Avenue
+After :player4/Cheater/1170
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2190
+User rolled a 6
+you landed on Oriental Avenue
+After :player1/Aggresive/2184
+-----------------------------------------------------------------
+Player before :player2/Conservative/2732
+User rolled a 6
+you landed on Mediterranean Avenue
+After :player2/Conservative/2932
+-----------------------------------------------------------------
+Player before :player3/Random/1414
+User rolled a 3
+you landed on Kentucky Avenue
+After :player3/Random/1414
+-----------------------------------------------------------------
+Player before :player4/Cheater/1170
+User rolled a 2
+you landed on Community Chest
+After :player4/Cheater/1170
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2184
+User rolled a 6
+you landed on Electric Company
+After :player1/Aggresive/1984
+-----------------------------------------------------------------
+Player before :player2/Conservative/2932
+User rolled a 4
+you landed on Reading Railroad
+After :player2/Conservative/2832
+-----------------------------------------------------------------
+Player before :player3/Random/1414
+User rolled a 4
+you landed on B. & O. Railroad
+After :player3/Random/1389
+-----------------------------------------------------------------
+Player before :player4/Cheater/1195
+User rolled a 4
+you landed on Park Place
+After :player4/Cheater/1195
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2084
+User rolled a 4
+you landed on St. James Place
+After :player1/Aggresive/2070
+-----------------------------------------------------------------
+Player before :player2/Conservative/2832
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2682
+-----------------------------------------------------------------
+Player before :player3/Random/1439
+User rolled a 4
+you landed on Marvin Gardens
+After :player3/Random/1415
+-----------------------------------------------------------------
+Player before :player4/Cheater/1259
+User rolled a 5
+you landed on Community Chest
+After :player4/Cheater/1459
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2144
+User rolled a 5
+you landed on Kentucky Avenue
+After :player1/Aggresive/1924
+-----------------------------------------------------------------
+Player before :player2/Conservative/2682
+User rolled a 2
+you landed on Connecticut Avenue
+After :player2/Conservative/2682
+-----------------------------------------------------------------
+Player before :player3/Random/1415
+User rolled a 4
+you landed on Community Chest
+After :player3/Random/1415
+-----------------------------------------------------------------
+Player before :player4/Cheater/1459
+User rolled a 5
+you landed on Chance
+After :player4/Cheater/1409
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1924
+User rolled a 1
+you landed on Chance
+After :player1/Aggresive/2024
+-----------------------------------------------------------------
+Player before :player2/Conservative/2682
+User rolled a 1
+you landed on Jail
+After :player2/Conservative/2682
+-----------------------------------------------------------------
+Player before :player3/Random/1415
+User rolled a 2
+you landed on Shortline
+After :player3/Random/1215
+-----------------------------------------------------------------
+Player before :player4/Cheater/1409
+User rolled a 4
+you landed on St. Charles Place
+After :player4/Cheater/1309
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2024
+User rolled a 5
+you landed on Ventura Avenue
+After :player1/Aggresive/1764
+-----------------------------------------------------------------
+Player before :player2/Conservative/2682
+User rolled a 6
+you landed on St. James Place
+After :player2/Conservative/2668
+-----------------------------------------------------------------
+Player before :player3/Random/1215
+User rolled a 1
+you landed on Chance
+After :player3/Random/1215
+-----------------------------------------------------------------
+Player before :player4/Cheater/1323
+User rolled a 2
+you landed on States Avenue
+After :player4/Cheater/1183
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1764
+User rolled a 1
+you landed on Water Works
+After :player1/Aggresive/1564
+-----------------------------------------------------------------
+Player before :player2/Conservative/2668
+User rolled a 2
+you landed on Tennessee Avenue
+After :player2/Conservative/2668
+-----------------------------------------------------------------
+Player before :player3/Random/1215
+User rolled a 6
+you landed on Community Chest
+After :player3/Random/1365
+-----------------------------------------------------------------
+Player before :player4/Cheater/1183
+User rolled a 5
+you landed on Tennessee Avenue
+After :player4/Cheater/1003
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1564
+User rolled a 2
+you landed on Go To Jail
+After :player1/Aggresive/1514
+-----------------------------------------------------------------
+Player before :player2/Conservative/2668
+User rolled a 5
+you landed on Indiana Avenue
+After :player2/Conservative/2650
+-----------------------------------------------------------------
+Player before :player3/Random/1383
+User rolled a 2
+you landed on Electric Company
+After :player3/Random/1183
+-----------------------------------------------------------------
+Player before :player4/Cheater/1003
+User rolled a 4
+you landed on Chance
+After :player4/Cheater/1153
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1514
+User rolled a 5
+you landed on Shortline
+After :player1/Aggresive/1489
+-----------------------------------------------------------------
+Player before :player2/Conservative/2650
+User rolled a 6
+you landed on Marvin Gardens
+After :player2/Conservative/2626
+-----------------------------------------------------------------
+Player before :player3/Random/1208
+User rolled a 1
+you landed on States Avenue
+After :player3/Random/1198
+-----------------------------------------------------------------
+Player before :player4/Cheater/1163
+User rolled a 6
+you landed on Water Works
+After :player4/Cheater/963
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1513
+User rolled a 4
+you landed on Boardwalk
+After :player1/Aggresive/1463
+-----------------------------------------------------------------
+Player before :player2/Conservative/2626
+User rolled a 2
+you landed on Pacific Avenue
+After :player2/Conservative/2600
+-----------------------------------------------------------------
+Player before :player3/Random/1248
+User rolled a 5
+you landed on Tennessee Avenue
+After :player3/Random/1234
+-----------------------------------------------------------------
+Player before :player4/Cheater/1003
+User rolled a 6
+you landed on Pennsylvania Avenue
+After :player4/Cheater/803
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1463
+User rolled a 5
+you landed on Income Tax
+After :player1/Aggresive/1663
+-----------------------------------------------------------------
+Player before :player2/Conservative/2600
+User rolled a 6
+you landed on Park Place
+After :player2/Conservative/2565
+-----------------------------------------------------------------
+Player before :player3/Random/1269
+User rolled a 5
+you landed on Indiana Avenue
+After :player3/Random/1119
+-----------------------------------------------------------------
+Player before :player4/Cheater/803
+User rolled a 1
+you landed on Shortline
+After :player4/Cheater/803
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1663
+User rolled a 3
+you landed on Chance
+After :player1/Aggresive/1663
+-----------------------------------------------------------------
+Player before :player2/Conservative/2565
+User rolled a 1
+you landed on Luxury Tax
+After :player2/Conservative/2465
+-----------------------------------------------------------------
+Player before :player3/Random/1119
+User rolled a 6
+you landed on Marvin Gardens
+After :player3/Random/1095
+-----------------------------------------------------------------
+Player before :player4/Cheater/803
+User rolled a 5
+you landed on Go
+After :player4/Cheater/1003
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1687
+User rolled a 1
+you landed on Vermont Avenue
+After :player1/Aggresive/1587
+-----------------------------------------------------------------
+This game ended in draw!!
+
+player1 Aggresive Go
+player2 Conservative Go
+player3 Random Go
+player4 Cheater Go
+Player before :player2/Conservative/2500
+User rolled a 4
+you landed on Illnois Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 6
+you landed on Atlatic Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 2
+you landed on Chance
+After :player4/Cheater/2460
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 1
+you landed on Kentucky Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on B. & O. Railroad
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Marvin Gardens
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2460
+User rolled a 1
+you landed on Indiana Avenue
+After :player4/Cheater/2460
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 4
+you landed on B. & O. Railroad
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Ventura Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 6
+you landed on Shortline
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2460
+User rolled a 4
+you landed on Ventura Avenue
+After :player4/Cheater/2460
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 2
+you landed on Ventura Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on Water Works
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Luxury Tax
+After :player3/Random/2400
+-----------------------------------------------------------------
+Player before :player4/Cheater/2460
+User rolled a 1
+you landed on Water Works
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 2
+you landed on Marvin Gardens
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 5
+you landed on Community Chest
+After :player2/Conservative/2450
+-----------------------------------------------------------------
+Player before :player3/Random/2400
+User rolled a 4
+you landed on Community Chest
+After :player3/Random/2550
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 2
+you landed on Go To Jail
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 4
+you landed on Community Chest
+After :player1/Aggresive/2350
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Shortline
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2600
+User rolled a 4
+you landed on Oriental Avenue
+After :player3/Random/2600
+-----------------------------------------------------------------
+Player before :player4/Cheater/2310
+User rolled a 6
+you landed on Chance
+After :player4/Cheater/2510
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2350
+User rolled a 3
+you landed on Chance
+After :player1/Aggresive/2475
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 4
+you landed on Boardwalk
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2600
+User rolled a 3
+you landed on Connecticut Avenue
+After :player3/Random/2600
+-----------------------------------------------------------------
+Player before :player4/Cheater/2510
+User rolled a 5
+you landed on Reading Railroad
+After :player4/Cheater/2510
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2475
+User rolled a 3
+you landed on Boardwalk
+After :player1/Aggresive/2475
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 3
+you landed on Community Chest
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2600
+User rolled a 1
+you landed on Jail
+After :player3/Random/2600
+-----------------------------------------------------------------
+Player before :player4/Cheater/2510
+User rolled a 6
+you landed on St. Charles Place
+After :player4/Cheater/2510
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2475
+User rolled a 2
+you landed on Mediterranean Avenue
+After :player1/Aggresive/2415
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 3
+you landed on Reading Railroad
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2600
+User rolled a 3
+you landed on States Avenue
+After :player3/Random/2600
+-----------------------------------------------------------------
+Player before :player4/Cheater/2510
+User rolled a 5
+you landed on St. James Place
+After :player4/Cheater/2510
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2415
+User rolled a 2
+you landed on Baltic Avenue
+After :player1/Aggresive/2355
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2650
+User rolled a 5
+you landed on Tennessee Avenue
+After :player3/Random/2650
+-----------------------------------------------------------------
+Player before :player4/Cheater/2560
+User rolled a 1
+you landed on Community Chest
+After :player4/Cheater/2520
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2405
+User rolled a 2
+you landed on Reading Railroad
+After :player1/Aggresive/2305
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 4
+you landed on St. Charles Place
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2650
+User rolled a 6
+you landed on Illnois Avenue
+After :player3/Random/2650
+-----------------------------------------------------------------
+Player before :player4/Cheater/2520
+User rolled a 6
+you landed on Indiana Avenue
+After :player4/Cheater/2520
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2305
+User rolled a 3
+you landed on Vermont Avenue
+After :player1/Aggresive/2205
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 3
+you landed on Virginia Avenue
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2650
+User rolled a 1
+you landed on B. & O. Railroad
+After :player3/Random/2450
+-----------------------------------------------------------------
+Player before :player4/Cheater/2520
+User rolled a 3
+you landed on Atlatic Avenue
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2205
+User rolled a 2
+you landed on Jail
+After :player1/Aggresive/2205
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 1
+you landed on Pennsylvania Railroad
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2450
+User rolled a 6
+you landed on Pacific Avenue
+After :player3/Random/2450
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 5
+you landed on Pacific Avenue
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2205
+User rolled a 6
+you landed on St. James Place
+After :player1/Aggresive/2025
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 5
+you landed on Free Parking
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2450
+User rolled a 4
+you landed on Shortline
+After :player3/Random/2450
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 2
+you landed on Community Chest
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2025
+User rolled a 2
+you landed on Tennessee Avenue
+After :player1/Aggresive/1845
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 6
+you landed on Atlatic Avenue
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2450
+User rolled a 3
+you landed on Luxury Tax
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 4
+you landed on Park Place
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1845
+User rolled a 4
+you landed on Chance
+After :player1/Aggresive/2045
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 4
+you landed on Go To Jail
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 3
+you landed on Mediterranean Avenue
+After :player3/Random/2490
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 6
+you landed on Baltic Avenue
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2045
+User rolled a 5
+you landed on Reading Railroad
+After :player1/Aggresive/2045
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 5
+you landed on Shortline
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2490
+User rolled a 1
+you landed on Community Chest
+After :player3/Random/2590
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 6
+you landed on Connecticut Avenue
+After :player4/Cheater/2140
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2045
+User rolled a 1
+you landed on Oriental Avenue
+After :player1/Aggresive/2045
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 3
+you landed on Luxury Tax
+After :player2/Conservative/2200
+-----------------------------------------------------------------
+Player before :player3/Random/2590
+User rolled a 2
+you landed on Income Tax
+After :player3/Random/2490
+-----------------------------------------------------------------
+Player before :player4/Cheater/2140
+User rolled a 1
+you landed on Jail
+After :player4/Cheater/2140
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2045
+User rolled a 6
+you landed on Electric Company
+After :player1/Aggresive/1845
+-----------------------------------------------------------------
+Player before :player2/Conservative/2200
+User rolled a 6
+you landed on Income Tax
+After :player2/Conservative/2100
+-----------------------------------------------------------------
+Player before :player3/Random/2490
+User rolled a 3
+you landed on Chance
+After :player3/Random/2690
+-----------------------------------------------------------------
+Player before :player4/Cheater/2140
+User rolled a 1
+you landed on St. Charles Place
+After :player4/Cheater/2000
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1845
+User rolled a 1
+you landed on States Avenue
+After :player1/Aggresive/1845
+-----------------------------------------------------------------
+Player before :player2/Conservative/2100
+User rolled a 1
+you landed on Reading Railroad
+After :player2/Conservative/2100
+-----------------------------------------------------------------
+Player before :player3/Random/2690
+User rolled a 2
+you landed on Community Chest
+After :player3/Random/2790
+-----------------------------------------------------------------
+Player before :player4/Cheater/2000
+User rolled a 6
+you landed on Community Chest
+After :player4/Cheater/2000
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1845
+User rolled a 6
+you landed on Newyork Avenue
+After :player1/Aggresive/1845
+-----------------------------------------------------------------
+Player before :player2/Conservative/2100
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2790
+User rolled a 6
+you landed on Vermont Avenue
+After :player3/Random/2790
+-----------------------------------------------------------------
+Player before :player4/Cheater/2000
+User rolled a 4
+you landed on Kentucky Avenue
+After :player4/Cheater/1780
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1845
+User rolled a 5
+you landed on Illnois Avenue
+After :player1/Aggresive/1605
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 1
+you landed on Mediterranean Avenue
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2790
+User rolled a 1
+you landed on Connecticut Avenue
+After :player3/Random/2790
+-----------------------------------------------------------------
+Player before :player4/Cheater/1780
+User rolled a 4
+you landed on B. & O. Railroad
+After :player4/Cheater/1780
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1605
+User rolled a 2
+you landed on Atlatic Avenue
+After :player1/Aggresive/1605
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 5
+you landed on Oriental Avenue
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2790
+User rolled a 4
+you landed on States Avenue
+After :player3/Random/2790
+-----------------------------------------------------------------
+Player before :player4/Cheater/1780
+User rolled a 3
+you landed on Water Works
+After :player4/Cheater/1580
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1605
+User rolled a 4
+you landed on Go To Jail
+After :player1/Aggresive/1555
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 4
+you landed on Jail
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2790
+User rolled a 3
+you landed on St. James Place
+After :player3/Random/2790
+-----------------------------------------------------------------
+Player before :player4/Cheater/1580
+User rolled a 1
+you landed on Marvin Gardens
+After :player4/Cheater/1300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1555
+User rolled a 3
+you landed on Community Chest
+After :player1/Aggresive/1680
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 4
+you landed on Virginia Avenue
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2790
+User rolled a 1
+you landed on Community Chest
+After :player3/Random/2750
+-----------------------------------------------------------------
+Player before :player4/Cheater/1300
+User rolled a 3
+you landed on North Carolina Avenue
+After :player4/Cheater/1000
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1680
+User rolled a 2
+you landed on Shortline
+After :player1/Aggresive/1680
+-----------------------------------------------------------------
+This game ended in draw!!
+
+player1 Aggresive Go
+player2 Conservative Go
+player3 Random Go
+player4 Cheater Go
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2600
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Indiana Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 5
+you landed on B. & O. Railroad
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 6
+you landed on Atlatic Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2600
+User rolled a 2
+you landed on Illnois Avenue
+After :player2/Conservative/2600
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 1
+you landed on Illnois Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 4
+you landed on Marvin Gardens
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 6
+you landed on North Carolina Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2600
+User rolled a 6
+you landed on Go To Jail
+After :player2/Conservative/2550
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Ventura Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 1
+you landed on Go To Jail
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Shortline
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 3
+you landed on Community Chest
+After :player2/Conservative/2650
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 6
+you landed on Community Chest
+After :player3/Random/2460
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 1
+you landed on Pacific Avenue
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 2
+you landed on Park Place
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2650
+User rolled a 4
+you landed on Park Place
+After :player2/Conservative/2650
+-----------------------------------------------------------------
+Player before :player3/Random/2460
+User rolled a 4
+you landed on Park Place
+After :player3/Random/2460
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 5
+you landed on Chance
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2550
+User rolled a 1
+you landed on Luxury Tax
+After :player1/Aggresive/2550
+-----------------------------------------------------------------
+Player before :player2/Conservative/2700
+User rolled a 2
+you landed on Boardwalk
+After :player2/Conservative/2700
+-----------------------------------------------------------------
+Player before :player3/Random/2510
+User rolled a 2
+you landed on Boardwalk
+After :player3/Random/2510
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 2
+you landed on Luxury Tax
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2550
+User rolled a 3
+you landed on Mediterranean Avenue
+After :player1/Aggresive/2550
+-----------------------------------------------------------------
+Player before :player2/Conservative/2700
+User rolled a 2
+you landed on Mediterranean Avenue
+After :player2/Conservative/2700
+-----------------------------------------------------------------
+Player before :player3/Random/2510
+User rolled a 2
+you landed on Mediterranean Avenue
+After :player3/Random/2510
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 5
+you landed on Baltic Avenue
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2550
+User rolled a 5
+you landed on Oriental Avenue
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2700
+User rolled a 2
+you landed on Baltic Avenue
+After :player2/Conservative/2700
+-----------------------------------------------------------------
+Player before :player3/Random/2510
+User rolled a 1
+you landed on Community Chest
+After :player3/Random/2510
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 4
+you landed on Chance
+After :player4/Cheater/2200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 4
+you landed on Jail
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2750
+User rolled a 3
+you landed on Oriental Avenue
+After :player2/Conservative/2750
+-----------------------------------------------------------------
+Player before :player3/Random/2560
+User rolled a 5
+you landed on Chance
+After :player3/Random/2560
+-----------------------------------------------------------------
+Player before :player4/Cheater/2200
+User rolled a 5
+you landed on Electric Company
+After :player4/Cheater/2000
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on States Avenue
+After :player1/Aggresive/2360
+-----------------------------------------------------------------
+Player before :player2/Conservative/2750
+User rolled a 5
+you landed on St. Charles Place
+After :player2/Conservative/2750
+-----------------------------------------------------------------
+Player before :player3/Random/2560
+User rolled a 3
+you landed on Jail
+After :player3/Random/2560
+-----------------------------------------------------------------
+Player before :player4/Cheater/2000
+User rolled a 5
+you landed on Community Chest
+After :player4/Cheater/2000
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2360
+User rolled a 5
+you landed on Tennessee Avenue
+After :player1/Aggresive/2360
+-----------------------------------------------------------------
+Player before :player2/Conservative/2750
+User rolled a 3
+you landed on Virginia Avenue
+After :player2/Conservative/2750
+-----------------------------------------------------------------
+Player before :player3/Random/2560
+User rolled a 6
+you landed on St. James Place
+After :player3/Random/2560
+-----------------------------------------------------------------
+Player before :player4/Cheater/2000
+User rolled a 5
+you landed on Chance
+After :player4/Cheater/1850
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 3
+you landed on Kentucky Avenue
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2800
+User rolled a 6
+you landed on Free Parking
+After :player2/Conservative/2800
+-----------------------------------------------------------------
+Player before :player3/Random/2610
+User rolled a 1
+you landed on Community Chest
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1850
+User rolled a 3
+you landed on B. & O. Railroad
+After :player4/Cheater/1850
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 6
+you landed on Ventura Avenue
+After :player1/Aggresive/2150
+-----------------------------------------------------------------
+Player before :player2/Conservative/2800
+User rolled a 4
+you landed on Illnois Avenue
+After :player2/Conservative/2800
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 3
+you landed on Free Parking
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1850
+User rolled a 6
+you landed on Pacific Avenue
+After :player4/Cheater/1550
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2150
+User rolled a 2
+you landed on Marvin Gardens
+After :player1/Aggresive/2150
+-----------------------------------------------------------------
+Player before :player2/Conservative/2800
+User rolled a 5
+you landed on Marvin Gardens
+After :player2/Conservative/2800
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 5
+you landed on B. & O. Railroad
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1550
+User rolled a 4
+you landed on Shortline
+After :player4/Cheater/1350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2150
+User rolled a 2
+you landed on Pacific Avenue
+After :player1/Aggresive/2150
+-----------------------------------------------------------------
+Player before :player2/Conservative/2800
+User rolled a 1
+you landed on Go To Jail
+After :player2/Conservative/2750
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 1
+you landed on Atlatic Avenue
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1350
+User rolled a 5
+you landed on Go
+After :player4/Cheater/1350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2150
+User rolled a 6
+you landed on Park Place
+After :player1/Aggresive/1800
+-----------------------------------------------------------------
+Player before :player2/Conservative/2750
+User rolled a 3
+you landed on Community Chest
+After :player2/Conservative/2710
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 6
+you landed on North Carolina Avenue
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1350
+User rolled a 2
+you landed on Community Chest
+After :player4/Cheater/1300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1800
+User rolled a 6
+you landed on Baltic Avenue
+After :player1/Aggresive/1740
+-----------------------------------------------------------------
+Player before :player2/Conservative/2710
+User rolled a 5
+you landed on Luxury Tax
+After :player2/Conservative/2610
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 1
+you landed on Community Chest
+After :player3/Random/2710
+-----------------------------------------------------------------
+Player before :player4/Cheater/1300
+User rolled a 6
+you landed on Vermont Avenue
+After :player4/Cheater/1200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1740
+User rolled a 2
+you landed on Reading Railroad
+After :player1/Aggresive/1640
+-----------------------------------------------------------------
+Player before :player2/Conservative/2610
+User rolled a 1
+you landed on Boardwalk
+After :player2/Conservative/2610
+-----------------------------------------------------------------
+Player before :player3/Random/2710
+User rolled a 1
+you landed on Pennsylvania Avenue
+After :player3/Random/2390
+-----------------------------------------------------------------
+Player before :player4/Cheater/1200
+User rolled a 5
+you landed on States Avenue
+After :player4/Cheater/1060
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1640
+User rolled a 2
+you landed on Chance
+After :player1/Aggresive/1790
+-----------------------------------------------------------------
+Player before :player2/Conservative/2610
+User rolled a 5
+you landed on Income Tax
+After :player2/Conservative/2510
+-----------------------------------------------------------------
+Player before :player3/Random/2390
+User rolled a 4
+you landed on Luxury Tax
+After :player3/Random/2290
+-----------------------------------------------------------------
+Player before :player4/Cheater/1060
+User rolled a 2
+you landed on Pennsylvania Railroad
+After :player4/Cheater/860
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1790
+User rolled a 4
+you landed on St. Charles Place
+After :player1/Aggresive/1650
+-----------------------------------------------------------------
+Player before :player2/Conservative/2510
+User rolled a 3
+you landed on Chance
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/2290
+User rolled a 1
+you landed on Boardwalk
+After :player3/Random/2290
+-----------------------------------------------------------------
+Player before :player4/Cheater/860
+User rolled a 6
+you landed on Kentucky Avenue
+After :player4/Cheater/640
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1650
+User rolled a 5
+you landed on St. James Place
+After :player1/Aggresive/1470
+-----------------------------------------------------------------
+Player before :player2/Conservative/2470
+User rolled a 1
+you landed on Vermont Avenue
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/2290
+User rolled a 1
+you landed on Go
+After :player3/Random/2290
+-----------------------------------------------------------------
+Player before :player4/Cheater/640
+User rolled a 5
+you landed on Atlatic Avenue
+After :player4/Cheater/380
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1470
+User rolled a 3
+you landed on Newyork Avenue
+After :player1/Aggresive/1270
+-----------------------------------------------------------------
+Player before :player2/Conservative/2470
+User rolled a 6
+you landed on Virginia Avenue
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/2290
+User rolled a 5
+you landed on Reading Railroad
+After :player3/Random/2290
+-----------------------------------------------------------------
+Player before :player4/Cheater/380
+User rolled a 3
+you landed on Marvin Gardens
+After :player4/Cheater/100
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1270
+User rolled a 5
+you landed on Illnois Avenue
+After :player1/Aggresive/1030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2470
+User rolled a 6
+you landed on Free Parking
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/2290
+User rolled a 4
+you landed on Connecticut Avenue
+After :player3/Random/2170
+-----------------------------------------------------------------
+Player before :player4/Cheater/100
+User rolled a 2
+you landed on Pacific Avenue
+After :player4/Cheater/100
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1030
+User rolled a 5
+you landed on Marvin Gardens
+After :player1/Aggresive/1030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2470
+User rolled a 5
+you landed on B. & O. Railroad
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/2170
+User rolled a 3
+you landed on Electric Company
+After :player3/Random/1970
+-----------------------------------------------------------------
+Player before :player4/Cheater/100
+User rolled a 2
+you landed on Community Chest
+After :player4/Cheater/50
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1080
+User rolled a 5
+you landed on Pennsylvania Avenue
+After :player1/Aggresive/760
+-----------------------------------------------------------------
+Player before :player2/Conservative/2470
+User rolled a 1
+you landed on Atlatic Avenue
+After :player2/Conservative/2470
+-----------------------------------------------------------------
+Player before :player3/Random/1970
+User rolled a 5
+you landed on Community Chest
+After :player3/Random/1930
+-----------------------------------------------------------------
+Player before :player4/Cheater/50
+User rolled a 3
+you landed on Chance
+Since the user is already in debt he is eliminated.
+After :player4/Cheater/0
+-----------------------------------------------------------------
+Player before :player1/Aggresive/760
+User rolled a 3
+you landed on Park Place
+After :player1/Aggresive/410
+-----------------------------------------------------------------
+This game ended in draw!!
+
+player1 Aggresive Go
+player2 Conservative Go
+player3 Random Go
+player4 Cheater Go
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 4
+you landed on Illnois Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 2
+you landed on Chance
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 6
+you landed on Atlatic Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on Indiana Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Ventura Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 6
+you landed on Water Works
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Marvin Gardens
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on B. & O. Railroad
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 4
+you landed on Pacific Avenue
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2300
+User rolled a 3
+you landed on Pacific Avenue
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 1
+you landed on Go To Jail
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 2
+you landed on Ventura Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 6
+you landed on Park Place
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2300
+User rolled a 1
+you landed on North Carolina Avenue
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2450
+User rolled a 1
+you landed on Pacific Avenue
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 4
+you landed on Pacific Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Go
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2300
+User rolled a 6
+you landed on Luxury Tax
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2450
+User rolled a 4
+you landed on Shortline
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 6
+you landed on Park Place
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 2
+you landed on Community Chest
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 1
+you landed on Boardwalk
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Luxury Tax
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 6
+you landed on Baltic Avenue
+After :player2/Conservative/2550
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 3
+you landed on Reading Railroad
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 1
+you landed on Go
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 1
+you landed on Boardwalk
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 6
+you landed on Connecticut Avenue
+After :player2/Conservative/2550
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 4
+you landed on Connecticut Avenue
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 2
+you landed on Community Chest
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 2
+you landed on Mediterranean Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 3
+you landed on Electric Company
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 4
+you landed on States Avenue
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 3
+you landed on Reading Railroad
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Income Tax
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 3
+you landed on Pennsylvania Railroad
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 2
+you landed on Pennsylvania Railroad
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 1
+you landed on Oriental Avenue
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Chance
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 5
+you landed on Free Parking
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 6
+you landed on Kentucky Avenue
+After :player3/Random/2350
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 3
+you landed on Connecticut Avenue
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 6
+you landed on States Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2350
+User rolled a 1
+you landed on Kentucky Avenue
+After :player2/Conservative/2350
+-----------------------------------------------------------------
+Player before :player3/Random/2350
+User rolled a 1
+you landed on Chance
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2550
+User rolled a 4
+you landed on States Avenue
+After :player4/Cheater/2550
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2550
+User rolled a 5
+you landed on Tennessee Avenue
+After :player1/Aggresive/2550
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 3
+you landed on Illnois Avenue
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 4
+you landed on Atlatic Avenue
+After :player3/Random/1940
+-----------------------------------------------------------------
+Player before :player4/Cheater/2550
+User rolled a 1
+you landed on Virginia Avenue
+After :player4/Cheater/2390
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2550
+User rolled a 5
+you landed on Indiana Avenue
+After :player1/Aggresive/2330
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 2
+you landed on Atlatic Avenue
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/1940
+User rolled a 3
+you landed on Marvin Gardens
+After :player3/Random/1940
+-----------------------------------------------------------------
+Player before :player4/Cheater/2390
+User rolled a 5
+you landed on Newyork Avenue
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2330
+User rolled a 1
+you landed on Illnois Avenue
+After :player1/Aggresive/2090
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 6
+you landed on North Carolina Avenue
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/1940
+User rolled a 1
+you landed on Go To Jail
+After :player3/Random/1890
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 1
+you landed on Free Parking
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2090
+User rolled a 6
+you landed on Go To Jail
+After :player1/Aggresive/2040
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 5
+you landed on Park Place
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/1890
+User rolled a 1
+you landed on Pacific Avenue
+After :player3/Random/1890
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 1
+you landed on Kentucky Avenue
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2040
+User rolled a 6
+you landed on Chance
+After :player1/Aggresive/2240
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 2
+you landed on Boardwalk
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/1890
+User rolled a 5
+you landed on Chance
+After :player3/Random/2015
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 5
+you landed on Atlatic Avenue
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2240
+User rolled a 3
+you landed on Baltic Avenue
+After :player1/Aggresive/2240
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 5
+you landed on Income Tax
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/2015
+User rolled a 2
+you landed on Luxury Tax
+After :player3/Random/1915
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 3
+you landed on Marvin Gardens
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2240
+User rolled a 4
+you landed on Chance
+After :player1/Aggresive/2190
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 3
+you landed on Chance
+After :player2/Conservative/2260
+-----------------------------------------------------------------
+Player before :player3/Random/1915
+User rolled a 1
+you landed on Boardwalk
+After :player3/Random/1915
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 3
+you landed on North Carolina Avenue
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2190
+User rolled a 1
+you landed on St. Charles Place
+After :player1/Aggresive/2190
+-----------------------------------------------------------------
+Player before :player2/Conservative/2260
+User rolled a 5
+you landed on Electric Company
+After :player2/Conservative/2060
+-----------------------------------------------------------------
+Player before :player3/Random/1915
+User rolled a 5
+you landed on Income Tax
+After :player3/Random/1815
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 6
+you landed on Luxury Tax
+After :player4/Cheater/2190
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2190
+User rolled a 3
+you landed on Virginia Avenue
+After :player1/Aggresive/2030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2060
+User rolled a 4
+you landed on St. James Place
+After :player2/Conservative/2060
+-----------------------------------------------------------------
+Player before :player3/Random/1815
+User rolled a 5
+you landed on Connecticut Avenue
+After :player3/Random/1815
+-----------------------------------------------------------------
+Player before :player4/Cheater/2190
+User rolled a 1
+you landed on Boardwalk
+After :player4/Cheater/1790
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2030
+User rolled a 6
+you landed on Free Parking
+After :player1/Aggresive/2030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2060
+User rolled a 2
+you landed on Tennessee Avenue
+After :player2/Conservative/2060
+-----------------------------------------------------------------
+Player before :player3/Random/1815
+User rolled a 4
+you landed on States Avenue
+After :player3/Random/1815
+-----------------------------------------------------------------
+Player before :player4/Cheater/1790
+User rolled a 6
+you landed on Reading Railroad
+After :player4/Cheater/1790
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2030
+User rolled a 1
+you landed on Kentucky Avenue
+After :player1/Aggresive/2030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2060
+User rolled a 3
+you landed on Kentucky Avenue
+After :player2/Conservative/2060
+-----------------------------------------------------------------
+Player before :player3/Random/1815
+User rolled a 2
+you landed on Pennsylvania Railroad
+After :player3/Random/1815
+-----------------------------------------------------------------
+Player before :player4/Cheater/1790
+User rolled a 5
+you landed on Jail
+After :player4/Cheater/1790
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2030
+User rolled a 3
+you landed on Illnois Avenue
+After :player1/Aggresive/2030
+-----------------------------------------------------------------
+Player before :player2/Conservative/2060
+User rolled a 5
+you landed on Atlatic Avenue
+After :player2/Conservative/2060
+-----------------------------------------------------------------
+Player before :player3/Random/1815
+User rolled a 2
+you landed on Community Chest
+After :player3/Random/1665
+-----------------------------------------------------------------
+Player before :player4/Cheater/1840
+User rolled a 4
+you landed on Virginia Avenue
+After :player4/Cheater/1680
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2080
+User rolled a 4
+you landed on Water Works
+After :player1/Aggresive/1880
+-----------------------------------------------------------------
+Player before :player2/Conservative/2110
+User rolled a 1
+you landed on Ventura Avenue
+After :player2/Conservative/2110
+-----------------------------------------------------------------
+Player before :player3/Random/1665
+User rolled a 3
+you landed on Free Parking
+After :player3/Random/1665
+-----------------------------------------------------------------
+Player before :player4/Cheater/1680
+User rolled a 1
+you landed on Pennsylvania Railroad
+After :player4/Cheater/1480
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1880
+User rolled a 1
+you landed on Marvin Gardens
+After :player1/Aggresive/1880
+-----------------------------------------------------------------
+This game ended in draw!!
+
+player1 Aggresive Go
+player2 Conservative Go
+player3 Random Go
+player4 Cheater Go
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on Kentucky Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 5
+you landed on B. & O. Railroad
+After :player3/Random/2500
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 4
+you landed on Illnois Avenue
+After :player4/Cheater/2500
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 4
+you landed on Illnois Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 5
+you landed on Atlatic Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2500
+User rolled a 3
+you landed on Water Works
+After :player3/Random/2300
+-----------------------------------------------------------------
+Player before :player4/Cheater/2500
+User rolled a 4
+you landed on Water Works
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Ventura Avenue
+After :player1/Aggresive/2500
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 1
+you landed on Ventura Avenue
+After :player2/Conservative/2500
+-----------------------------------------------------------------
+Player before :player3/Random/2300
+User rolled a 3
+you landed on Pacific Avenue
+After :player3/Random/2300
+-----------------------------------------------------------------
+Player before :player4/Cheater/2300
+User rolled a 1
+you landed on Marvin Gardens
+After :player4/Cheater/2300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2500
+User rolled a 3
+you landed on Go To Jail
+After :player1/Aggresive/2450
+-----------------------------------------------------------------
+Player before :player2/Conservative/2500
+User rolled a 3
+you landed on Go To Jail
+After :player2/Conservative/2450
+-----------------------------------------------------------------
+Player before :player3/Random/2300
+User rolled a 5
+you landed on Chance
+After :player3/Random/2300
+-----------------------------------------------------------------
+Player before :player4/Cheater/2300
+User rolled a 4
+you landed on Community Chest
+After :player4/Cheater/2400
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2450
+User rolled a 3
+you landed on Community Chest
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2450
+User rolled a 6
+you landed on Chance
+After :player2/Conservative/2550
+-----------------------------------------------------------------
+Player before :player3/Random/2300
+User rolled a 2
+you landed on Luxury Tax
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2400
+User rolled a 3
+you landed on Chance
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 2
+you landed on Shortline
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 6
+you landed on Community Chest
+After :player2/Conservative/2550
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 5
+you landed on Baltic Avenue
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 3
+you landed on Boardwalk
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 5
+you landed on Go
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2550
+User rolled a 5
+you landed on Chance
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 2
+you landed on Reading Railroad
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 4
+you landed on Baltic Avenue
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 3
+you landed on Baltic Avenue
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 2
+you landed on Connecticut Avenue
+After :player2/Conservative/2675
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 1
+you landed on Oriental Avenue
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 6
+you landed on Connecticut Avenue
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 3
+you landed on Oriental Avenue
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2675
+User rolled a 3
+you landed on Electric Company
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 1
+you landed on Chance
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 4
+you landed on States Avenue
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 4
+you landed on Jail
+After :player1/Aggresive/2410
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 6
+you landed on Tennessee Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 2
+you landed on Connecticut Avenue
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 1
+you landed on Virginia Avenue
+After :player4/Cheater/2350
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2410
+User rolled a 2
+you landed on Electric Company
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 5
+you landed on Indiana Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 2
+you landed on St. Charles Place
+After :player3/Random/2200
+-----------------------------------------------------------------
+Player before :player4/Cheater/2350
+User rolled a 3
+you landed on Community Chest
+After :player4/Cheater/2310
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 4
+you landed on St. James Place
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 1
+you landed on Illnois Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2200
+User rolled a 1
+you landed on Electric Company
+After :player3/Random/2000
+-----------------------------------------------------------------
+Player before :player4/Cheater/2310
+User rolled a 3
+you landed on Free Parking
+After :player4/Cheater/2310
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 2
+you landed on Tennessee Avenue
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 2
+you landed on Atlatic Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/2000
+User rolled a 5
+you landed on Community Chest
+After :player3/Random/1950
+-----------------------------------------------------------------
+Player before :player4/Cheater/2310
+User rolled a 2
+you landed on Chance
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 2
+you landed on Free Parking
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on Marvin Gardens
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1950
+User rolled a 3
+you landed on Free Parking
+After :player3/Random/1950
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 1
+you landed on Indiana Avenue
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 1
+you landed on Kentucky Avenue
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on North Carolina Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1950
+User rolled a 1
+you landed on Kentucky Avenue
+After :player3/Random/1950
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 1
+you landed on Illnois Avenue
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 3
+you landed on Illnois Avenue
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 2
+you landed on Pennsylvania Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1950
+User rolled a 1
+you landed on Chance
+After :player3/Random/1950
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 1
+you landed on B. & O. Railroad
+After :player4/Cheater/2260
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 3
+you landed on Ventura Avenue
+After :player1/Aggresive/2210
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 6
+you landed on Go
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1950
+User rolled a 6
+you landed on Water Works
+After :player3/Random/1750
+-----------------------------------------------------------------
+Player before :player4/Cheater/2260
+User rolled a 3
+you landed on Water Works
+After :player4/Cheater/2060
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2210
+User rolled a 3
+you landed on Go To Jail
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on Baltic Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1750
+User rolled a 4
+you landed on North Carolina Avenue
+After :player3/Random/1750
+-----------------------------------------------------------------
+Player before :player4/Cheater/2060
+User rolled a 3
+you landed on Pacific Avenue
+After :player4/Cheater/1760
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 6
+you landed on Chance
+After :player1/Aggresive/2110
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on Oriental Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1750
+User rolled a 3
+you landed on Shortline
+After :player3/Random/1750
+-----------------------------------------------------------------
+Player before :player4/Cheater/1760
+User rolled a 3
+you landed on Pennsylvania Avenue
+After :player4/Cheater/1760
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2110
+User rolled a 1
+you landed on Park Place
+After :player1/Aggresive/2110
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 5
+you landed on St. Charles Place
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1750
+User rolled a 2
+you landed on Park Place
+After :player3/Random/1750
+-----------------------------------------------------------------
+Player before :player4/Cheater/1760
+User rolled a 5
+you landed on Boardwalk
+After :player4/Cheater/1760
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2110
+User rolled a 1
+you landed on Luxury Tax
+After :player1/Aggresive/2110
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 4
+you landed on Pennsylvania Railroad
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1750
+User rolled a 4
+you landed on Mediterranean Avenue
+After :player3/Random/1750
+-----------------------------------------------------------------
+Player before :player4/Cheater/1760
+User rolled a 1
+you landed on Go
+After :player4/Cheater/1760
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2110
+User rolled a 2
+you landed on Go
+After :player1/Aggresive/2110
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 4
+you landed on Newyork Avenue
+After :player2/Conservative/2475
+-----------------------------------------------------------------
+Player before :player3/Random/1750
+User rolled a 3
+you landed on Income Tax
+After :player3/Random/1650
+-----------------------------------------------------------------
+Player before :player4/Cheater/1760
+User rolled a 5
+you landed on Reading Railroad
+After :player4/Cheater/1760
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2110
+User rolled a 2
+you landed on Community Chest
+After :player1/Aggresive/2235
+-----------------------------------------------------------------
+Player before :player2/Conservative/2475
+User rolled a 3
+you landed on Chance
+After :player2/Conservative/2575
+-----------------------------------------------------------------
+Player before :player3/Random/1650
+User rolled a 1
+you landed on Reading Railroad
+After :player3/Random/1650
+-----------------------------------------------------------------
+Player before :player4/Cheater/1760
+User rolled a 1
+you landed on Oriental Avenue
+After :player4/Cheater/1660
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2235
+User rolled a 3
+you landed on Reading Railroad
+After :player1/Aggresive/2235
+-----------------------------------------------------------------
+Player before :player2/Conservative/2575
+User rolled a 6
+you landed on Water Works
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1650
+User rolled a 4
+you landed on Connecticut Avenue
+After :player3/Random/1650
+-----------------------------------------------------------------
+Player before :player4/Cheater/1660
+User rolled a 6
+you landed on Electric Company
+After :player4/Cheater/1460
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2235
+User rolled a 4
+you landed on Connecticut Avenue
+After :player1/Aggresive/2235
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 1
+you landed on Marvin Gardens
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1650
+User rolled a 4
+you landed on States Avenue
+After :player3/Random/1510
+-----------------------------------------------------------------
+Player before :player4/Cheater/1460
+User rolled a 6
+you landed on Tennessee Avenue
+After :player4/Cheater/1280
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2235
+User rolled a 6
+you landed on Pennsylvania Railroad
+After :player1/Aggresive/2035
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 3
+you landed on North Carolina Avenue
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1510
+User rolled a 4
+you landed on Community Chest
+After :player3/Random/1470
+-----------------------------------------------------------------
+Player before :player4/Cheater/1280
+User rolled a 6
+you landed on Illnois Avenue
+After :player4/Cheater/1280
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2035
+User rolled a 1
+you landed on St. James Place
+After :player1/Aggresive/2035
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 2
+you landed on Pennsylvania Avenue
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1470
+User rolled a 2
+you landed on Newyork Avenue
+After :player3/Random/1470
+-----------------------------------------------------------------
+Player before :player4/Cheater/1280
+User rolled a 1
+you landed on B. & O. Railroad
+After :player4/Cheater/1080
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2035
+User rolled a 6
+you landed on Chance
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 5
+you landed on Boardwalk
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1470
+User rolled a 3
+you landed on Chance
+After :player3/Random/1620
+-----------------------------------------------------------------
+Player before :player4/Cheater/1080
+User rolled a 3
+you landed on Water Works
+After :player4/Cheater/880
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 2
+you landed on Illnois Avenue
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 1
+you landed on Go
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1620
+User rolled a 6
+you landed on Water Works
+After :player3/Random/1420
+-----------------------------------------------------------------
+Player before :player4/Cheater/880
+User rolled a 5
+you landed on Community Chest
+After :player4/Cheater/880
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 3
+you landed on Ventura Avenue
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 2
+you landed on Community Chest
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1420
+User rolled a 5
+you landed on Community Chest
+After :player3/Random/1570
+-----------------------------------------------------------------
+Player before :player4/Cheater/880
+User rolled a 2
+you landed on Shortline
+After :player4/Cheater/680
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 5
+you landed on North Carolina Avenue
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 4
+you landed on Oriental Avenue
+After :player2/Conservative/2375
+-----------------------------------------------------------------
+Player before :player3/Random/1570
+User rolled a 1
+you landed on Pennsylvania Avenue
+After :player3/Random/1570
+-----------------------------------------------------------------
+Player before :player4/Cheater/680
+User rolled a 5
+you landed on Go
+After :player4/Cheater/680
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 6
+you landed on Luxury Tax
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2375
+User rolled a 6
+you landed on Electric Company
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1570
+User rolled a 3
+you landed on Park Place
+After :player3/Random/1570
+-----------------------------------------------------------------
+Player before :player4/Cheater/680
+User rolled a 6
+you landed on Oriental Avenue
+After :player4/Cheater/580
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 2
+you landed on Go
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Tennessee Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1570
+User rolled a 3
+you landed on Go
+After :player3/Random/1570
+-----------------------------------------------------------------
+Player before :player4/Cheater/580
+User rolled a 6
+you landed on Electric Company
+After :player4/Cheater/380
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 4
+you landed on Income Tax
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Illnois Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1570
+User rolled a 6
+you landed on Oriental Avenue
+After :player3/Random/1570
+-----------------------------------------------------------------
+Player before :player4/Cheater/380
+User rolled a 4
+you landed on St. James Place
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 1
+you landed on Reading Railroad
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 3
+you landed on Ventura Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1570
+User rolled a 5
+you landed on St. Charles Place
+After :player3/Random/1430
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 6
+you landed on Chance
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 1
+you landed on Oriental Avenue
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 2
+you landed on Marvin Gardens
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1430
+User rolled a 3
+you landed on Virginia Avenue
+After :player3/Random/1430
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 4
+you landed on Atlatic Avenue
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 3
+you landed on Connecticut Avenue
+After :player1/Aggresive/2160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 3
+you landed on North Carolina Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/1430
+User rolled a 5
+you landed on Newyork Avenue
+After :player3/Random/1230
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 4
+you landed on Go To Jail
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2160
+User rolled a 3
+you landed on Electric Company
+After :player1/Aggresive/1960
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Luxury Tax
+After :player2/Conservative/2075
+-----------------------------------------------------------------
+Player before :player3/Random/1230
+User rolled a 5
+you landed on Illnois Avenue
+After :player3/Random/990
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 5
+you landed on Shortline
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1960
+User rolled a 5
+you landed on Community Chest
+After :player1/Aggresive/2060
+-----------------------------------------------------------------
+Player before :player2/Conservative/2075
+User rolled a 3
+you landed on Mediterranean Avenue
+After :player2/Conservative/2075
+-----------------------------------------------------------------
+Player before :player3/Random/990
+User rolled a 5
+you landed on Marvin Gardens
+After :player3/Random/710
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 4
+you landed on Boardwalk
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/2060
+User rolled a 4
+you landed on Kentucky Avenue
+After :player1/Aggresive/1840
+-----------------------------------------------------------------
+Player before :player2/Conservative/2075
+User rolled a 1
+you landed on Community Chest
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/710
+User rolled a 1
+you landed on Go To Jail
+After :player3/Random/660
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 6
+you landed on Reading Railroad
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1840
+User rolled a 2
+you landed on Indiana Avenue
+After :player1/Aggresive/1620
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 1
+you landed on Baltic Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/660
+User rolled a 6
+you landed on Chance
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 4
+you landed on Connecticut Avenue
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1620
+User rolled a 2
+you landed on B. & O. Railroad
+After :player1/Aggresive/1620
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on Vermont Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 4
+you landed on Go
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 1
+you landed on Jail
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1620
+User rolled a 1
+you landed on Atlatic Avenue
+After :player1/Aggresive/1360
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Virginia Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 6
+you landed on Oriental Avenue
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 5
+you landed on Pennsylvania Railroad
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1360
+User rolled a 2
+you landed on Water Works
+After :player1/Aggresive/1160
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on Newyork Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 2
+you landed on Vermont Avenue
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 3
+you landed on Tennessee Avenue
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/1160
+User rolled a 4
+you landed on North Carolina Avenue
+After :player1/Aggresive/860
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on Illnois Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 1
+you landed on Connecticut Avenue
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 3
+you landed on Kentucky Avenue
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/860
+User rolled a 3
+you landed on Shortline
+After :player1/Aggresive/860
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Go To Jail
+After :player2/Conservative/2125
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 6
+you landed on Pennsylvania Railroad
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 4
+you landed on B. & O. Railroad
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/860
+User rolled a 4
+you landed on Boardwalk
+After :player1/Aggresive/460
+-----------------------------------------------------------------
+Player before :player2/Conservative/2125
+User rolled a 5
+you landed on Shortline
+After :player2/Conservative/2125
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 1
+you landed on St. James Place
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 2
+you landed on Ventura Avenue
+After :player4/Cheater/200
+-----------------------------------------------------------------
+Player before :player1/Aggresive/460
+User rolled a 4
+you landed on Baltic Avenue
+After :player1/Aggresive/400
+-----------------------------------------------------------------
+Player before :player2/Conservative/2125
+User rolled a 1
+you landed on Chance
+After :player2/Conservative/2125
+-----------------------------------------------------------------
+Player before :player3/Random/810
+User rolled a 5
+you landed on Kentucky Avenue
+After :player3/Random/810
+-----------------------------------------------------------------
+Player before :player4/Cheater/200
+User rolled a 6
+you landed on Community Chest
+After :player4/Cheater/50
+-----------------------------------------------------------------
+Player before :player1/Aggresive/450
+User rolled a 6
+you landed on Connecticut Avenue
+After :player1/Aggresive/330
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on Mediterranean Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/860
+User rolled a 5
+you landed on Atlatic Avenue
+After :player3/Random/860
+-----------------------------------------------------------------
+Player before :player4/Cheater/50
+User rolled a 5
+you landed on Luxury Tax
+Since the user is already in debt he is eliminated.
+After :player4/Cheater/0
+-----------------------------------------------------------------
+Player before :player1/Aggresive/330
+User rolled a 6
+you landed on Pennsylvania Railroad
+After :player1/Aggresive/130
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on Oriental Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/860
+User rolled a 3
+you landed on Marvin Gardens
+After :player3/Random/860
+-----------------------------------------------------------------
+Player before :player1/Aggresive/130
+User rolled a 3
+you landed on Tennessee Avenue
+After :player1/Aggresive/130
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 2
+you landed on Vermont Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/860
+User rolled a 2
+you landed on Pacific Avenue
+After :player3/Random/560
+-----------------------------------------------------------------
+Player before :player1/Aggresive/130
+User rolled a 4
+you landed on Chance
+After :player1/Aggresive/130
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 5
+you landed on States Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/560
+User rolled a 4
+you landed on Shortline
+After :player3/Random/360
+-----------------------------------------------------------------
+Player before :player1/Aggresive/130
+User rolled a 3
+you landed on B. & O. Railroad
+After :player1/Aggresive/130
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 4
+you landed on Community Chest
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/360
+User rolled a 6
+you landed on Mediterranean Avenue
+After :player3/Random/300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/130
+User rolled a 2
+you landed on Ventura Avenue
+After :player1/Aggresive/130
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 4
+you landed on Kentucky Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/300
+User rolled a 5
+you landed on Oriental Avenue
+After :player3/Random/300
+-----------------------------------------------------------------
+Player before :player1/Aggresive/130
+User rolled a 6
+you landed on Community Chest
+After :player1/Aggresive/90
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 4
+you landed on B. & O. Railroad
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/300
+User rolled a 1
+you landed on Chance
+After :player3/Random/400
+-----------------------------------------------------------------
+Player before :player1/Aggresive/90
+User rolled a 6
+you landed on Boardwalk
+Since the user is already in debt he is eliminated.
+After :player1/Aggresive/0
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 6
+you landed on Pacific Avenue
+After :player2/Conservative/2175
+-----------------------------------------------------------------
+Player before :player3/Random/400
+User rolled a 3
+you landed on Jail
+After :player3/Random/400
+-----------------------------------------------------------------
+Player before :player2/Conservative/2175
+User rolled a 2
+you landed on Community Chest
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/400
+User rolled a 6
+you landed on St. James Place
+After :player3/Random/400
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 1
+you landed on Pennsylvania Avenue
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/400
+User rolled a 3
+you landed on Newyork Avenue
+After :player3/Random/400
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 2
+you landed on Chance
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/400
+User rolled a 6
+you landed on B. & O. Railroad
+After :player3/Random/400
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 3
+you landed on Boardwalk
+After :player2/Conservative/2400
+-----------------------------------------------------------------
+Player before :player3/Random/400
+User rolled a 3
+you landed on Water Works
+After :player3/Random/200
+-----------------------------------------------------------------
+Player before :player2/Conservative/2400
+User rolled a 5
+you landed on Income Tax
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/200
+User rolled a 1
+you landed on Marvin Gardens
+After :player3/Random/200
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 5
+you landed on Connecticut Avenue
+After :player2/Conservative/2300
+-----------------------------------------------------------------
+Player before :player3/Random/200
+User rolled a 1
+you landed on Go To Jail
+After :player3/Random/150
+-----------------------------------------------------------------
+Player before :player2/Conservative/2300
+User rolled a 3
+you landed on Electric Company
+After :player2/Conservative/2100
+-----------------------------------------------------------------
+Player before :player3/Random/150
+User rolled a 4
+you landed on Pennsylvania Avenue
+After :player3/Random/150
+-----------------------------------------------------------------
+Player before :player2/Conservative/2100
+User rolled a 1
+you landed on States Avenue
+After :player2/Conservative/2100
+-----------------------------------------------------------------
+Player before :player3/Random/150
+User rolled a 4
+you landed on Luxury Tax
+After :player3/Random/50
+-----------------------------------------------------------------
+Player before :player2/Conservative/2100
+User rolled a 1
+you landed on Virginia Avenue
+After :player2/Conservative/2100
+-----------------------------------------------------------------
+Player before :player3/Random/50
+User rolled a 1
+you landed on Boardwalk
+Since the user is already in debt he is eliminated.
+player2 has won!!

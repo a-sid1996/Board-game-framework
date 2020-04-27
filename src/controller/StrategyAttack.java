@@ -4,6 +4,7 @@ import model.Player;
 import model.Tile;
 import model.Unit;
 
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -51,11 +52,11 @@ public class StrategyAttack  implements Strategy{
     		/*BUY FUNCTIONALITY*/
 			if(resultTile.getMainPlayer() == null) 
 			{
-				System.out.println("Attacker buy" +p.getName());
-				if(p.getMoney() > tile.getValue("Cost"))
+				//System.out.println("Attacker buy" +p.getName());
+				if(p.getMoney() > tile.getValue("cost"))
 				{
-		        	gc.list.get(0).addMoney(tile.getValue("Cost"));
-		        	p.deductMoney(tile.getValue("Cost"));
+		        	gc.list.get(0).addMoney(tile.getValue("cost"));
+		        	p.deductMoney(tile.getValue("cost"));
 		        	Unit unit = new Unit("property", tile);
 		        	p.setAsset(unit);
 		        	p.updateCurrentTile(tile, 0);
@@ -71,38 +72,40 @@ public class StrategyAttack  implements Strategy{
 
 			else if(resultTile.getMainPlayer().equals(p))
 			{
-				if(!resultTile.getType().equals("railroad")){
-				System.out.println("Attacker build" +p.getName());
-				if(p.getMoney() > tile.getValue("hotel")) 
+				if(!resultTile.getType().equals("railroad"))
 				{
-		        	gc.list.get(0).addMoney(tile.getValue("hotel"));
-		        	p.deductMoney(tile.getValue("hotel"));
-		        	Unit unit = new Unit("property", tile);
-		        	p.setAsset(unit);
-		        	tile.setMainPlayer(p);
-		    	} 
-				else 
-				{
-					System.out.println("Insufficient fund");
-		    	}}
+					//System.out.println("Attacker build" +p.getName());
+					if(p.getMoney() > tile.getValue("house"))
+						{
+						gc.list.get(0).addMoney(tile.getValue("house"));
+						p.deductMoney(tile.getValue("house"));
+						Unit unit = new Unit("property", tile);
+						p.setAsset(unit);
+						tile.setMainPlayer(p);
+		    		}
+					else
+					{
+						System.out.println("Insufficient fund");
+					}
+				}
 								
 			}
-			
-			/*RENT PAYING FUNCTIONALITY*/
-			else 
-			{
-				if(p.getMoney() > tile.getValue("rent1")) 
-				{
-		    		gc.getPlayer( tile.getMainPlayer() ).addMoney(tile.getValue("rent1"));
-		        	gc.list.get(0).addMoney(tile.getValue("rent1"));
-		        	p.deductMoney(tile.getValue("rent1"));
-		    	} 
-				else
-				{
 
-					System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");					      	
-					gc.list.get(0).deductMoney(tile.getValue("rent1"));
-					tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+			/*RENT PAYING FUNCTIONALITY*/
+
+			else {
+				if(tournamentController.a == 0)
+				{
+					if (p.getMoney() > tile.getValue("rent1")) {
+						gc.getPlayer(tile.getMainPlayer()).addMoney(tile.getValue("rent1"));
+						gc.list.get(0).addMoney(tile.getValue("rent1"));
+						p.deductMoney(tile.getValue("rent1"));
+					} else {
+
+						System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");
+						gc.list.get(0).deductMoney(tile.getValue("rent1"));
+						tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+					}
 				}
 			}
 			

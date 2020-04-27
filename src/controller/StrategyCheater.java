@@ -58,10 +58,10 @@ public class StrategyCheater implements Strategy{
 				{
 					//buy
 					System.out.println("Attacker buy" +p.getName());
-					if(p.getMoney() > tile.getValue("Cost"))
+					if(p.getMoney() > tile.getValue("cost"))
 					{
-			        	gc.list.get(0).addMoney(tile.getValue("Cost"));
-			        	p.deductMoney(tile.getValue("Cost"));
+			        	gc.list.get(0).addMoney(tile.getValue("cost"));
+			        	p.deductMoney(tile.getValue("cost"));
 			        	Unit unit = new Unit("property", tile);
 			        	p.setAsset(unit);
 			        	tile.setMainPlayer(p);
@@ -80,44 +80,29 @@ public class StrategyCheater implements Strategy{
 		/*BUILD FUNCTIONALITY*/
 			else if(resultTile.getMainPlayer().equals(p))
 			{
-				if(result == 1)
-				{
-					//build
-					System.out.println("Attacker build" +p.getName());
-					if(p.getMoney() > tile.getValue("hotel")) 
-					{
-			        	gc.list.get(0).addMoney(tile.getValue("hotel"));
-			        	p.deductMoney(tile.getValue("hotel"));
-			        	Unit unit = new Unit("property", tile);
-			        	p.setAsset(unit);
-			        	tile.setMainPlayer(p);
-			    	} 
-					else 
-					{
-						System.out.println("Insufficient fund");
-			    	}					
+				if(!resultTile.getType().equals("railroad")) {
+					if (result == 1) {
+						//build
+						System.out.println("Attacker build" + p.getName());
+						if (p.getMoney() > tile.getValue("house")) {
+							gc.list.get(0).addMoney(tile.getValue("house"));
+							p.deductMoney(tile.getValue("house"));
+							Unit unit = new Unit("property", tile);
+							p.setAsset(unit);
+							tile.setMainPlayer(p);
+						} else {
+							System.out.println("Insufficient fund");
+						}
+					} else {
+						//not build
+					}
 				}
-				else 
-				{
-					//not build
-				}								
 			} 
 			
 			/*RENT PAYING FUNCTIONALITY*/
 			else 
 			{
-				if(p.getMoney() > tile.getValue("rent1")) 
-				{
-		    		gc.getPlayer( tile.getMainPlayer() ).addMoney(tile.getValue("rent1"));
-		        	gc.list.get(0).addMoney(tile.getValue("rent1"));
-		        	p.deductMoney(tile.getValue("rent1"));
-		    	} 
-				else
-				{
-					System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");					      	
-					gc.list.get(0).deductMoney(tile.getValue("rent1"));
-					tile.getMainPlayer().addMoney(tile.getValue("rent1"));
-				}
+				System.out.println("Cheater player wont pay rent");
 			}
 			
 		}
@@ -138,17 +123,14 @@ public class StrategyCheater implements Strategy{
     	
     	else if (resultTile.getType().equals("tax")) 
     	{
-    		System.out.println("Tax paid");
-			p.deductMoney(100);
-			gc.list.get(0).addMoney(100);
+    		System.out.println("Cheater player will not pay tax");
 		} 
     	
     	else if (resultTile.getType().equals("go-to-jail")) 
     	{
 			
 			System.out.println("A fine of $50 would be collected.");
-			p.deductMoney(50);
-			gc.list.get(0).addMoney(50);
+			System.out.println("Cheater player will not pay fine ");
 			gc.movePlayer(p, gc.bc.getTile("10 10"));
 
 		} 

@@ -63,7 +63,7 @@ public class EditMap {
     public boolean EditAvenueCost(String name, int cost) {
         for (Tile t : getTileList()) {
             if (t.getTileName().equalsIgnoreCase(name)) {
-                t.setValue("Cost", cost);
+                t.setValue("cost", cost);
                 return true;
             }
         }

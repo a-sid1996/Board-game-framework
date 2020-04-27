@@ -67,7 +67,7 @@ public class offerScreenController {
     @FXML
     void buildHouseBtn(ActionEvent event) {
     	if(player.getMoney() > tile.getValue("hotel")) {
-//    		gc.getPlayer(player).deductMoney(tile.getValue("Cost"));
+//    		gc.getPlayer(player).deductMoney(tile.getValue("cost"));
         	gc.list.get(0).addMoney(tile.getValue("hotel"));
         	player.deductMoney(tile.getValue("hotel"));
         	Unit unit = new Unit("property", tile);
@@ -90,10 +90,10 @@ public class offerScreenController {
      */
     @FXML
     void buyBtnClick(ActionEvent event) {
-    	if(player.getMoney() > tile.getValue("Cost")) {
-//    		gc.getPlayer(player).deductMoney(tile.getValue("Cost"));
-        	gc.list.get(0).addMoney(tile.getValue("Cost"));
-        	player.deductMoney(tile.getValue("Cost"));
+    	if(player.getMoney() > tile.getValue("cost")) {
+//    		gc.getPlayer(player).deductMoney(tile.getValue("cost"));
+        	gc.list.get(0).addMoney(tile.getValue("cost"));
+        	player.deductMoney(tile.getValue("cost"));
         	Unit unit = new Unit("property", tile);
         	player.setAsset(unit);
         	player.updateCurrentTile(tile, 0);
@@ -186,7 +186,7 @@ public class offerScreenController {
 
 			if(resultTile.getMainPlayer() == null) {
 				buyBtn.setVisible(true);
-				amount.setText(String.valueOf(resultTile.getValue("Cost")));
+				amount.setText(String.valueOf(resultTile.getValue("cost")));
 			} else if(resultTile.getMainPlayer().equals(p)){
 				buildHouseBtn.setVisible(true);
 				

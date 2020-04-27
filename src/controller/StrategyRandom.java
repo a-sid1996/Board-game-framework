@@ -58,10 +58,10 @@ public class StrategyRandom implements Strategy{
 				{
 					//buy
 					System.out.println("Attacker buy " +p.getName());
-					if(p.getMoney() > tile.getValue("Cost"))
+					if(p.getMoney() > tile.getValue("cost"))
 					{
-			        	gc.list.get(0).addMoney(tile.getValue("Cost"));
-			        	p.deductMoney(tile.getValue("Cost"));
+			        	gc.list.get(0).addMoney(tile.getValue("cost"));
+			        	p.deductMoney(tile.getValue("cost"));
 			        	Unit unit = new Unit("property", tile);
 			        	p.setAsset(unit);
 			        	p.updateCurrentTile(tile, 0);
@@ -90,10 +90,10 @@ public class StrategyRandom implements Strategy{
 					if(!resultTile.getType().equals("railroad"))
 					{
 						System.out.println("Attacker build" +p.getName());
-						if(p.getMoney() > tile.getValue("hotel"))
+						if(p.getMoney() > tile.getValue("house"))
 						{
-							gc.list.get(0).addMoney(tile.getValue("hotel"));
-							p.deductMoney(tile.getValue("hotel"));
+							gc.list.get(0).addMoney(tile.getValue("house"));
+							p.deductMoney(tile.getValue("house"));
 							Unit unit = new Unit("property", tile);
 							p.setAsset(unit);
 							tile.setMainPlayer(p);
@@ -113,17 +113,17 @@ public class StrategyRandom implements Strategy{
 			/*RENT PAYING FUNCTIONALITY*/
 			else 
 			{
-				if(p.getMoney() > tile.getValue("rent1")) 
+				if(tournamentController.a == 0)
 				{
-		    		gc.getPlayer( tile.getMainPlayer() ).addMoney(tile.getValue("rent1"));
-		        	gc.list.get(0).addMoney(tile.getValue("rent1"));
-		        	p.deductMoney(tile.getValue("rent1"));
-		    	} 
-				else
-				{
-					System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");					      	
-					gc.list.get(0).deductMoney(tile.getValue("rent1"));
-					tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+					if (p.getMoney() > tile.getValue("rent1")) {
+						gc.getPlayer(tile.getMainPlayer()).addMoney(tile.getValue("rent1"));
+						gc.list.get(0).addMoney(tile.getValue("rent1"));
+						p.deductMoney(tile.getValue("rent1"));
+					} else {
+						System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");
+						gc.list.get(0).deductMoney(tile.getValue("rent1"));
+						tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+					}
 				}
 			}
 			

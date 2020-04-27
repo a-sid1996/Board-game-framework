@@ -57,18 +57,21 @@ public class StrategyConservative implements Strategy{
 			/*RENT PAYING FUNCTIONALITY*/
 			else 
 			{
-				if(p.getMoney() > tile.getValue("rent1")) 
+				if(tournamentController.a == 0)
 				{
-		    		gc.getPlayer( tile.getMainPlayer() ).addMoney(tile.getValue("rent1"));
-		        	gc.list.get(0).addMoney(tile.getValue("rent1"));
-		        	p.deductMoney(tile.getValue("rent1"));
-		    	} 
-				else
-				{
+					if(p.getMoney() > tile.getValue("rent1"))
+					{
+						gc.getPlayer( tile.getMainPlayer() ).addMoney(tile.getValue("rent1"));
+						gc.list.get(0).addMoney(tile.getValue("rent1"));
+						p.deductMoney(tile.getValue("rent1"));
+					}
+					else
+					{
 
-					System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");					      	
-					gc.list.get(0).deductMoney(tile.getValue("rent1"));
-					tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+						System.out.println("You do not have suficient funds to pay rent this.\\n Assigning loan from bank");
+						gc.list.get(0).deductMoney(tile.getValue("rent1"));
+						tile.getMainPlayer().addMoney(tile.getValue("rent1"));
+					}
 				}
 			}
 			

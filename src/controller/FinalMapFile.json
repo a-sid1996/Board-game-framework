@@ -43,8 +43,8 @@
         "b_type": "railroad",
         "c_x": "5",
         "d_y": "0",
-        "e_cost": "200",
-        "f_rent": "[25,55,55,55,55,55]"
+        "e_cost": "100",
+        "f_rent": "[100,55,55,55,55,55]"
       },
       {
         "a_name": "Oriental Avenue",
@@ -95,7 +95,7 @@
         "g_house": "100"
       },
       {
-        "a_name": "Electric Compand_y",
+        "a_name": "Electric Company",
         "b_type": "utility",
         "c_x": "0",
         "d_y": "2",
