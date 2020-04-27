@@ -20,6 +20,7 @@ Project for SOEN 6441
   * Player position setup
   * Reinforcement
   * Fortification
+  * Tournament Mode - To play the auto Strategy patterned game (`Agressive Player`, `Conservative Player`, `Cheater Player`, `Random Player`)
 7. All the test cases are in the `test` directory. Please make sure `JUnit` is added as dependency to run the test suite.
 
 ## Working with this GitHub repository
