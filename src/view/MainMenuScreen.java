@@ -17,7 +17,7 @@ public class MainMenuScreen extends Application {
     public void start(Stage primaryStage) throws Exception {
 //        primaryStage.setTitle("Start Screen");
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainScreen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
             Parent root = (Parent) loader.load();
             Scene newScene = new Scene(root);
             Stage newStage = new Stage();

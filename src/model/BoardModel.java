@@ -6,18 +6,18 @@ package model;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Board class contains methods related to gaming board.
  */
-public class BoardModel {
+public class BoardModel implements Serializable {
     /**
      * @param height is the height of board
      * @param width  is the width of board
      * @param board  is a collection of board represented as
      */
-    private BufferedReader BoardModel_br = new BufferedReader(new InputStreamReader(System.in));
     private int height, width;
     private ArrayList<Tile> board = new ArrayList<>();
     private int num;
@@ -33,11 +33,11 @@ public class BoardModel {
     public ArrayList<Tile> getBoard() {
         return board;
     }
-    
+
     public void setBoard(ArrayList<Tile> board) {
-    	this.board = board;
+        this.board = board;
     }
-    
+
 //    public void populateBoard(String ans) throws IOException {
 //        // TODO Auto-generated method stub
 //        boolean needCustomNames = ans.equals("Y");
@@ -68,14 +68,14 @@ public class BoardModel {
     }
 
     public Tile getTile(int row, int column) {
-    	
-    	for(Tile tile : board) {
-    		if(tile.getTileCoordinates().equals(row + " " + column)) {
-    			return tile;
-    		}
-    	}
-		return null;
-    	
+
+        for (Tile tile : board) {
+            if (tile.getTileCoordinates().equals(row + " " + column)) {
+                return tile;
+            }
+        }
+        return null;
+
 //        if (row >= 0 && row < board.size()) {
 //            ArrayList<Tile> boardRow = getBoard().get(row);
 //            if (column >= 0 && column < boardRow.size()) {

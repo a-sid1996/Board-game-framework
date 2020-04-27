@@ -12,10 +12,10 @@ public class EditMapTest {
     @Test
     public void EditAvenueCost() {
         ArrayList<Tile> al = new ArrayList<>();
-        al.add(new Tile("c1", 0, 0, "Cost"));
+        al.add(new Tile("c1", 0, 0, "cost"));
         EditMap editMap = Mockito.mock(EditMap.class);
         Mockito.when(editMap.getTileList()).thenReturn(al);
-        Assert.assertFalse(editMap.EditAvenueCost("Cost", 200));
+        Assert.assertFalse(editMap.EditAvenueCost("cost", 200));
         Assert.assertFalse(editMap.EditAvenueCost("cXYZ", 200));
     }
 

@@ -1,12 +1,16 @@
 package model;
 
+import controller.Strategy;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This class represents a player object and its properties
  */
-public class Player {
+public class Player implements Serializable {
+    private static final long serialVersionUID = 123L;
     /**
      * @param name        represents player's name
      * @param currentTile shows tiles that are owned by current player.
@@ -19,8 +23,8 @@ public class Player {
     private String name;
     private ArrayList<Tile> currentTile;
     private ArrayList<Unit> asset;
-    Score score;
-
+    private Score score;
+    private String playerType;
 
     /**
      * Card List
@@ -35,6 +39,17 @@ public class Player {
         }
         this.score = score;
         this.currentTile = currentTile;
+    }
+
+    public Player(String name, Unit[] units, Score score, ArrayList<Tile> currentTile, String playerType) {
+        this.name = name;
+        this.asset = new ArrayList<>();
+        for (Unit unit : units) {
+            this.asset.add(unit);
+        }
+        this.score = score;
+        this.currentTile = currentTile;
+        this.playerType = playerType;
     }
 
     /**
@@ -223,4 +238,11 @@ public class Player {
 
     }
 
+    public String getPlayerType() {
+        return playerType;
+    }
+
+    public void setPlayerType(String playerType) {
+        this.playerType = playerType;
+    }
 }

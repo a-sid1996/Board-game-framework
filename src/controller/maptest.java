@@ -152,7 +152,7 @@ public class maptest {
 				}
 				
 				tile = new Tile(name, x, y, "property");
-				tile.setValue("Cost", cost);
+				tile.setValue("cost", cost);
 				tile.setValue("house", house);
 				tile.setValue("rent1", rentList.get(0));
 				tile.setValue("rent2", rentList.get(1));
@@ -192,7 +192,7 @@ public class maptest {
 				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				tile = new Tile(name, x, y, "railroad");
-				tile.setValue("Cost", cost);
+				tile.setValue("cost", cost);
 				TileList.add(tile);
 
 			}
@@ -224,7 +224,7 @@ public class maptest {
 				int y = Integer.parseInt((String) tmap.get("c_x"));
 				int cost = Integer.parseInt((String) tmap.get("e_cost"));
 				tile = new Tile(name, x, y, "utility");
-				tile.setValue("Cost", cost);
+				tile.setValue("cost", cost);
 				TileList.add(tile);
 
 			}

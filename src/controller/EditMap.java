@@ -20,8 +20,12 @@ public class EditMap {
      */
     BoardModel boardModel;
     MapJsonParser map;
-    ArrayList<Tile> al = new ArrayList<Tile>(MapJsonParser.TileList);
+    ArrayList<Tile> al = new ArrayList<Tile>();
 
+    public EditMap(ArrayList<Tile> al) {
+    	this.al = al;
+    }
+    
     public ArrayList<Tile> getTileList() {
         return al;
     }
@@ -59,7 +63,7 @@ public class EditMap {
     public boolean EditAvenueCost(String name, int cost) {
         for (Tile t : getTileList()) {
             if (t.getTileName().equalsIgnoreCase(name)) {
-                t.setValue("Cost", cost);
+                t.setValue("cost", cost);
                 return true;
             }
         }
