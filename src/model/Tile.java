@@ -6,34 +6,22 @@ import java.util.HashMap;
 
 public class Tile implements Serializable {
 
-    /**
-     * @param int x and y  are the coordinates of tile on the board
-     * @param nameofTile defines tile name
-     * @param internalValue stores amount associated with specific tile.
-     * @param unit is any object that can be associated with current tile.For instance, Money, house, hotel etc.
-     * @param neighbourTile stores neighbor tiles of the current tile.
-     * @param playerlog monitors players activity on current tile such as how many times player has been to this tile.
-     * @param CurrentPlayer defines current player who has landed on this tile.
-     * @param mainPlayer is the player who owns this tile.
-     */
-	
     private int x, y;
     private String nameOfTile;
     private String type;
     private HashMap<String, Integer> internalValue = new HashMap<String, Integer>();
-	private ArrayList<Unit> unit = new ArrayList<Unit>();
+    private ArrayList<Unit> unit = new ArrayList<Unit>();
     private ArrayList<Tile> neighbourTile = new ArrayList<Tile>();
     private HashMap<String, Integer> playerLog;
     private Player currentPlayer;
     private Player mainPlayer;
-    
-    
+
 
     /**
      * @param nameOfTile is a unique name assigned to current tile
      * @param X          is the x coordinate of the current tile
      * @param Y          is the y coordinate of the current tile
-     * @param type tile type
+     * @param type       tile type
      */
     public Tile(String nameOfTile, int X, int Y, String type) {
         this.nameOfTile = nameOfTile;
@@ -42,9 +30,9 @@ public class Tile implements Serializable {
         this.type = type;
         this.mainPlayer = null;
     }
-    
+
     public Tile() {
-    	
+
     }
 
     public String getTileCoordinates() {
@@ -58,8 +46,8 @@ public class Tile implements Serializable {
     public int getValue(String key) {
         return internalValue.get(key);
     }
-    
- 
+
+
     public void setPlayer(Player player) {
 
         this.currentPlayer = player;
@@ -137,12 +125,12 @@ public class Tile implements Serializable {
         neighbourTile.remove(tile);
     }
 
-	public String getType() {
-		return type;
-	}
-	
-	public HashMap<String, Integer> getInternalValue() {
-		return internalValue;
-	}
+    public String getType() {
+        return type;
+    }
+
+    public HashMap<String, Integer> getInternalValue() {
+        return internalValue;
+    }
 
 }

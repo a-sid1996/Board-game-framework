@@ -44,7 +44,8 @@ public class SaveAndLoad {
 
     /**
      * Constructor used while Saving the existing game
-     * @param gameController is GameController object 
+     *
+     * @param gameController is GameController object
      */
     public SaveAndLoad(GameController gameController) {
         super();
@@ -53,6 +54,7 @@ public class SaveAndLoad {
 
     /**
      * This method gets executed when user wants to save the existing game
+     *
      * @param file is any file in which we want to store game object
      * @return boolean whether game is saved or not
      */
@@ -70,19 +72,23 @@ public class SaveAndLoad {
 
     /**
      * This method gets executed when user wants to load existing game
+     *
      * @param file is any file in which we want to store game object
      * @return GameController object which resumes the game
+     * @throws ClassNotFoundException ClassNotFoundException
+     * @throws IOException            IOException
      */
     public GameController loadGame(String file) throws IOException, ClassNotFoundException {
-            ObjectInputStream oi = new ObjectInputStream(new FileInputStream(file));
-            Object obj = oi.readObject();
-            GameController gc = (GameController) obj;
-            oi.close();
-            return gc;
+        ObjectInputStream oi = new ObjectInputStream(new FileInputStream(file));
+        Object obj = oi.readObject();
+        GameController gc = (GameController) obj;
+        oi.close();
+        return gc;
     }
 
     /**
      * Getter method for Player Object
+     *
      * @return Player Object
      */
     public Player getPlayer() {
@@ -91,6 +97,7 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Player Object
+     *
      * @param player is Player Object
      */
     public void setPlayer(Player player) {
@@ -99,6 +106,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for Dice Object
+     *
      * @return Dice Object
      */
     public Dice getDice() {
@@ -107,6 +115,7 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Dice Object
+     *
      * @param dice is Dice Object
      */
     public void setDice(Dice dice) {
@@ -115,6 +124,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for Tile Object
+     *
      * @return Tile Object
      */
     public Tile getTile() {
@@ -123,6 +133,7 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Tile Object
+     *
      * @param tile is Tile Object
      */
     public void setTile(Tile tile) {
@@ -131,6 +142,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for Unit Object
+     *
      * @return Unit Object
      */
     public Unit getUnit() {
@@ -139,6 +151,7 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Unit Object
+     *
      * @param unit is Unit Object
      */
     public void setUnit(Unit unit) {
@@ -147,6 +160,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for BoardModel Object
+     *
      * @return BoardModel Object
      */
     public BoardModel getBoardModel() {
@@ -155,7 +169,8 @@ public class SaveAndLoad {
 
     /**
      * Setter method for BoardModel Object
-     * @param boardModel is BoardModel Object
+     *
+     * @param boardmodel is Board Model Object
      */
     public void setBoardModel(BoardModel boardmodel) {
         this.boardmodel = boardmodel;
@@ -163,6 +178,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for Score Object
+     *
      * @return Score Object
      */
     public Score getScore() {
@@ -171,6 +187,7 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Score Object
+     *
      * @param score is Score Object
      */
     public void setScore(Score score) {
@@ -179,6 +196,7 @@ public class SaveAndLoad {
 
     /**
      * Getter method for PlayerTurnModule Object
+     *
      * @return PlayerTurnModule Object
      */
     public PlayerTurnModule getPlayerTurnModule() {
@@ -187,7 +205,8 @@ public class SaveAndLoad {
 
     /**
      * Setter method for Score Object
-     * @param score is Score Object
+     *
+     * @param playerturnmodule is player turn module Object
      */
     public void setScore(PlayerTurnModule playerturnmodule) {
         this.playerturnmodule = playerturnmodule;

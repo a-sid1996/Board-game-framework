@@ -20,14 +20,6 @@ import model.Unit;
  * This controller class is the main controller of the framework which initializes all model objects and
  */
 public class GameController implements gameScreenController.GameControlObserver, Serializable {
-    /**
-     * @param list has a list of all the players
-     * @param bc is an object of Board model
-     * @param cm is an object of Card
-     * @param score is an object of Score module
-     * @param turn is an object of Player turn module which is of type player
-     * @param units is an object of unit class
-     */
     ArrayList<Player> list = new ArrayList<Player>();
     BoardModel bc;
     Card cm;
@@ -43,6 +35,7 @@ public class GameController implements gameScreenController.GameControlObserver,
      * @param list represents list of player objects playing the game
      * @param turn represents current turn of the player and he will roll the dice
      * @param score score
+     * @param tournament tournament
      */
     public GameController(BoardModel bc, Card cm, ArrayList<Player> list, Score score, PlayerTurnModule<Player> turn, boolean tournament) {
         // TODO Auto-generated constructor stub

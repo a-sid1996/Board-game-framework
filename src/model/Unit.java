@@ -22,12 +22,6 @@ public class Unit implements Serializable {
         }
     }
 
-    /**
-     * @param name is a name of the unit
-     * @param amount is any value associated with the Unit
-     * @param property stores unit type and its unique property such as House, Hotel
-     * @param Tile is a tile associated with current unit
-     */
     private String unitType;
     private int amount;
     private HashMap<String, String> property;
@@ -35,7 +29,7 @@ public class Unit implements Serializable {
 
     /**
      * @param unitType is a name of the unit
-     * @param tile unit type
+     * @param tile     unit type
      */
     public Unit(String unitType, Tile tile) {
         this.unitType = unitType;

@@ -25,10 +25,10 @@ public class PlayerTurnModuleTest {
 
         PlayerTurnModule<Player> turn = new PlayerTurnModule<>(players);
 
-        Assert.assertEquals(turn.update(player1), player1);
-        Assert.assertEquals(turn.update(player2), player2);
-        Assert.assertEquals(turn.update(player3), player3);
-        Assert.assertEquals(turn.update(player4), player4);
+        Assert.assertNull(turn.update(player1));
+        Assert.assertNull(turn.update(player2));
+        Assert.assertNull(turn.update(player3));
+        Assert.assertNull(turn.update(player4));
     }
 
     @org.junit.Test
@@ -48,10 +48,10 @@ public class PlayerTurnModuleTest {
         players.add(player4);
 
         PlayerTurnModule<Player> turn = new PlayerTurnModule<>(players);
-        Assert.assertEquals(turn.next(), player1);
         Assert.assertEquals(turn.next(), player2);
         Assert.assertEquals(turn.next(), player3);
         Assert.assertEquals(turn.next(), player4);
+        Assert.assertEquals(turn.next(), player1);
     }
 
 }

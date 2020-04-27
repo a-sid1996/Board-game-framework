@@ -13,11 +13,6 @@ import java.util.*;
  * Board class contains methods related to gaming board.
  */
 public class BoardModel implements Serializable {
-    /**
-     * @param height is the height of board
-     * @param width  is the width of board
-     * @param board  is a collection of board represented as
-     */
     private int height, width;
     private ArrayList<Tile> board = new ArrayList<>();
     private int num;

@@ -11,24 +11,12 @@ import java.util.List;
  */
 public class Player implements Serializable {
     private static final long serialVersionUID = 123L;
-    /**
-     * @param name        represents player's name
-     * @param currentTile shows tiles that are owned by current player.
-     * @param asset       represents players possession or unit. For instance, in
-     * monopoly it is money and in Risk it is Army/Troops.
-     * @param score       is an object of Score class.
-     * @param cardList    stores list of cards player posseses.
-     */
-
     private String name;
     private ArrayList<Tile> currentTile;
     private ArrayList<Unit> asset;
     private Score score;
     private String playerType;
 
-    /**
-     * Card List
-     */
     private List<Card> cardList = new ArrayList<Card>();
 
     public Player(String name, Unit[] units, Score score, ArrayList<Tile> currentTile) {

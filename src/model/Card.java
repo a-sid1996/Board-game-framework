@@ -9,11 +9,6 @@ import java.util.Random;
  * of cards for Board games. of different players
  */
 public class Card implements Serializable {
-
-    /**
-     * @param noOfCards   defines specific ID assigned to all cards
-     * @param descOfCards defines description stored in all cards
-     */
     private int noOfCards;
     HashMap<Integer, String> descOfCards;
 

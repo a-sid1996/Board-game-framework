@@ -7,10 +7,6 @@ import java.util.List;
 
 public class PlayerTurnModule<Player> implements Serializable {
 
-	/**
-	 * @param iterator object to iterate over List of players
-	 * @param list of players
-	 */
 	private int turnOfPlayer = 0;
 	private ArrayList<Player> list;
 
